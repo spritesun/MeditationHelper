@@ -9,17 +9,18 @@
 import UIKit
 
 class MHMeditationViewController: UIViewController {
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  @IBAction func start(sender: AnyObject) {
+//    let saveRecordTVC = self.storyboard?.instantiateViewControllerWithIdentifier("MHSaveRecordTableViewController") as UIViewController
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    let saveRecordNC = self.storyboard?.instantiateViewControllerWithIdentifier("MHSaveRecordNavigationController") as UINavigationController
+//    saveRecordNC.pushViewController(saveRecordTVC, animated: false)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    self.presentViewController(saveRecordNC, animated: true, completion: nil)
+  }
 }
 

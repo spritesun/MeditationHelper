@@ -16,6 +16,7 @@
 		A3B9AF561A625CCF00234F80 /* MeditationHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF551A625CCF00234F80 /* MeditationHelperTests.swift */; };
 		A3B9AF601A62825400234F80 /* MHRingtonesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF5F1A62825400234F80 /* MHRingtonesTableViewController.swift */; };
 		A3B9AF621A62834500234F80 /* MHDismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF611A62834500234F80 /* MHDismissSegue.swift */; };
+		A3B9AF641A6292B200234F80 /* MHSaveRecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF631A6292B200234F80 /* MHSaveRecordTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		A3B9AF551A625CCF00234F80 /* MeditationHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHelperTests.swift; sourceTree = "<group>"; };
 		A3B9AF5F1A62825400234F80 /* MHRingtonesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHRingtonesTableViewController.swift; sourceTree = "<group>"; };
 		A3B9AF611A62834500234F80 /* MHDismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHDismissSegue.swift; sourceTree = "<group>"; };
+		A3B9AF631A6292B200234F80 /* MHSaveRecordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHSaveRecordTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +71,9 @@
 				A3B9AF521A625CCF00234F80 /* MeditationHelperTests */,
 				A3B9AF391A625CCF00234F80 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		A3B9AF391A625CCF00234F80 /* Products */ = {
 			isa = PBXGroup;
@@ -87,6 +91,7 @@
 				A3B9AF3F1A625CCF00234F80 /* MHMeditationViewController.swift */,
 				A3B9AF411A625CCF00234F80 /* MHSummaryViewController.swift */,
 				A3B9AF431A625CCF00234F80 /* Main.storyboard */,
+				A3B9AF631A6292B200234F80 /* MHSaveRecordTableViewController.swift */,
 				A3B9AF5F1A62825400234F80 /* MHRingtonesTableViewController.swift */,
 				A3B9AF611A62834500234F80 /* MHDismissSegue.swift */,
 				A3B9AF461A625CCF00234F80 /* Images.xcassets */,
@@ -223,6 +228,7 @@
 			files = (
 				A3B9AF601A62825400234F80 /* MHRingtonesTableViewController.swift in Sources */,
 				A3B9AF621A62834500234F80 /* MHDismissSegue.swift in Sources */,
+				A3B9AF641A6292B200234F80 /* MHSaveRecordTableViewController.swift in Sources */,
 				A3B9AF421A625CCF00234F80 /* MHSummaryViewController.swift in Sources */,
 				A3B9AF3E1A625CCF00234F80 /* AppDelegate.swift in Sources */,
 				A3B9AF401A625CCF00234F80 /* MHMeditationViewController.swift in Sources */,
@@ -419,6 +425,7 @@
 				A3B9AF5B1A625CCF00234F80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3B9AF5C1A625CCF00234F80 /* Build configuration list for PBXNativeTarget "MeditationHelperTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +434,7 @@
 				A3B9AF5E1A625CCF00234F80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
