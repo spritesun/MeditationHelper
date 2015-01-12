@@ -16,6 +16,8 @@ class MHMeditationViewController: UIViewController {
   
   @IBOutlet var stopButton: UIButton!
   
+  var meditation: MHMeditation!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
@@ -24,9 +26,12 @@ class MHMeditationViewController: UIViewController {
     self.startButton.hidden = true
     self.stopButton.hidden = false
     self.registerNotification()
+    self.meditation = MHMeditation()
   }
   
   @IBAction func stop(sender: AnyObject) {
+    self.startButton.hidden = false
+    self.stopButton.hidden = true
     self.clearNotifications()
     let saveRecordNC = self.storyboard?.instantiateViewControllerWithIdentifier("MHSaveRecordNavigationController") as UINavigationController
     self.presentViewController(saveRecordNC, animated: true, completion: nil)

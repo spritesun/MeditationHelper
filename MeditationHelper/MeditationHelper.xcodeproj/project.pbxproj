@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A39903DB1A63946D00CB5493 /* MHMeditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39903DA1A63946D00CB5493 /* MHMeditation.swift */; };
 		A3B9AF3E1A625CCF00234F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF3D1A625CCF00234F80 /* AppDelegate.swift */; };
 		A3B9AF401A625CCF00234F80 /* MHMeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF3F1A625CCF00234F80 /* MHMeditationViewController.swift */; };
 		A3B9AF421A625CCF00234F80 /* MHSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF411A625CCF00234F80 /* MHSummaryViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A39903DA1A63946D00CB5493 /* MHMeditation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditation.swift; sourceTree = "<group>"; };
 		A3B9AF381A625CCF00234F80 /* MeditationHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeditationHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B9AF3C1A625CCF00234F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3B9AF3D1A625CCF00234F80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,14 +90,15 @@
 			isa = PBXGroup;
 			children = (
 				A3B9AF3D1A625CCF00234F80 /* AppDelegate.swift */,
-				A3B9AF3F1A625CCF00234F80 /* MHMeditationViewController.swift */,
-				A3B9AF411A625CCF00234F80 /* MHSummaryViewController.swift */,
-				A3B9AF431A625CCF00234F80 /* Main.storyboard */,
-				A3B9AF631A6292B200234F80 /* MHSaveRecordTableViewController.swift */,
-				A3B9AF5F1A62825400234F80 /* MHRingtonesTableViewController.swift */,
-				A3B9AF611A62834500234F80 /* MHDismissSegue.swift */,
 				A3B9AF461A625CCF00234F80 /* Images.xcassets */,
 				A3B9AF481A625CCF00234F80 /* LaunchScreen.xib */,
+				A3B9AF431A625CCF00234F80 /* Main.storyboard */,
+				A3B9AF611A62834500234F80 /* MHDismissSegue.swift */,
+				A39903DA1A63946D00CB5493 /* MHMeditation.swift */,
+				A3B9AF3F1A625CCF00234F80 /* MHMeditationViewController.swift */,
+				A3B9AF5F1A62825400234F80 /* MHRingtonesTableViewController.swift */,
+				A3B9AF631A6292B200234F80 /* MHSaveRecordTableViewController.swift */,
+				A3B9AF411A625CCF00234F80 /* MHSummaryViewController.swift */,
 				A3B9AF3B1A625CCF00234F80 /* Supporting Files */,
 			);
 			path = MeditationHelper;
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3B9AF601A62825400234F80 /* MHRingtonesTableViewController.swift in Sources */,
+				A39903DB1A63946D00CB5493 /* MHMeditation.swift in Sources */,
 				A3B9AF621A62834500234F80 /* MHDismissSegue.swift in Sources */,
 				A3B9AF641A6292B200234F80 /* MHSaveRecordTableViewController.swift in Sources */,
 				A3B9AF421A625CCF00234F80 /* MHSummaryViewController.swift in Sources */,
