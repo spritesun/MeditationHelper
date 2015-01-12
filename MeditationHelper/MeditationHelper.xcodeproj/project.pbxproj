@@ -66,6 +66,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A39903DC1A639CF500CB5493 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3B9AF461A625CCF00234F80 /* Images.xcassets */,
+				A3B9AF481A625CCF00234F80 /* LaunchScreen.xib */,
+				A3B9AF431A625CCF00234F80 /* Main.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		A3B9AF2F1A625CCF00234F80 = {
 			isa = PBXGroup;
 			children = (
@@ -90,15 +100,13 @@
 			isa = PBXGroup;
 			children = (
 				A3B9AF3D1A625CCF00234F80 /* AppDelegate.swift */,
-				A3B9AF461A625CCF00234F80 /* Images.xcassets */,
-				A3B9AF481A625CCF00234F80 /* LaunchScreen.xib */,
-				A3B9AF431A625CCF00234F80 /* Main.storyboard */,
 				A3B9AF611A62834500234F80 /* MHDismissSegue.swift */,
 				A39903DA1A63946D00CB5493 /* MHMeditation.swift */,
 				A3B9AF3F1A625CCF00234F80 /* MHMeditationViewController.swift */,
 				A3B9AF5F1A62825400234F80 /* MHRingtonesTableViewController.swift */,
 				A3B9AF631A6292B200234F80 /* MHSaveRecordTableViewController.swift */,
 				A3B9AF411A625CCF00234F80 /* MHSummaryViewController.swift */,
+				A39903DC1A639CF500CB5493 /* Resources */,
 				A3B9AF3B1A625CCF00234F80 /* Supporting Files */,
 			);
 			path = MeditationHelper;

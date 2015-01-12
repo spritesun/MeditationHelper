@@ -15,10 +15,10 @@ class MHSaveRecordTableViewController: UITableViewController {
   }
   
   @IBAction func cancel(sender: AnyObject) {
-    self.dismissViewControllerAnimated(true, completion: nil)
+    dismissViewControllerAnimated(true, completion: nil)
   }
   
   @IBAction func save(sender: AnyObject) {
-    self.dismissViewControllerAnimated(true, completion: nil)
+    dismissViewControllerAnimated(true, completion: nil)
   }
 }

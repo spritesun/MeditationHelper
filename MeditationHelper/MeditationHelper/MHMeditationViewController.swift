@@ -23,23 +23,28 @@ class MHMeditationViewController: UIViewController {
   }
   
   @IBAction func start(sender: AnyObject) {
-    self.startButton.hidden = true
-    self.stopButton.hidden = false
-    self.registerNotification()
-    self.meditation = MHMeditation()
+    startButton.hidden = true
+    stopButton.hidden = false
+    registerNotification()
+
+    meditation = MHMeditation()
+    meditation.start()
   }
   
   @IBAction func stop(sender: AnyObject) {
-    self.startButton.hidden = false
-    self.stopButton.hidden = true
-    self.clearNotifications()
-    let saveRecordNC = self.storyboard?.instantiateViewControllerWithIdentifier("MHSaveRecordNavigationController") as UINavigationController
-    self.presentViewController(saveRecordNC, animated: true, completion: nil)
+    startButton.hidden = false
+    stopButton.hidden = true
+    clearNotifications()
+    
+    meditation.stop()
+    
+    let saveRecordNC = storyboard?.instantiateViewControllerWithIdentifier("MHSaveRecordNavigationController") as UINavigationController
+    presentViewController(saveRecordNC, animated: true, completion: nil)
   }
   
   func registerNotification() {
     let notification = UILocalNotification()
-    notification.fireDate = NSDate(timeIntervalSinceNow: self.datePicker.countDownDuration)
+    notification.fireDate = NSDate(timeIntervalSinceNow: datePicker.countDownDuration)
     notification.alertBody = "請慢慢下座";
     notification.soundName = UILocalNotificationDefaultSoundName;
     UIApplication.sharedApplication().scheduleLocalNotification(notification)

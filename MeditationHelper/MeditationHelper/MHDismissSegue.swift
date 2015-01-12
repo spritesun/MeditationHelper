@@ -11,6 +11,6 @@ import UIKit
 @objc(MHDismissSegue)
 class MHDismissSegue: UIStoryboardSegue {
   override func perform() {
-    self.sourceViewController.dismissViewControllerAnimated(true, completion: nil)
+    sourceViewController.dismissViewControllerAnimated(true, completion: nil)
   }
 }

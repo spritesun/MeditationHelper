@@ -21,4 +21,13 @@ class MHMeditation {
   
   init()  {
   }
+  
+  func start() {
+    startTime = NSDate()
+  }
+  
+  func stop() {
+    endTime = NSDate()
+  }
+  
 }
