@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
     </dependencies>
     <scenes>
-        <!--禪修-->
+        <!--Meditation-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="MHMeditationViewController" customModule="MeditationHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" userLabel="Meditation" customClass="MHMeditationViewController" customModule="MeditationHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -16,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="2700" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWE-Zh-HY9">
-                                <rect key="frame" x="0.0" y="28" width="600" height="162"/>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="2700" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWE-Zh-HY9">
+                                <rect key="frame" x="0.0" y="29" width="600" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="442616400.96909302">
                                     <!--2015-01-10 21:00:00 +0000-->
                                 </date>
@@ -47,15 +48,19 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="禪修" image="meditate" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="controlButton" destination="83v-lb-IKx" id="tIQ-fb-P8R"/>
+                        <outlet property="datePicker" destination="SWE-Zh-HY9" id="leL-E8-W7v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--記錄禪修-->
+        <!--SaveRecord-->
         <scene sceneID="whu-d4-ANc">
             <objects>
-                <tableViewController storyboardIdentifier="MHSaveRecordTableViewController" id="8Kq-sB-w0z" customClass="MHSaveRecordTableViewController" customModule="MeditationHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MHSaveRecordTableViewController" id="8Kq-sB-w0z" userLabel="SaveRecord" customClass="MHSaveRecordTableViewController" customModule="MeditationHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="6Mt-7p-qWI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -256,10 +261,10 @@
             </objects>
             <point key="canvasLocation" x="1470" y="-311"/>
         </scene>
-        <!--報表-->
+        <!--History-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="MHSummaryViewController" customModule="MeditationHelper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" userLabel="History" customClass="MHSummaryViewController" customModule="MeditationHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -275,10 +280,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--設置-->
+        <!--Settings-->
         <scene sceneID="bPV-u1-wkx">
             <objects>
-                <tableViewController id="zXe-Vl-hcR" sceneMemberID="viewController">
+                <tableViewController id="zXe-Vl-hcR" userLabel="Settings" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="VXg-iJ-fAY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
