@@ -12,18 +12,24 @@ class MHMeditationViewController: UIViewController {
   
   @IBOutlet var datePicker: UIDatePicker!
   
-  @IBOutlet var controlButton: UIButton!
+  @IBOutlet var startButton: UIButton!
+  
+  @IBOutlet var stopButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
   }
   
   @IBAction func start(sender: AnyObject) {
-    UIApplication.sharedApplication().cancelAllLocalNotifications()
-    self.controlButton.selected = !self.controlButton.selected
+    self.startButton.hidden = true
+    self.stopButton.hidden = false
     self.registerNotification()
-    //    let saveRecordNC = self.storyboard?.instantiateViewControllerWithIdentifier("MHSaveRecordNavigationController") as UINavigationController
-    //    self.presentViewController(saveRecordNC, animated: true, completion: nil)
+  }
+  
+  @IBAction func stop(sender: AnyObject) {
+    self.clearNotifications()
+    let saveRecordNC = self.storyboard?.instantiateViewControllerWithIdentifier("MHSaveRecordNavigationController") as UINavigationController
+    self.presentViewController(saveRecordNC, animated: true, completion: nil)
   }
   
   func registerNotification() {
@@ -33,6 +39,10 @@ class MHMeditationViewController: UIViewController {
     notification.soundName = UILocalNotificationDefaultSoundName;
     UIApplication.sharedApplication().scheduleLocalNotification(notification)
     println("alarm ready")
+  }
+  
+  func clearNotifications() {
+    UIApplication.sharedApplication().cancelAllLocalNotifications()
   }
 }
 
