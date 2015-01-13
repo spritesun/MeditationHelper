@@ -21,6 +21,9 @@
 		A3B411FF1A64E26200F74BDC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B411FE1A64E26200F74BDC /* libsqlite3.dylib */; };
 		A3B412021A64E2B900F74BDC /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B412011A64E2B900F74BDC /* Parse.framework */; };
 		A3B412041A64E2C200F74BDC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B412031A64E2C200F74BDC /* Bolts.framework */; };
+		A3B4120B1A65CF1100F74BDC /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B4120A1A65CF1100F74BDC /* ParseCrashReporting.framework */; };
+		A3B4120D1A65D10500F74BDC /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B4120C1A65D10500F74BDC /* libstdc++.6.dylib */; };
+		A3B4120F1A65D12100F74BDC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B4120E1A65D12100F74BDC /* Accounts.framework */; };
 		A3B9AF3E1A625CCF00234F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF3D1A625CCF00234F80 /* AppDelegate.swift */; };
 		A3B9AF401A625CCF00234F80 /* MHMeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF3F1A625CCF00234F80 /* MHMeditationViewController.swift */; };
 		A3B9AF421A625CCF00234F80 /* MHSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF411A625CCF00234F80 /* MHSummaryViewController.swift */; };
@@ -59,6 +62,9 @@
 		A3B412011A64E2B900F74BDC /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		A3B412031A64E2C200F74BDC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		A3B412061A64E32200F74BDC /* MeditationHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MeditationHelper-Bridging-Header.h"; sourceTree = "<group>"; };
+		A3B4120A1A65CF1100F74BDC /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		A3B4120C1A65D10500F74BDC /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		A3B4120E1A65D12100F74BDC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A3B9AF381A625CCF00234F80 /* MeditationHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeditationHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B9AF3C1A625CCF00234F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3B9AF3D1A625CCF00234F80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,11 +86,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3B4120F1A65D12100F74BDC /* Accounts.framework in Frameworks */,
+				A3B4120D1A65D10500F74BDC /* libstdc++.6.dylib in Frameworks */,
 				A3B411FF1A64E26200F74BDC /* libsqlite3.dylib in Frameworks */,
 				A3B411FD1A64E25A00F74BDC /* libz.dylib in Frameworks */,
 				A3B411FB1A64E25400F74BDC /* SystemConfiguration.framework in Frameworks */,
 				A3B411F91A64E24F00F74BDC /* StoreKit.framework in Frameworks */,
 				A3B411F71A64E24800F74BDC /* Security.framework in Frameworks */,
+				A3B4120B1A65CF1100F74BDC /* ParseCrashReporting.framework in Frameworks */,
 				A3B411F51A64E24200F74BDC /* QuartzCore.framework in Frameworks */,
 				A3B411F31A64E23D00F74BDC /* MobileCoreServices.framework in Frameworks */,
 				A3B412041A64E2C200F74BDC /* Bolts.framework in Frameworks */,
@@ -119,8 +128,9 @@
 		A3B412001A64E29300F74BDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A3B412031A64E2C200F74BDC /* Bolts.framework */,
-				A3B412011A64E2B900F74BDC /* Parse.framework */,
+				A3B4120E1A65D12100F74BDC /* Accounts.framework */,
+				A3B4120C1A65D10500F74BDC /* libstdc++.6.dylib */,
+				A3B412091A65CEDA00F74BDC /* Parse */,
 				A3B411FE1A64E26200F74BDC /* libsqlite3.dylib */,
 				A3B411FC1A64E25A00F74BDC /* libz.dylib */,
 				A3B411FA1A64E25400F74BDC /* SystemConfiguration.framework */,
@@ -145,6 +155,16 @@
 				A3B9AF411A625CCF00234F80 /* MHSummaryViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A3B412091A65CEDA00F74BDC /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				A3B4120A1A65CF1100F74BDC /* ParseCrashReporting.framework */,
+				A3B412031A64E2C200F74BDC /* Bolts.framework */,
+				A3B412011A64E2B900F74BDC /* Parse.framework */,
+			);
+			name = Parse;
 			sourceTree = "<group>";
 		};
 		A3B9AF2F1A625CCF00234F80 = {

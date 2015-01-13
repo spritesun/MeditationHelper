@@ -15,9 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    ParseCrashReporting.enable()
     Parse.enableLocalDatastore()
     Parse.setApplicationId("bkhHMDxhsLutFJpJi2HhAvhgoaPC3k2f1DgopU7Y", clientKey: "6XwgHrOVVTm44VqCtqc4k079plmRPx9zkUoGUnI1")
     PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+    
     if(UIApplication.instancesRespondToSelector(Selector("registerUserNotificationSettings:")))
     {
       application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound | UIUserNotificationType.Alert, categories: nil))
