@@ -29,6 +29,9 @@ class MHMeditationViewController: UIViewController {
 
     meditation = MHMeditation()
     meditation.start()
+
+    PFAnalytics.trackEvent("startMeditation", dimensions: ["category": "mainUsage", "dayType": "weekday"])
+
   }
   
   @IBAction func stop(sender: AnyObject) {
