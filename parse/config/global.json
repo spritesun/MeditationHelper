@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "MeditationHelper": {
+            "applicationId": "bkhHMDxhsLutFJpJi2HhAvhgoaPC3k2f1DgopU7Y", 
+            "masterKey": "INljp0ULZIeRAwY7GgfG2CU2TamvwaGWXigXMele"
+        }, 
+        "_default": {
+            "link": "MeditationHelper"
+        }
+    }
+}

@@ -49,7 +49,7 @@ class MHMeditationViewController: UIViewController {
     let notification = UILocalNotification()
     notification.fireDate = NSDate(timeIntervalSinceNow: datePicker.countDownDuration)
     notification.alertBody = "請慢慢下座";
-    notification.soundName = UILocalNotificationDefaultSoundName;
+    notification.soundName = "tibetan-bell-low.caf";
     UIApplication.sharedApplication().scheduleLocalNotification(notification)
     println("alarm ready")
   }

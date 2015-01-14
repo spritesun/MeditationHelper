@@ -17,14 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="2700" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWE-Zh-HY9">
-                                <rect key="frame" x="0.0" y="29" width="600" height="162"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="2700" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWE-Zh-HY9">
+                                <rect key="frame" x="0.0" y="20" width="600" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="b5J-DW-l1B"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="442616400.96909302">
                                     <!--2015-01-10 21:00:00 +0000-->
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83v-lb-IKx" userLabel="start">
-                                <rect key="frame" x="268" y="268" width="64" height="64"/>
+                                <rect key="frame" x="268" y="387" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="kxv-78-jc1"/>
                                     <constraint firstAttribute="width" constant="64" id="lQu-SU-Zjr"/>
@@ -37,7 +40,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeM-eX-n1Z" userLabel="stop">
-                                <rect key="frame" x="268" y="268" width="64" height="64"/>
+                                <rect key="frame" x="268" y="387" width="64" height="64"/>
                                 <state key="normal" image="stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -48,13 +51,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="83v-lb-IKx" secondAttribute="bottom" constant="219" id="0Vy-Nk-0vN"/>
-                            <constraint firstItem="83v-lb-IKx" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="NU8-LF-szv"/>
-                            <constraint firstItem="jeM-eX-n1Z" firstAttribute="leading" secondItem="83v-lb-IKx" secondAttribute="leading" id="ZfW-q7-qPA"/>
-                            <constraint firstItem="SWE-Zh-HY9" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="aIF-AF-3an"/>
-                            <constraint firstItem="SWE-Zh-HY9" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" symbolic="YES" id="acT-F3-6OG"/>
-                            <constraint firstItem="jeM-eX-n1Z" firstAttribute="top" secondItem="83v-lb-IKx" secondAttribute="top" id="ifX-p3-nQW"/>
-                            <constraint firstAttribute="trailing" secondItem="SWE-Zh-HY9" secondAttribute="trailing" id="kBI-cX-hpi"/>
+                            <constraint firstItem="jeM-eX-n1Z" firstAttribute="centerX" secondItem="83v-lb-IKx" secondAttribute="centerX" id="4rT-HV-Bpc"/>
+                            <constraint firstAttribute="width" secondItem="SWE-Zh-HY9" secondAttribute="width" id="8YA-RR-8ZQ"/>
+                            <constraint firstItem="SWE-Zh-HY9" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="Tmk-yW-6hX"/>
+                            <constraint firstItem="SWE-Zh-HY9" firstAttribute="centerX" secondItem="83v-lb-IKx" secondAttribute="centerX" id="VzP-Qv-ewf"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="83v-lb-IKx" secondAttribute="bottom" constant="100" id="aDd-Wj-er4"/>
+                            <constraint firstAttribute="centerX" secondItem="83v-lb-IKx" secondAttribute="centerX" id="bqR-la-41g"/>
+                            <constraint firstItem="jeM-eX-n1Z" firstAttribute="centerY" secondItem="83v-lb-IKx" secondAttribute="centerY" id="zWp-bB-TSC"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="禪修" image="meditate" id="acW-dT-cKf"/>
