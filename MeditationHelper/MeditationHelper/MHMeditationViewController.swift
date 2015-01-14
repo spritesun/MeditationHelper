@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 Sunlong. All rights reserved.
 //
 
-import UIKit
-
 class MHMeditationViewController: UIViewController {
   
   @IBOutlet var datePicker: UIDatePicker!

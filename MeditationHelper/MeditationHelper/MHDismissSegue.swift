@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 Sunlong. All rights reserved.
 //
 
-import UIKit
-
 @objc(MHDismissSegue)
 class MHDismissSegue: UIStoryboardSegue {
   override func perform() {

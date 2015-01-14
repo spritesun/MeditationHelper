@@ -6,9 +6,6 @@
 //  Copyright (c) 2015 Sunlong. All rights reserved.
 //
 
-import UIKit
-import CoreLocation
-
 class MHMeditation {
   var startTime: NSDate!
   var endTime: NSDate?
