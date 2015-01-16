@@ -18,13 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Parse.setApplicationId("bkhHMDxhsLutFJpJi2HhAvhgoaPC3k2f1DgopU7Y", clientKey: "6XwgHrOVVTm44VqCtqc4k079plmRPx9zkUoGUnI1")
     PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil) // will cause another warnBlockingOperationOnMainThread()
 
-    PFUser.enableAutomaticUser()
-    var defaultACL = PFACL()
-    // Optionally enable public read access while disabling public write access.
-    // defaultACL.setPublicReadAccess(true)
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+    if (nil != PFUser.currentUser()) {
+      var defaultACL = PFACL()
       PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser:true)
-    })
+    }
     
     if(UIApplication.instancesRespondToSelector(Selector("registerUserNotificationSettings:")))
     {

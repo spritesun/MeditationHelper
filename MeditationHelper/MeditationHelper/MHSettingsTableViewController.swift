@@ -47,6 +47,7 @@ class MHSettingsTableViewController: UITableViewController, PFLogInViewControlle
   func logout() {
     PFUser.logOut()
     tableView.reloadData()
+    PFACL.setDefaultACL(nil, withAccessForCurrentUser:true)
   }
   
   // MARK: PFLogInViewControllerDelegate
@@ -71,6 +72,7 @@ class MHSettingsTableViewController: UITableViewController, PFLogInViewControlle
   func logInViewController(logInController: PFLogInViewController!, didLogInUser user: PFUser!) {
     dismissViewControllerAnimated(true, completion: {
       self.tableView.reloadData()
+      PFACL.setDefaultACL(PFACL(), withAccessForCurrentUser:true)
     })
   }
   
