@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Meditation-->
@@ -286,9 +287,26 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSO-Z9-Uy9">
+                                <rect key="frame" x="16" y="20" width="568" height="531"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="bSO-Z9-Uy9" secondAttribute="bottom" id="ALM-cY-o76"/>
+                            <constraint firstItem="bSO-Z9-Uy9" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="e1u-gp-HbZ"/>
+                            <constraint firstItem="bSO-Z9-Uy9" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="fkQ-AJ-lSb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bSO-Z9-Uy9" secondAttribute="trailing" id="yHW-pW-eTs"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="報表" image="list" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="historyContent" destination="bSO-Z9-Uy9" id="ezZ-Qx-Oax"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
