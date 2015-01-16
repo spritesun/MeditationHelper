@@ -136,6 +136,13 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		A3ABB8F81A68D6DA00914A0E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		A3B412001A64E29300F74BDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +215,7 @@
 				A3B9AF611A62834500234F80 /* MHDismissSegue.swift */,
 				A39903DA1A63946D00CB5493 /* MHMeditation.swift */,
 				A3B412051A64E2E700F74BDC /* Controllers */,
+				A3ABB8F81A68D6DA00914A0E /* Helpers */,
 				A39903DC1A639CF500CB5493 /* Resources */,
 				A3B9AF3B1A625CCF00234F80 /* Supporting Files */,
 				A3B412061A64E32200F74BDC /* MeditationHelper-Bridging-Header.h */,
@@ -441,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -478,7 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -498,7 +506,6 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MeditationHelper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -519,7 +526,6 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MeditationHelper/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
