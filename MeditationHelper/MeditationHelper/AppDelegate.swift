@@ -23,6 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser:true)
     }
     
+//    let query = MHMeditation.query()
+//    query.fromLocalDatastore()
+//    query.findObjectsInBackgroundWithBlock({ (meditations, error) -> Void in
+//      if error == nil {
+//        println("There is \(meditations.count) meditations not saved yet.\n\(meditations)")
+//      }
+//    })
+
     if(UIApplication.instancesRespondToSelector(Selector("registerUserNotificationSettings:")))
     {
       application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound | UIUserNotificationType.Alert, categories: nil))

@@ -10,25 +10,37 @@ class MHSettingsTableViewController: UITableViewController, PFLogInViewControlle
   
   // MARK: UITableViewDelegate & UITableViewDataSource
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+    return nil == PFUser.currentUser() ? 1 : 2
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    var cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsCell") as UITableViewCell
-    if (nil == PFUser.currentUser()) {
-      cell.textLabel?.text = "登入/註冊"
-      cell.detailTextLabel?.text = ""
-    } else {
-      cell.textLabel?.text = "登出"
-      cell.detailTextLabel?.text = PFUser.currentUser().username
+    var cell : UITableViewCell
+    switch indexPath.row {
+    case 0:
+      if nil == PFUser.currentUser() {
+        cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsLoginCell") as UITableViewCell
+      } else {
+        cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsLogoutCell") as UITableViewCell
+        cell.detailTextLabel?.text = PFUser.currentUser().username
+      }
+    case 1:
+      cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsUploadCell") as UITableViewCell
+    default:
+      cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsLoginCell") as UITableViewCell
     }
     return cell
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    if (indexPath.row == 0) {
-      (nil == PFUser.currentUser()) ? presentLogin() : logout()
+    switch indexPath.row {
+    case 0:
+      nil == PFUser.currentUser() ? presentLogin() : logout()
+    case 1:
+      upload()
+    default:
+      println("Should not go here")
     }
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
   
   // MARK: Login/Logout Cell
@@ -47,7 +59,27 @@ class MHSettingsTableViewController: UITableViewController, PFLogInViewControlle
   func logout() {
     PFUser.logOut()
     tableView.reloadData()
+    upload()
     PFACL.setDefaultACL(nil, withAccessForCurrentUser:true)
+  }
+  
+  // MARK: Upload
+  func upload() {
+    if nil != PFUser.currentUser() {
+      let query = MHMeditation.query()
+      query.fromLocalDatastore()
+      query.findObjectsInBackgroundWithBlock({ (meditations, error) -> Void in
+        if error == nil {
+          for meditation in meditations as [MHMeditation] {
+            meditation.saveEventually({ (successed, error) -> Void in
+              if successed {
+                meditation.unpinInBackground()
+              }
+            })
+          }
+        }
+      })
+    }
   }
   
   // MARK: PFLogInViewControllerDelegate
@@ -72,8 +104,18 @@ class MHSettingsTableViewController: UITableViewController, PFLogInViewControlle
   func logInViewController(logInController: PFLogInViewController!, didLogInUser user: PFUser!) {
     dismissViewControllerAnimated(true, completion: {
       self.tableView.reloadData()
-      PFACL.setDefaultACL(PFACL(), withAccessForCurrentUser:true)
     })
+    PFACL.setDefaultACL(PFACL(), withAccessForCurrentUser:true)
+    let query = MHMeditation.query()
+    query.fromLocalDatastore()
+    query.findObjectsInBackgroundWithBlock({ (meditations, error) -> Void in
+      if error == nil {
+        for meditation in meditations as [MHMeditation] {
+          meditation.ACL = PFACL(user: PFUser.currentUser())
+        }
+      }
+    })
+
   }
   
   func logInViewController(logInController: PFLogInViewController!, didFailToLogInWithError error: NSError!) {

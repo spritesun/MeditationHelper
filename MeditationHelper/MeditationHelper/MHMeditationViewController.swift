@@ -38,10 +38,16 @@ class MHMeditationViewController: UIViewController {
     clearNotifications()
     
     meditation.stop()
-    meditation.saveEventually()
+    if nil == PFUser.currentUser() {
+      meditation.pinInBackground()
+    } else {
+      meditation.saveEventually()//need more thoughts here
+    }
+    
    
     let alert = alertController("保存成功", message: "本次打坐: " + meditation.duration())
     self.presentViewController(alert, animated: true, completion: nil)
+    
 //    let saveRecordNC = storyboard?.instantiateViewControllerWithIdentifier("MHSaveRecordNavigationController") as UINavigationController
 //    presentViewController(saveRecordNC, animated: true, completion: nil)
   }
