@@ -6,17 +6,22 @@
 //  Copyright (c) 2015 Sunlong. All rights reserved.
 //
 
-class MHMeditation {
-  var startTime: NSDate!
-  var endTime: NSDate?
-  var rate = 0
-  var weather: String?
-  var locatoin: String?
-  var geocode: CLLocationCoordinate2D?
-  var tags = [String]()
-  var comment: String?
+class MHMeditation : PFObject, PFSubclassing, Printable {
+  @NSManaged var startTime: NSDate!
+  @NSManaged var endTime: NSDate!
+  @NSManaged var rate: Int
+  @NSManaged var weather: String!
+  @NSManaged var location: String!
+  @NSManaged var geocode: CLLocationCoordinate2D
+  @NSManaged var tags: [String]!
+  @NSManaged var comment: String!
   
-  init()  {
+  class override func load() {
+    self.registerSubclass()
+  }
+  
+  class func parseClassName() -> String! {
+    return "MHMeditation"
   }
   
   func start() {
@@ -25,6 +30,16 @@ class MHMeditation {
   
   func stop() {
     endTime = NSDate()
+    rate = 3
+    location = "家中"
   }
   
+  func duration() -> String {
+    return String((Int)(endTime.timeIntervalSinceDate(startTime) / 60) + 1) + "分鐘"
+  }
+  
+  override var description : String {
+    return "開始時間: \(startTime); 結束時間: \(endTime); 地點: \(location)"
+  }
+
 }
