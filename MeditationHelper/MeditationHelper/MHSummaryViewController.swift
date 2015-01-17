@@ -15,15 +15,22 @@ class MHSummaryViewController: UIViewController {
   }
   
   override func viewWillAppear(animated: Bool) {
-//    var query = MHMeditation.query()
-//    query.limit = 1000
-//    var meditations = query.findObjects()
-//    var history = ""
-//    for meditation in meditations {
-//      history += meditation.description
-//      history += "\n"
-//    }
-//    historyContent.text = history
+    var query = MHMeditation.query()
+    if !IJReachability.isConnectedToNetwork() {
+      query.fromLocalDatastore()
+    }
+    query.orderByDescending("endTime")
+    query.findObjectsInBackgroundWithBlock { (meditations, error) -> Void in
+      if error == nil {
+        var history = ""
+        for meditation in meditations {
+          history += meditation.description
+          history += "\n"
+        }
+        self.historyContent.text = history
+      }
+    }
+    
   }
 }
 

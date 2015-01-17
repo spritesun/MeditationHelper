@@ -29,3 +29,8 @@ PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser:true)
 - In-App Purchases for donations or even outside link for donation?
 - use https://github.com/Ramotion/animated-tab-bar for tab animation and sync finish animation
 - use https://github.com/dekatotoro/GoogleMaterialDesignIcons for images
+
+
+### known issue
+- parse saveEventually when offline and restart app, data missing information.
+- parse enableAutomaticUser does not work well with default acl, throw exception in too many place.

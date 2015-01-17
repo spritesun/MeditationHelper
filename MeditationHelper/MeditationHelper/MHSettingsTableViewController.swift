@@ -65,13 +65,13 @@ class MHSettingsTableViewController: UITableViewController, PFLogInViewControlle
   
   // MARK: Upload
   func upload() {
-    if nil != PFUser.currentUser() {
+    if IJReachability.isConnectedToNetwork() && nil != PFUser.currentUser() {
       let query = MHMeditation.query()
       query.fromLocalDatastore()
       query.findObjectsInBackgroundWithBlock({ (meditations, error) -> Void in
         if error == nil {
           for meditation in meditations as [MHMeditation] {
-            meditation.saveEventually({ (successed, error) -> Void in
+            meditation.saveInBackgroundWithBlock({ (successed, error) -> Void in
               if successed {
                 meditation.unpinInBackground()
               }

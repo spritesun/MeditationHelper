@@ -38,10 +38,13 @@ class MHMeditationViewController: UIViewController {
     clearNotifications()
     
     meditation.stop()
-    if nil == PFUser.currentUser() {
-      meditation.pinInBackground()
-    } else {
-      meditation.saveEventually()//need more thoughts here
+    meditation.pinInBackground()
+    if IJReachability.isConnectedToNetwork() && nil != PFUser.currentUser() {
+      meditation.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
+        if succeeded {
+          self.meditation.unpinInBackground()
+        }
+      })
     }
     
    

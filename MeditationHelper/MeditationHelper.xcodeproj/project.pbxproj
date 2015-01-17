@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A39903DB1A63946D00CB5493 /* MHMeditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39903DA1A63946D00CB5493 /* MHMeditation.swift */; };
+		A3ABB8FA1A6A8A9700914A0E /* IJReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ABB8F91A6A8A9700914A0E /* IJReachability.swift */; };
 		A3B411EB1A64E21200F74BDC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B411EA1A64E21200F74BDC /* AudioToolbox.framework */; };
 		A3B411ED1A64E21900F74BDC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B411EC1A64E21900F74BDC /* CFNetwork.framework */; };
 		A3B411EF1A64E23100F74BDC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B411EE1A64E23100F74BDC /* CoreGraphics.framework */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		A39903DA1A63946D00CB5493 /* MHMeditation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditation.swift; sourceTree = "<group>"; };
+		A3ABB8F91A6A8A9700914A0E /* IJReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IJReachability.swift; sourceTree = "<group>"; };
 		A3B411EA1A64E21200F74BDC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A3B411EC1A64E21900F74BDC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		A3B411EE1A64E23100F74BDC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -139,6 +141,7 @@
 		A3ABB8F81A68D6DA00914A0E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A3ABB8F91A6A8A9700914A0E /* IJReachability.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				A3B9AF421A625CCF00234F80 /* MHSummaryViewController.swift in Sources */,
 				A3B9AF3E1A625CCF00234F80 /* AppDelegate.swift in Sources */,
 				A3B9AF401A625CCF00234F80 /* MHMeditationViewController.swift in Sources */,
+				A3ABB8FA1A6A8A9700914A0E /* IJReachability.swift in Sources */,
 				A3B4121F1A6628AC00F74BDC /* MHSettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -39,7 +39,12 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
   }
   
   override var description : String {
-    return "開始時間: \(startTime); 結束時間: \(endTime); 地點: \(location)"
+    let dateFormatter = NSDateFormatter()
+    dateFormatter.locale = NSLocale(localeIdentifier: "zh_Hant")
+    dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+    dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+    let str = dateFormatter.stringFromDate(NSDate())
+    return "開始時間: \(dateFormatter.stringFromDate(startTime));\n結束時間: \(dateFormatter.stringFromDate(endTime));\n地點: \(location)\n\n"
   }
 
 }
