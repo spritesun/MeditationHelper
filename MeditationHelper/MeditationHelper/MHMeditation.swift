@@ -34,8 +34,9 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
     location = "家中"
   }
   
+  // Should be in meditation view model 
   func duration() -> String {
-    return String((Int)(endTime.timeIntervalSinceDate(startTime) / 60) + 1) + "分鐘"
+    return "\((Int)(endTime.timeIntervalSinceDate(startTime) / 60)) 分鐘"
   }
   
   override var description : String {

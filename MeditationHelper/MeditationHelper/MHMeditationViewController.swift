@@ -27,39 +27,22 @@ class MHMeditationViewController: UIViewController {
 
     meditation = MHMeditation()
     meditation.start()
-
-    PFAnalytics.trackEvent("startMeditation", dimensions: ["category": "mainUsage", "dayType": "weekday"])
-
   }
   
-  @IBAction func stop(sender: AnyObject) {
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "MHMeditationStop" {
+      self.stop()
+      let saveRecordVC = segue.destinationViewController.topViewController as MHSaveRecordTableViewController
+      saveRecordVC.meditation = meditation
+    }
+  }
+  
+  func stop() {
     startButton.hidden = false
     stopButton.hidden = true
     clearNotifications()
     
     meditation.stop()
-    meditation.pinInBackground()
-    if IJReachability.isConnectedToNetwork() && nil != PFUser.currentUser() {
-      meditation.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
-        if succeeded {
-          self.meditation.unpinInBackground()
-        }
-      })
-    }
-    
-   
-    let alert = alertController("保存成功", message: "本次打坐: " + meditation.duration())
-    self.presentViewController(alert, animated: true, completion: nil)
-    
-//    let saveRecordNC = storyboard?.instantiateViewControllerWithIdentifier("MHSaveRecordNavigationController") as UINavigationController
-//    presentViewController(saveRecordNC, animated: true, completion: nil)
-  }
-  
-  func alertController(title: String!, message:String!) -> UIAlertController {
-    let controller = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-    let OKAction = UIAlertAction(title: "OK", style: .Default) {action -> Void in}
-    controller.addAction(OKAction)
-    return controller
   }
   
   func registerNotification() {
