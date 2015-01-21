@@ -47,6 +47,7 @@ class MHSettingsTableViewController: UITableViewController, PFLogInViewControlle
   func presentLogin() {
     let logInViewController = PFLogInViewController()
     let logInlogoView = UIImageView(image: UIImage(named: "logo"))
+    logInlogoView.contentMode = UIViewContentMode.ScaleAspectFit
     logInViewController.logInView.logo = logInlogoView
     logInViewController.logInView.emailAsUsername = true
     logInViewController.delegate = self
