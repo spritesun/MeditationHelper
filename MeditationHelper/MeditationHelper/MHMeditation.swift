@@ -14,7 +14,16 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
   @NSManaged var location: String!
   @NSManaged var geocode: CLLocationCoordinate2D
   @NSManaged var tags: [String]!
-  @NSManaged var comment: String!
+  @NSManaged private var commentRaw: NSData!
+
+  var comment: String! {
+    get {
+      return NSString(data: commentRaw, encoding: NSUTF8StringEncoding)
+    }
+    set {
+      commentRaw = newValue.dataUsingEncoding(NSUTF8StringEncoding)
+    }
+  }
   
   class override func load() {
     self.registerSubclass()
