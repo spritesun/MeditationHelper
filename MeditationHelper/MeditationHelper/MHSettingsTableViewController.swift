@@ -45,10 +45,17 @@ class MHSettingsTableViewController: UITableViewController, PFLogInViewControlle
   
   // MARK: Login/Logout Cell
   func presentLogin() {
-    var logInViewController = PFLogInViewController()
+    let logInViewController = PFLogInViewController()
+    let logInlogoView = UIImageView(image: UIImage(named: "logo"))
+    logInViewController.logInView.logo = logInlogoView
+    logInViewController.logInView.emailAsUsername = true
     logInViewController.delegate = self
     
-    var signUpViewController = PFSignUpViewController()
+    let signUpViewController = PFSignUpViewController()
+    let signUplogoView = UIImageView(image: UIImage(named: "logo"))
+    signUplogoView.contentMode = UIViewContentMode.ScaleAspectFit
+    signUpViewController.signUpView.logo = signUplogoView
+    signUpViewController.signUpView.emailAsUsername = true
     signUpViewController.delegate = self
     
     logInViewController.signUpController = signUpViewController
