@@ -10,18 +10,21 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
   @NSManaged var startTime: NSDate!
   @NSManaged var endTime: NSDate!
   @NSManaged var rate: Int
-  @NSManaged var weather: String!
-  @NSManaged var location: String!
+  @NSManaged var weather: String?
+  @NSManaged var location: String?
   @NSManaged var geocode: CLLocationCoordinate2D
-  @NSManaged var tags: [String]!
-  @NSManaged private var commentRaw: NSData!
+  @NSManaged var tags: [String]?
+  @NSManaged private var commentRaw: NSData?
 
-  var comment: String! {
+  var comment: String? {
     get {
-      return NSString(data: commentRaw, encoding: NSUTF8StringEncoding)
+      if let commentRaw = self.commentRaw as NSData! {
+        return NSString(data:commentRaw, encoding: NSUTF8StringEncoding)
+      }
+      return Optional.None
     }
     set {
-      commentRaw = newValue.dataUsingEncoding(NSUTF8StringEncoding)
+      commentRaw = newValue?.dataUsingEncoding(NSUTF8StringEncoding)
     }
   }
   
@@ -54,7 +57,11 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
     dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
     dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
     let str = dateFormatter.stringFromDate(NSDate())
-    return "開始時間: \(dateFormatter.stringFromDate(startTime));\n結束時間: \(dateFormatter.stringFromDate(endTime));\n地點: \(location)\n\n"
+    var locationStr = ""
+    if location != nil {
+      locationStr = location!
+    }
+    return "開始時間: \(dateFormatter.stringFromDate(startTime))\n結束時間: \(dateFormatter.stringFromDate(endTime))\n地點: \(locationStr)\n天氣: \(weather)\n評分: \(rate)\n心得: \(comment)"
   }
 
 }

@@ -28,6 +28,8 @@
 		A38E2EA01A70B5D800ECD40E /* MHParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E2E9F1A70B5D800ECD40E /* MHParseManager.swift */; };
 		A38E2EA21A70BB2000ECD40E /* MHDebugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E2EA11A70BB2000ECD40E /* MHDebugger.swift */; };
 		A38E2EA41A70BBBE00ECD40E /* MHNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E2EA31A70BBBE00ECD40E /* MHNotificationManager.swift */; };
+		A38E2EA71A70BDF900ECD40E /* MHLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E2EA61A70BDF900ECD40E /* MHLogInViewController.swift */; };
+		A38E2EAB1A70CE0C00ECD40E /* MHMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E2EAA1A70CE0C00ECD40E /* MHMigrator.swift */; };
 		A39903DB1A63946D00CB5493 /* MHMeditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39903DA1A63946D00CB5493 /* MHMeditation.swift */; };
 		A3ABB8FA1A6A8A9700914A0E /* IJReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ABB8F91A6A8A9700914A0E /* IJReachability.swift */; };
 		A3B411EB1A64E21200F74BDC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B411EA1A64E21200F74BDC /* AudioToolbox.framework */; };
@@ -93,6 +95,8 @@
 		A38E2E9F1A70B5D800ECD40E /* MHParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHParseManager.swift; sourceTree = "<group>"; };
 		A38E2EA11A70BB2000ECD40E /* MHDebugger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHDebugger.swift; sourceTree = "<group>"; };
 		A38E2EA31A70BBBE00ECD40E /* MHNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHNotificationManager.swift; sourceTree = "<group>"; };
+		A38E2EA61A70BDF900ECD40E /* MHLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHLogInViewController.swift; sourceTree = "<group>"; };
+		A38E2EAA1A70CE0C00ECD40E /* MHMigrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMigrator.swift; sourceTree = "<group>"; };
 		A39903DA1A63946D00CB5493 /* MHMeditation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditation.swift; sourceTree = "<group>"; };
 		A3ABB8F91A6A8A9700914A0E /* IJReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IJReachability.swift; sourceTree = "<group>"; };
 		A3B411EA1A64E21200F74BDC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -231,6 +235,7 @@
 				A38E2E9F1A70B5D800ECD40E /* MHParseManager.swift */,
 				A38E2EA31A70BBBE00ECD40E /* MHNotificationManager.swift */,
 				A38E2EA11A70BB2000ECD40E /* MHDebugger.swift */,
+				A38E2EAA1A70CE0C00ECD40E /* MHMigrator.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				A3B9AF631A6292B200234F80 /* MHSaveRecordTableViewController.swift */,
 				A3B9AF411A625CCF00234F80 /* MHSummaryViewController.swift */,
 				A3B4121E1A6628AC00F74BDC /* MHSettingsTableViewController.swift */,
+				A38E2EA61A70BDF900ECD40E /* MHLogInViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 				A3330C2E1A6C8A2B001DF590 /* FormSwitchCell.swift in Sources */,
 				A3B9AF641A6292B200234F80 /* MHSaveRecordTableViewController.swift in Sources */,
 				A3330C291A6C8A2B001DF590 /* FormCheckCell.swift in Sources */,
+				A38E2EAB1A70CE0C00ECD40E /* MHMigrator.swift in Sources */,
 				A3330C261A6C8A2B001DF590 /* FormTitleCell.swift in Sources */,
 				A3B9AF421A625CCF00234F80 /* MHSummaryViewController.swift in Sources */,
 				A3330C361A6C8A2B001DF590 /* FormSectionDescriptor.swift in Sources */,
@@ -500,6 +507,7 @@
 				A3330C271A6C8A2B001DF590 /* FormValueCell.swift in Sources */,
 				A3B9AF3E1A625CCF00234F80 /* AppDelegate.swift in Sources */,
 				A3330C331A6C8A2B001DF590 /* FormViewController.swift in Sources */,
+				A38E2EA71A70BDF900ECD40E /* MHLogInViewController.swift in Sources */,
 				A3330C2C1A6C8A2B001DF590 /* FormSegmentedControlCell.swift in Sources */,
 				A3330C2B1A6C8A2B001DF590 /* FormPickerCell.swift in Sources */,
 				A3330C2F1A6C8A2B001DF590 /* FormTextFieldCell.swift in Sources */,
