@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55870EA1C2DC8AD4E4970F26 /* MHMeditationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558707F66F5E156EAD455CF6 /* MHMeditationListViewModel.swift */; };
 		A3330C251A6C8A2B001DF590 /* FormBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C111A6C8A2B001DF590 /* FormBaseCell.swift */; };
 		A3330C261A6C8A2B001DF590 /* FormTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C121A6C8A2B001DF590 /* FormTitleCell.swift */; };
 		A3330C271A6C8A2B001DF590 /* FormValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C131A6C8A2B001DF590 /* FormValueCell.swift */; };
@@ -25,11 +26,14 @@
 		A3330C341A6C8A2B001DF590 /* FormDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C221A6C8A2B001DF590 /* FormDescriptor.swift */; };
 		A3330C351A6C8A2B001DF590 /* FormRowDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C231A6C8A2B001DF590 /* FormRowDescriptor.swift */; };
 		A3330C361A6C8A2B001DF590 /* FormSectionDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C241A6C8A2B001DF590 /* FormSectionDescriptor.swift */; };
+		A36CCC101A7211BD00F035D3 /* MHMeditationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587024FC360C5E22EE6BF2E /* MHMeditationCell.swift */; };
+		A36CCC121A7212A700F035D3 /* MHMeditationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36CCC111A7212A700F035D3 /* MHMeditationViewModel.swift */; };
 		A38E2EA01A70B5D800ECD40E /* MHParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E2E9F1A70B5D800ECD40E /* MHParseManager.swift */; };
 		A38E2EA21A70BB2000ECD40E /* MHDebugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E2EA11A70BB2000ECD40E /* MHDebugger.swift */; };
 		A38E2EA41A70BBBE00ECD40E /* MHNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E2EA31A70BBBE00ECD40E /* MHNotificationManager.swift */; };
 		A38E2EA71A70BDF900ECD40E /* MHLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E2EA61A70BDF900ECD40E /* MHLogInViewController.swift */; };
 		A38E2EAB1A70CE0C00ECD40E /* MHMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E2EAA1A70CE0C00ECD40E /* MHMigrator.swift */; };
+		A38E2EAD1A71DB1900ECD40E /* MHMeditationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E2EAC1A71DB1900ECD40E /* MHMeditationListViewController.swift */; };
 		A39903DB1A63946D00CB5493 /* MHMeditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39903DA1A63946D00CB5493 /* MHMeditation.swift */; };
 		A3ABB8FA1A6A8A9700914A0E /* IJReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ABB8F91A6A8A9700914A0E /* IJReachability.swift */; };
 		A3B411EB1A64E21200F74BDC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B411EA1A64E21200F74BDC /* AudioToolbox.framework */; };
@@ -74,6 +78,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5587024FC360C5E22EE6BF2E /* MHMeditationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationCell.swift; sourceTree = "<group>"; };
+		558707F66F5E156EAD455CF6 /* MHMeditationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationListViewModel.swift; sourceTree = "<group>"; };
 		A3330C111A6C8A2B001DF590 /* FormBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormBaseCell.swift; sourceTree = "<group>"; };
 		A3330C121A6C8A2B001DF590 /* FormTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTitleCell.swift; sourceTree = "<group>"; };
 		A3330C131A6C8A2B001DF590 /* FormValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValueCell.swift; sourceTree = "<group>"; };
@@ -92,11 +98,13 @@
 		A3330C221A6C8A2B001DF590 /* FormDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDescriptor.swift; sourceTree = "<group>"; };
 		A3330C231A6C8A2B001DF590 /* FormRowDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormRowDescriptor.swift; sourceTree = "<group>"; };
 		A3330C241A6C8A2B001DF590 /* FormSectionDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSectionDescriptor.swift; sourceTree = "<group>"; };
+		A36CCC111A7212A700F035D3 /* MHMeditationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationViewModel.swift; sourceTree = "<group>"; };
 		A38E2E9F1A70B5D800ECD40E /* MHParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHParseManager.swift; sourceTree = "<group>"; };
 		A38E2EA11A70BB2000ECD40E /* MHDebugger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHDebugger.swift; sourceTree = "<group>"; };
 		A38E2EA31A70BBBE00ECD40E /* MHNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHNotificationManager.swift; sourceTree = "<group>"; };
 		A38E2EA61A70BDF900ECD40E /* MHLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHLogInViewController.swift; sourceTree = "<group>"; };
 		A38E2EAA1A70CE0C00ECD40E /* MHMigrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMigrator.swift; sourceTree = "<group>"; };
+		A38E2EAC1A71DB1900ECD40E /* MHMeditationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationListViewController.swift; sourceTree = "<group>"; };
 		A39903DA1A63946D00CB5493 /* MHMeditation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditation.swift; sourceTree = "<group>"; };
 		A3ABB8F91A6A8A9700914A0E /* IJReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IJReachability.swift; sourceTree = "<group>"; };
 		A3B411EA1A64E21200F74BDC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -289,8 +297,12 @@
 				A3B9AF3F1A625CCF00234F80 /* MHMeditationViewController.swift */,
 				A3B9AF631A6292B200234F80 /* MHSaveRecordTableViewController.swift */,
 				A3B9AF411A625CCF00234F80 /* MHSummaryViewController.swift */,
+				A38E2EAC1A71DB1900ECD40E /* MHMeditationListViewController.swift */,
+				A36CCC111A7212A700F035D3 /* MHMeditationViewModel.swift */,
 				A3B4121E1A6628AC00F74BDC /* MHSettingsTableViewController.swift */,
 				A38E2EA61A70BDF900ECD40E /* MHLogInViewController.swift */,
+				5587024FC360C5E22EE6BF2E /* MHMeditationCell.swift */,
+				558707F66F5E156EAD455CF6 /* MHMeditationListViewModel.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -497,9 +509,12 @@
 				A3330C281A6C8A2B001DF590 /* FormButtonCell.swift in Sources */,
 				A3330C2E1A6C8A2B001DF590 /* FormSwitchCell.swift in Sources */,
 				A3B9AF641A6292B200234F80 /* MHSaveRecordTableViewController.swift in Sources */,
+				A36CCC101A7211BD00F035D3 /* MHMeditationCell.swift in Sources */,
 				A3330C291A6C8A2B001DF590 /* FormCheckCell.swift in Sources */,
 				A38E2EAB1A70CE0C00ECD40E /* MHMigrator.swift in Sources */,
 				A3330C261A6C8A2B001DF590 /* FormTitleCell.swift in Sources */,
+				A36CCC121A7212A700F035D3 /* MHMeditationViewModel.swift in Sources */,
+				A38E2EAD1A71DB1900ECD40E /* MHMeditationListViewController.swift in Sources */,
 				A3B9AF421A625CCF00234F80 /* MHSummaryViewController.swift in Sources */,
 				A3330C361A6C8A2B001DF590 /* FormSectionDescriptor.swift in Sources */,
 				A38E2EA21A70BB2000ECD40E /* MHDebugger.swift in Sources */,
@@ -518,6 +533,7 @@
 				A3330C321A6C8A2B001DF590 /* FormSelector.swift in Sources */,
 				A3B4121F1A6628AC00F74BDC /* MHSettingsTableViewController.swift in Sources */,
 				A3330C351A6C8A2B001DF590 /* FormRowDescriptor.swift in Sources */,
+				55870EA1C2DC8AD4E4970F26 /* MHMeditationListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

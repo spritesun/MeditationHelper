@@ -38,7 +38,7 @@ class MHSettingsTableViewController: UITableViewController {
     case 1:
       upload()
     default:
-      println("Should not go here")
+      println("Should never go here")
     }
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
