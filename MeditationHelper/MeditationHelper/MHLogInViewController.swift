@@ -95,7 +95,7 @@ class MHLogInViewController: PFLogInViewController, PFLogInViewControllerDelegat
   }
   
   func signUpViewController(signUpController: PFSignUpViewController!, didSignUpUser user: PFUser!) {
-    dismissViewControllerAnimated(true, completion: reloadSettingsTable)
+    settingsVC?.dismissViewControllerAnimated(true, completion: reloadSettingsTable)
   }
   
   func signUpViewController(signUpController: PFSignUpViewController!, didFailToSignUpWithError error: NSError!) {

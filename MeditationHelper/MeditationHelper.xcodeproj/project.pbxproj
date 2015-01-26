@@ -55,7 +55,6 @@
 		A3B4121F1A6628AC00F74BDC /* MHSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B4121E1A6628AC00F74BDC /* MHSettingsTableViewController.swift */; };
 		A3B9AF3E1A625CCF00234F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF3D1A625CCF00234F80 /* AppDelegate.swift */; };
 		A3B9AF401A625CCF00234F80 /* MHMeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF3F1A625CCF00234F80 /* MHMeditationViewController.swift */; };
-		A3B9AF421A625CCF00234F80 /* MHSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF411A625CCF00234F80 /* MHSummaryViewController.swift */; };
 		A3B9AF451A625CCF00234F80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B9AF431A625CCF00234F80 /* Main.storyboard */; };
 		A3B9AF471A625CCF00234F80 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3B9AF461A625CCF00234F80 /* Images.xcassets */; };
 		A3B9AF4A1A625CCF00234F80 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3B9AF481A625CCF00234F80 /* LaunchScreen.xib */; };
@@ -130,7 +129,6 @@
 		A3B9AF3C1A625CCF00234F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3B9AF3D1A625CCF00234F80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3B9AF3F1A625CCF00234F80 /* MHMeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHMeditationViewController.swift; sourceTree = "<group>"; };
-		A3B9AF411A625CCF00234F80 /* MHSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHSummaryViewController.swift; sourceTree = "<group>"; };
 		A3B9AF441A625CCF00234F80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3B9AF461A625CCF00234F80 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A3B9AF491A625CCF00234F80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -296,7 +294,6 @@
 			children = (
 				A3B9AF3F1A625CCF00234F80 /* MHMeditationViewController.swift */,
 				A3B9AF631A6292B200234F80 /* MHSaveRecordTableViewController.swift */,
-				A3B9AF411A625CCF00234F80 /* MHSummaryViewController.swift */,
 				A38E2EAC1A71DB1900ECD40E /* MHMeditationListViewController.swift */,
 				A36CCC111A7212A700F035D3 /* MHMeditationViewModel.swift */,
 				A3B4121E1A6628AC00F74BDC /* MHSettingsTableViewController.swift */,
@@ -515,7 +512,6 @@
 				A3330C261A6C8A2B001DF590 /* FormTitleCell.swift in Sources */,
 				A36CCC121A7212A700F035D3 /* MHMeditationViewModel.swift in Sources */,
 				A38E2EAD1A71DB1900ECD40E /* MHMeditationListViewController.swift in Sources */,
-				A3B9AF421A625CCF00234F80 /* MHSummaryViewController.swift in Sources */,
 				A3330C361A6C8A2B001DF590 /* FormSectionDescriptor.swift in Sources */,
 				A38E2EA21A70BB2000ECD40E /* MHDebugger.swift in Sources */,
 				A38E2EA01A70B5D800ECD40E /* MHParseManager.swift in Sources */,

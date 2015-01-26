@@ -64,6 +64,14 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
     }    
   }
   
+  class func currentUserQuery() -> PFQuery {
+    var query = MHMeditation.query()
+    if nil == PFUser.currentUser() {
+      query.fromLocalDatastore()
+    }
+    return query;
+  }
+  
 //  override var description : String {
 //    let dateFormatter = NSDateFormatter()
 //    dateFormatter.locale = NSLocale(localeIdentifier: "zh_Hant")

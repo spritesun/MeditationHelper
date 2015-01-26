@@ -23,12 +23,9 @@ class MHMeditationListViewController: PFQueryTableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
   }
-
+  
   override func queryForTable() -> PFQuery! {
-    var query = MHMeditation.query()
-    if nil == PFUser.currentUser() {
-      query.fromLocalDatastore()
-    }
+    var query = MHMeditation.currentUserQuery()
     query.orderByDescending("endTime")
     return query
   }
@@ -70,6 +67,30 @@ class MHMeditationListViewController: PFQueryTableViewController {
     return viewModel.titleForSection(section)
   }
 
+  override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    return true
+  }
+
+  override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    if editingStyle == UITableViewCellEditingStyle.Delete {
+      var meditation = objectAtIndexPath(indexPath)
+      if nil == PFUser.currentUser() {
+        //unpin aysnc task, callback not been called properly everytime.
+        meditation.unpinInBackground()
+        println("==delete from local")
+        self.loadObjects()
+      } else {
+        //repeat delete same thing again and again seems be handle properly by Parse
+        meditation.deleteInBackgroundWithBlock({ (success, error) -> Void in
+          if success {
+            println("==delete from internet")
+            self.loadObjects()
+          }
+        })
+      }
+    }
+  }
+  
 //  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 //    super.tableView(tableView, didDeselectRowAtIndexPath: indexPath)
 //    let selectedObject = self.objectAtIndexPath(indexPath)
