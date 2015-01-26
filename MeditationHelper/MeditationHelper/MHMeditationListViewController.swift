@@ -26,6 +26,9 @@ class MHMeditationListViewController: PFQueryTableViewController {
 
   override func queryForTable() -> PFQuery! {
     var query = MHMeditation.query()
+    if nil == PFUser.currentUser() {
+      query.fromLocalDatastore()
+    }
     query.orderByDescending("endTime")
     return query
   }
