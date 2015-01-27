@@ -60,11 +60,13 @@
 		A3B9AF4A1A625CCF00234F80 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3B9AF481A625CCF00234F80 /* LaunchScreen.xib */; };
 		A3B9AF561A625CCF00234F80 /* MeditationHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF551A625CCF00234F80 /* MeditationHelperTests.swift */; };
 		A3B9AF621A62834500234F80 /* MHDismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF611A62834500234F80 /* MHDismissSegue.swift */; };
-		A3B9AF641A6292B200234F80 /* MHSaveRecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF631A6292B200234F80 /* MHSaveRecordTableViewController.swift */; };
+		A3B9AF641A6292B200234F80 /* MHMeditationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF631A6292B200234F80 /* MHMeditationDetailsViewController.swift */; };
 		A3E795DD1A6634790041636B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E795DC1A6634790041636B /* ParseUI.framework */; };
 		A3E795DF1A6635330041636B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E795DE1A6635330041636B /* Social.framework */; };
 		A3E795E11A6635370041636B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E795E01A6635370041636B /* Accounts.framework */; };
 		A3ED81831A77594A009FFBF5 /* MHNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ED81821A77594A009FFBF5 /* MHNotification.swift */; };
+		A3ED81871A775B9F009FFBF5 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ED81861A775B9F009FFBF5 /* FXForms.m */; };
+		A3ED81891A775C59009FFBF5 /* MHMeditationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ED81881A775C59009FFBF5 /* MHMeditationForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,11 +139,14 @@
 		A3B9AF541A625CCF00234F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3B9AF551A625CCF00234F80 /* MeditationHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHelperTests.swift; sourceTree = "<group>"; };
 		A3B9AF611A62834500234F80 /* MHDismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHDismissSegue.swift; sourceTree = "<group>"; };
-		A3B9AF631A6292B200234F80 /* MHSaveRecordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHSaveRecordTableViewController.swift; sourceTree = "<group>"; };
+		A3B9AF631A6292B200234F80 /* MHMeditationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationDetailsViewController.swift; sourceTree = "<group>"; };
 		A3E795DC1A6634790041636B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		A3E795DE1A6635330041636B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A3E795E01A6635370041636B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A3ED81821A77594A009FFBF5 /* MHNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHNotification.swift; sourceTree = "<group>"; };
+		A3ED81851A775B9F009FFBF5 /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXForms.h; sourceTree = "<group>"; };
+		A3ED81861A775B9F009FFBF5 /* FXForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXForms.m; sourceTree = "<group>"; };
+		A3ED81881A775C59009FFBF5 /* MHMeditationForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +245,8 @@
 		A38E2EA51A70BC4F00ECD40E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A3ED81821A77594A009FFBF5 /* MHNotification.swift */,
+				A3B9AF611A62834500234F80 /* MHDismissSegue.swift */,
 				A38E2E9F1A70B5D800ECD40E /* MHParseManager.swift */,
 				A38E2EA31A70BBBE00ECD40E /* MHNotificationManager.swift */,
 				A38E2EA11A70BB2000ECD40E /* MHDebugger.swift */,
@@ -263,6 +270,7 @@
 		A3ABB8F81A68D6DA00914A0E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				A3ED81841A775B91009FFBF5 /* FXForms */,
 				A3330C0E1A6C8A2B001DF590 /* SwiftForms */,
 				A3ABB8F91A6A8A9700914A0E /* IJReachability.swift */,
 			);
@@ -295,13 +303,10 @@
 			isa = PBXGroup;
 			children = (
 				A3B9AF3F1A625CCF00234F80 /* MHMeditationViewController.swift */,
-				A3B9AF631A6292B200234F80 /* MHSaveRecordTableViewController.swift */,
+				A3B9AF631A6292B200234F80 /* MHMeditationDetailsViewController.swift */,
 				A38E2EAC1A71DB1900ECD40E /* MHMeditationListViewController.swift */,
-				A36CCC111A7212A700F035D3 /* MHMeditationViewModel.swift */,
 				A3B4121E1A6628AC00F74BDC /* MHSettingsTableViewController.swift */,
 				A38E2EA61A70BDF900ECD40E /* MHLogInViewController.swift */,
-				5587024FC360C5E22EE6BF2E /* MHMeditationCell.swift */,
-				558707F66F5E156EAD455CF6 /* MHMeditationListViewModel.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -342,9 +347,9 @@
 			isa = PBXGroup;
 			children = (
 				A3B9AF3D1A625CCF00234F80 /* AppDelegate.swift */,
-				A3B9AF611A62834500234F80 /* MHDismissSegue.swift */,
-				A39903DA1A63946D00CB5493 /* MHMeditation.swift */,
-				A3ED81821A77594A009FFBF5 /* MHNotification.swift */,
+				A3ED818A1A78488D009FFBF5 /* Models */,
+				A3ED818B1A78489D009FFBF5 /* Views */,
+				A3ED818C1A7848B0009FFBF5 /* ViewModels */,
 				A3B412051A64E2E700F74BDC /* Controllers */,
 				A38E2EA51A70BC4F00ECD40E /* Helpers */,
 				A3ABB8F81A68D6DA00914A0E /* Libraries */,
@@ -378,6 +383,41 @@
 				A3B9AF541A625CCF00234F80 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3ED81841A775B91009FFBF5 /* FXForms */ = {
+			isa = PBXGroup;
+			children = (
+				A3ED81851A775B9F009FFBF5 /* FXForms.h */,
+				A3ED81861A775B9F009FFBF5 /* FXForms.m */,
+			);
+			name = FXForms;
+			sourceTree = "<group>";
+		};
+		A3ED818A1A78488D009FFBF5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A39903DA1A63946D00CB5493 /* MHMeditation.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A3ED818B1A78489D009FFBF5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5587024FC360C5E22EE6BF2E /* MHMeditationCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A3ED818C1A7848B0009FFBF5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				558707F66F5E156EAD455CF6 /* MHMeditationListViewModel.swift */,
+				A3ED81881A775C59009FFBF5 /* MHMeditationForm.swift */,
+				A36CCC111A7212A700F035D3 /* MHMeditationViewModel.swift */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,6 +540,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A39903DB1A63946D00CB5493 /* MHMeditation.swift in Sources */,
+				A3ED81891A775C59009FFBF5 /* MHMeditationForm.swift in Sources */,
+				A3ED81871A775B9F009FFBF5 /* FXForms.m in Sources */,
 				A3330C251A6C8A2B001DF590 /* FormBaseCell.swift in Sources */,
 				A3ED81831A77594A009FFBF5 /* MHNotification.swift in Sources */,
 				A3330C341A6C8A2B001DF590 /* FormDescriptor.swift in Sources */,
@@ -509,7 +551,7 @@
 				A3330C2D1A6C8A2B001DF590 /* FormSelectorCell.swift in Sources */,
 				A3330C281A6C8A2B001DF590 /* FormButtonCell.swift in Sources */,
 				A3330C2E1A6C8A2B001DF590 /* FormSwitchCell.swift in Sources */,
-				A3B9AF641A6292B200234F80 /* MHSaveRecordTableViewController.swift in Sources */,
+				A3B9AF641A6292B200234F80 /* MHMeditationDetailsViewController.swift in Sources */,
 				A36CCC101A7211BD00F035D3 /* MHMeditationCell.swift in Sources */,
 				A3330C291A6C8A2B001DF590 /* FormCheckCell.swift in Sources */,
 				A38E2EAB1A70CE0C00ECD40E /* MHMigrator.swift in Sources */,

@@ -99,7 +99,7 @@ class MHMeditationListViewController: PFQueryTableViewController {
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "MHMeditationEdit" {
-      let saveRecordVC = segue.destinationViewController as MHSaveRecordTableViewController
+      let saveRecordVC = segue.destinationViewController as MHMeditationDetailsViewController
       saveRecordVC.meditation = objectAtIndexPath(tableView.indexPathForSelectedRow()) as MHMeditation
       saveRecordVC.isEditingMode = true
     }

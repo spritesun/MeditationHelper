@@ -72,26 +72,6 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--SaveRecord-->
-        <scene sceneID="whu-d4-ANc">
-            <objects>
-                <tableViewController storyboardIdentifier="MHSaveRecordTableViewController" id="8Kq-sB-w0z" userLabel="SaveRecord" customClass="MHSaveRecordTableViewController" customModule="MeditationHelper" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="6Mt-7p-qWI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="8Kq-sB-w0z" id="bJQ-EV-Ozj"/>
-                            <outlet property="delegate" destination="8Kq-sB-w0z" id="CgZ-Jq-llf"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="Ff1-Sr-kSt"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q2i-qg-hg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2195" y="-311"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="HSO-1O-OVi">
             <objects>
@@ -101,12 +81,31 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="8Kq-sB-w0z" kind="relationship" relationship="rootViewController" id="rZx-A3-YA8"/>
+                        <segue destination="P2P-h9-WfC" kind="relationship" relationship="rootViewController" id="3IH-t7-xXO"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ckw-jV-Sir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1470" y="-311"/>
+        </scene>
+        <!--Meditation Details View Controller-->
+        <scene sceneID="g3F-R4-wMc">
+            <objects>
+                <viewController id="P2P-h9-WfC" customClass="MHMeditationDetailsViewController" customModule="MeditationHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FSt-Ah-NGr"/>
+                        <viewControllerLayoutGuide type="bottom" id="H9p-MK-Bfu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hmp-6P-wlE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CY3-mO-ju7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DUR-Gy-owy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2262" y="-311"/>
         </scene>
         <!--日記-->
         <scene sceneID="1wr-KU-LQU">
@@ -201,7 +200,7 @@
                                     <outlet property="rate" destination="Cdu-9S-WIT" id="LPQ-lR-dx7"/>
                                     <outlet property="timeRange" destination="ug7-tN-NxQ" id="B0v-3P-Aso"/>
                                     <outlet property="weather" destination="vvS-MN-C02" id="ZOP-er-xnG"/>
-                                    <segue destination="8Kq-sB-w0z" kind="show" identifier="MHMeditationEdit" id="ek5-KG-luC"/>
+                                    <segue destination="P2P-h9-WfC" kind="show" identifier="MHMeditationEdit" id="KOB-3u-clP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -332,6 +331,6 @@
         <image name="stop" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ek5-KG-luC"/>
+        <segue reference="KOB-3u-clP"/>
     </inferredMetricsTieBreakers>
 </document>
