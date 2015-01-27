@@ -18,8 +18,14 @@ class MHMeditationListViewController: PFQueryTableViewController {
     dateFormatter.locale = NSLocale(localeIdentifier: "zh_Hant")
     dateFormatter.dateStyle = NSDateFormatterStyle.NoStyle
     dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+    
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadObjects", name: MHNotification.MeditationDidUpdate, object: nil)
   }
 
+  deinit {
+    NSNotificationCenter.defaultCenter().removeObserver(self)
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
@@ -91,9 +97,12 @@ class MHMeditationListViewController: PFQueryTableViewController {
     }
   }
   
-//  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//    super.tableView(tableView, didDeselectRowAtIndexPath: indexPath)
-//    let selectedObject = self.objectAtIndexPath(indexPath)
-//  }
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "MHMeditationEdit" {
+      let saveRecordVC = segue.destinationViewController as MHSaveRecordTableViewController
+      saveRecordVC.meditation = objectAtIndexPath(tableView.indexPathForSelectedRow()) as MHMeditation
+      saveRecordVC.isEditingMode = true
+    }
+  }
 
 }

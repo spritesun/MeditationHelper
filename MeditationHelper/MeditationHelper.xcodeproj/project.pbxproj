@@ -64,6 +64,7 @@
 		A3E795DD1A6634790041636B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E795DC1A6634790041636B /* ParseUI.framework */; };
 		A3E795DF1A6635330041636B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E795DE1A6635330041636B /* Social.framework */; };
 		A3E795E11A6635370041636B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E795E01A6635370041636B /* Accounts.framework */; };
+		A3ED81831A77594A009FFBF5 /* MHNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ED81821A77594A009FFBF5 /* MHNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,7 @@
 		A3E795DC1A6634790041636B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		A3E795DE1A6635330041636B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A3E795E01A6635370041636B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		A3ED81821A77594A009FFBF5 /* MHNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +344,7 @@
 				A3B9AF3D1A625CCF00234F80 /* AppDelegate.swift */,
 				A3B9AF611A62834500234F80 /* MHDismissSegue.swift */,
 				A39903DA1A63946D00CB5493 /* MHMeditation.swift */,
+				A3ED81821A77594A009FFBF5 /* MHNotification.swift */,
 				A3B412051A64E2E700F74BDC /* Controllers */,
 				A38E2EA51A70BC4F00ECD40E /* Helpers */,
 				A3ABB8F81A68D6DA00914A0E /* Libraries */,
@@ -498,6 +501,7 @@
 			files = (
 				A39903DB1A63946D00CB5493 /* MHMeditation.swift in Sources */,
 				A3330C251A6C8A2B001DF590 /* FormBaseCell.swift in Sources */,
+				A3ED81831A77594A009FFBF5 /* MHNotification.swift in Sources */,
 				A3330C341A6C8A2B001DF590 /* FormDescriptor.swift in Sources */,
 				A3330C311A6C8A2B001DF590 /* FormOptionsSelectorController.swift in Sources */,
 				A38E2EA41A70BBBE00ECD40E /* MHNotificationManager.swift in Sources */,

@@ -86,22 +86,11 @@
                             <outlet property="delegate" destination="8Kq-sB-w0z" id="CgZ-Jq-llf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ff1-Sr-kSt">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="46d-iU-MtM">
-                            <connections>
-                                <action selector="cancel:" destination="8Kq-sB-w0z" id="7ef-sx-uKv"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nnn-AF-IGf">
-                            <connections>
-                                <action selector="save:" destination="8Kq-sB-w0z" id="UMI-M9-iwf"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Ff1-Sr-kSt"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2i-qg-hg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2158" y="-311"/>
+            <point key="canvasLocation" x="2195" y="-311"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HSO-1O-OVi">
@@ -139,25 +128,25 @@
                                                 <constraint firstAttribute="height" constant="75" id="UPi-YN-mxu"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRl-HO-SKr">
                                             <rect key="frame" x="18" y="90" width="49" height="21"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvS-MN-C02">
                                             <rect key="frame" x="88" y="90" width="46" height="21"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate: 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdu-9S-WIT">
                                             <rect key="frame" x="154" y="90" width="40" height="21"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00-11:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug7-tN-NxQ">
@@ -166,7 +155,7 @@
                                                 <constraint firstAttribute="width" constant="150" id="vH6-ec-alL"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oG-ad-jJ0">
@@ -176,7 +165,7 @@
                                                 <constraint firstAttribute="width" constant="68" id="TaB-Xe-rw7"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -212,6 +201,7 @@
                                     <outlet property="rate" destination="Cdu-9S-WIT" id="LPQ-lR-dx7"/>
                                     <outlet property="timeRange" destination="ug7-tN-NxQ" id="B0v-3P-Aso"/>
                                     <outlet property="weather" destination="vvS-MN-C02" id="ZOP-er-xnG"/>
+                                    <segue destination="8Kq-sB-w0z" kind="show" identifier="MHMeditationEdit" id="ek5-KG-luC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -341,4 +331,7 @@
         <image name="setting" width="25" height="25"/>
         <image name="stop" width="64" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ek5-KG-luC"/>
+    </inferredMetricsTieBreakers>
 </document>

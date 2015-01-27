@@ -17,6 +17,7 @@ class MHSaveRecordTableViewController: FormViewController, FormViewControllerDel
   }
   
   var meditation: MHMeditation!
+  var isEditingMode = false
   
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -25,16 +26,33 @@ class MHSaveRecordTableViewController: FormViewController, FormViewControllerDel
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    if isEditingMode {
+      navigationItem.hidesBackButton = false
+      title = "修改禪修記錄"
+    } else {
+      navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("cancel"))
+      navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: Selector("save"))
+      title = "保存禪修記錄"
+    }
+    
     delegate = self;
     setValue(meditation.duration(), forTag: FormTag.duration)
-    setValue(3, forTag: FormTag.rate)
+
+    setValue(meditation.location ?? "", forTag: FormTag.location)
+    setValue(meditation.weather ?? "", forTag: FormTag.weather)
+    setValue(meditation.rate, forTag: FormTag.rate)
+    setValue(meditation.comment ?? "", forTag: FormTag.comment)
+  }
+  override func viewWillDisappear(animated: Bool) {
+    save()
+    super.viewWillDisappear(animated)
   }
   
-  @IBAction func cancel(sender: AnyObject) {
+  func cancel() {
     dismissViewControllerAnimated(true, completion: nil)
   }
   
-  @IBAction func save(sender: AnyObject) {
+  func save() {
     let values = self.form.formValues()
     meditation.location = values[FormTag.location] as? String
     meditation.weather = values[FormTag.weather] as? String
@@ -50,7 +68,11 @@ class MHSaveRecordTableViewController: FormViewController, FormViewControllerDel
       })
     }
     
-    dismissViewControllerAnimated(true, completion: nil)
+    NSNotificationCenter.defaultCenter().postNotificationName(MHNotification.MeditationDidUpdate, object: nil)
+    
+    if !isEditingMode {
+      dismissViewControllerAnimated(true, completion: nil)
+    }
   }
   
   // MARK: Private interface
@@ -59,7 +81,7 @@ class MHSaveRecordTableViewController: FormViewController, FormViewControllerDel
     
     let form = FormDescriptor()
     
-    form.title = "保存禪修記錄"
+    form.title = title
     
     let section1 = FormSectionDescriptor()
     
@@ -80,7 +102,10 @@ class MHSaveRecordTableViewController: FormViewController, FormViewControllerDel
     let section3 = FormSectionDescriptor()
     
     row = FormRowDescriptor(tag: FormTag.rate, rowType: .SegmentedControl, title: "評分")
-    row.configuration[FormRowDescriptor.Configuration.Options] = [1, 2, 3, 4, 5]
+    row.configuration[FormRowDescriptor.Configuration.Options] = [1, 2 ,3 ,4 ,5 ]
+    row.configuration[FormRowDescriptor.Configuration.TitleFormatterClosure] = { value in
+      return "  \(value)  "
+      } as TitleFormatterClosure
     section3.addRow(row)
     
     row = FormRowDescriptor(tag: FormTag.comment, rowType: .MultilineText, title: "心得")
