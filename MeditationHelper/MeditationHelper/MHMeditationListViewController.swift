@@ -10,6 +10,7 @@ class MHMeditationListViewController: PFQueryTableViewController {
 
   var viewModel = MHMeditationListViewModel(meditations: [MHMeditation]())
   var dateFormatter = NSDateFormatter()
+  var needRefresh = false
 
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -19,8 +20,7 @@ class MHMeditationListViewController: PFQueryTableViewController {
     dateFormatter.dateStyle = NSDateFormatterStyle.NoStyle
     dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
 
-    //post notification approach work well for edit but not create, edit will refresh, create not.
-//    NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadObjects", name: MHNotification.MeditationDidUpdate, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "markAsNeedRefresh", name: MHNotification.MeditationDidUpdate, object: nil)
   }
 
   deinit {
@@ -33,8 +33,14 @@ class MHMeditationListViewController: PFQueryTableViewController {
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
-    
-    loadObjects()
+    if needRefresh {
+      loadObjects()
+      needRefresh = false
+    }
+  }
+  
+  func markAsNeedRefresh() {
+    needRefresh = true
   }
   
   override func queryForTable() -> PFQuery! {
