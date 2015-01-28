@@ -18,8 +18,9 @@ class MHMeditationListViewController: PFQueryTableViewController {
     dateFormatter.locale = NSLocale(localeIdentifier: "zh_Hant")
     dateFormatter.dateStyle = NSDateFormatterStyle.NoStyle
     dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
-    
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadObjects", name: MHNotification.MeditationDidUpdate, object: nil)
+
+    //post notification approach work well for edit but not create, edit will refresh, create not.
+//    NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadObjects", name: MHNotification.MeditationDidUpdate, object: nil)
   }
 
   deinit {
@@ -28,6 +29,12 @@ class MHMeditationListViewController: PFQueryTableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    loadObjects()
   }
   
   override func queryForTable() -> PFQuery! {

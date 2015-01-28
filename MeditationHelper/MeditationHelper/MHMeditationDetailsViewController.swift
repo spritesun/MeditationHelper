@@ -44,7 +44,9 @@ class MHMeditationDetailsViewController: FXFormViewController {
   }
   
   override func viewWillDisappear(animated: Bool) {
-    save()
+    if isEditingMode {
+      save()
+    }
     super.viewWillDisappear(animated)
   }
   
@@ -68,7 +70,7 @@ class MHMeditationDetailsViewController: FXFormViewController {
       })
     }
     
-    NSNotificationCenter.defaultCenter().postNotificationName(MHNotification.MeditationDidUpdate, object: nil)
+//    NSNotificationCenter.defaultCenter().postNotificationName(MHNotification.MeditationDidUpdate, object: nil)
 
     if !isEditingMode {
       dismissViewControllerAnimated(true, completion: nil)
