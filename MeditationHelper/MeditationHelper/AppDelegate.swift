@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //    MHDebugger.printLocalMeditaions()
     MHNotificationManager.setup()
     MHMigrator.migrate()
+    MHTheme.setup(window)
     
     return true
   }

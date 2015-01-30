@@ -32,7 +32,7 @@ class MHMeditationViewController: UIViewController {
       lastCountDown = 45 * TimeUtil.Minute
     }
 
-    hourControl.color = UIColor.darkGrayColor()
+    hourControl.color = MHTheme.mainBgColor
     hourControl.maxValue = 12
     hourControl.minutesOrSeconds = TimeUtil.hoursOf(lastCountDown)
     hourControl.titleLabel.text = "時"
@@ -43,7 +43,7 @@ class MHMeditationViewController: UIViewController {
     minControl.titleLabel.text = "分"
     
     secControl.type = DDHTimerType.Solid
-    secControl.color = UIColor.grayColor()
+    secControl.color = UIColor.purpleColor()
     secControl.minutesOrSeconds = 59
     secControl.titleLabel.text = "秒"
   }

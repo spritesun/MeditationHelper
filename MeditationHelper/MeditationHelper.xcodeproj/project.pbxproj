@@ -62,6 +62,7 @@
 		A3B9AF621A62834500234F80 /* MHDismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF611A62834500234F80 /* MHDismissSegue.swift */; };
 		A3B9AF641A6292B200234F80 /* MHMeditationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF631A6292B200234F80 /* MHMeditationDetailsViewController.swift */; };
 		A3CB54FF1A7B4E3D008AA04E /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB54FE1A7B4E3D008AA04E /* TimeUtil.swift */; };
+		A3CB55011A7B512B008AA04E /* MHTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB55001A7B512B008AA04E /* MHTheme.swift */; };
 		A3E795DD1A6634790041636B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E795DC1A6634790041636B /* ParseUI.framework */; };
 		A3E795DF1A6635330041636B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E795DE1A6635330041636B /* Social.framework */; };
 		A3E795E11A6635370041636B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E795E01A6635370041636B /* Accounts.framework */; };
@@ -143,6 +144,7 @@
 		A3B9AF611A62834500234F80 /* MHDismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHDismissSegue.swift; sourceTree = "<group>"; };
 		A3B9AF631A6292B200234F80 /* MHMeditationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationDetailsViewController.swift; sourceTree = "<group>"; };
 		A3CB54FE1A7B4E3D008AA04E /* TimeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtil.swift; sourceTree = "<group>"; };
+		A3CB55001A7B512B008AA04E /* MHTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHTheme.swift; sourceTree = "<group>"; };
 		A3E795DC1A6634790041636B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		A3E795DE1A6635330041636B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A3E795E01A6635370041636B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				A3ED81821A77594A009FFBF5 /* MHNotification.swift */,
+				A3CB55001A7B512B008AA04E /* MHTheme.swift */,
 				A3CB54FE1A7B4E3D008AA04E /* TimeUtil.swift */,
 				A3B9AF611A62834500234F80 /* MHDismissSegue.swift */,
 				A38E2E9F1A70B5D800ECD40E /* MHParseManager.swift */,
@@ -579,6 +582,7 @@
 				A38E2EA21A70BB2000ECD40E /* MHDebugger.swift in Sources */,
 				A38E2EA01A70B5D800ECD40E /* MHParseManager.swift in Sources */,
 				A3330C271A6C8A2B001DF590 /* FormValueCell.swift in Sources */,
+				A3CB55011A7B512B008AA04E /* MHTheme.swift in Sources */,
 				A3B9AF3E1A625CCF00234F80 /* AppDelegate.swift in Sources */,
 				A3330C331A6C8A2B001DF590 /* FormViewController.swift in Sources */,
 				A38E2EA71A70BDF900ECD40E /* MHLogInViewController.swift in Sources */,
