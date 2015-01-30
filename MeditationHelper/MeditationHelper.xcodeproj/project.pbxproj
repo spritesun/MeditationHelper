@@ -61,12 +61,14 @@
 		A3B9AF561A625CCF00234F80 /* MeditationHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF551A625CCF00234F80 /* MeditationHelperTests.swift */; };
 		A3B9AF621A62834500234F80 /* MHDismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF611A62834500234F80 /* MHDismissSegue.swift */; };
 		A3B9AF641A6292B200234F80 /* MHMeditationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9AF631A6292B200234F80 /* MHMeditationDetailsViewController.swift */; };
+		A3CB54FF1A7B4E3D008AA04E /* TimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CB54FE1A7B4E3D008AA04E /* TimeUtil.swift */; };
 		A3E795DD1A6634790041636B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E795DC1A6634790041636B /* ParseUI.framework */; };
 		A3E795DF1A6635330041636B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E795DE1A6635330041636B /* Social.framework */; };
 		A3E795E11A6635370041636B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E795E01A6635370041636B /* Accounts.framework */; };
 		A3ED81831A77594A009FFBF5 /* MHNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ED81821A77594A009FFBF5 /* MHNotification.swift */; };
 		A3ED81871A775B9F009FFBF5 /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ED81861A775B9F009FFBF5 /* FXForms.m */; };
 		A3ED81891A775C59009FFBF5 /* MHMeditationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ED81881A775C59009FFBF5 /* MHMeditationForm.swift */; };
+		A3ED81C91A7A02E2009FFBF5 /* DDHTimerControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A3ED81C81A7A02E2009FFBF5 /* DDHTimerControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +142,7 @@
 		A3B9AF551A625CCF00234F80 /* MeditationHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationHelperTests.swift; sourceTree = "<group>"; };
 		A3B9AF611A62834500234F80 /* MHDismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHDismissSegue.swift; sourceTree = "<group>"; };
 		A3B9AF631A6292B200234F80 /* MHMeditationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationDetailsViewController.swift; sourceTree = "<group>"; };
+		A3CB54FE1A7B4E3D008AA04E /* TimeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtil.swift; sourceTree = "<group>"; };
 		A3E795DC1A6634790041636B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		A3E795DE1A6635330041636B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A3E795E01A6635370041636B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -147,6 +150,8 @@
 		A3ED81851A775B9F009FFBF5 /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXForms.h; sourceTree = "<group>"; };
 		A3ED81861A775B9F009FFBF5 /* FXForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXForms.m; sourceTree = "<group>"; };
 		A3ED81881A775C59009FFBF5 /* MHMeditationForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationForm.swift; sourceTree = "<group>"; };
+		A3ED81C71A7A02E2009FFBF5 /* DDHTimerControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHTimerControl.h; sourceTree = "<group>"; };
+		A3ED81C81A7A02E2009FFBF5 /* DDHTimerControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHTimerControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				A3ED81821A77594A009FFBF5 /* MHNotification.swift */,
+				A3CB54FE1A7B4E3D008AA04E /* TimeUtil.swift */,
 				A3B9AF611A62834500234F80 /* MHDismissSegue.swift */,
 				A38E2E9F1A70B5D800ECD40E /* MHParseManager.swift */,
 				A38E2EA31A70BBBE00ECD40E /* MHNotificationManager.swift */,
@@ -270,6 +276,7 @@
 		A3ABB8F81A68D6DA00914A0E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				A3ED81C61A7A02E2009FFBF5 /* DDHTimerControl */,
 				A3ED81841A775B91009FFBF5 /* FXForms */,
 				A3330C0E1A6C8A2B001DF590 /* SwiftForms */,
 				A3ABB8F91A6A8A9700914A0E /* IJReachability.swift */,
@@ -420,6 +427,15 @@
 			name = ViewModels;
 			sourceTree = "<group>";
 		};
+		A3ED81C61A7A02E2009FFBF5 /* DDHTimerControl */ = {
+			isa = PBXGroup;
+			children = (
+				A3ED81C71A7A02E2009FFBF5 /* DDHTimerControl.h */,
+				A3ED81C81A7A02E2009FFBF5 /* DDHTimerControl.m */,
+			);
+			path = DDHTimerControl;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -547,6 +563,7 @@
 				A3330C341A6C8A2B001DF590 /* FormDescriptor.swift in Sources */,
 				A3330C311A6C8A2B001DF590 /* FormOptionsSelectorController.swift in Sources */,
 				A38E2EA41A70BBBE00ECD40E /* MHNotificationManager.swift in Sources */,
+				A3CB54FF1A7B4E3D008AA04E /* TimeUtil.swift in Sources */,
 				A3B9AF621A62834500234F80 /* MHDismissSegue.swift in Sources */,
 				A3330C2D1A6C8A2B001DF590 /* FormSelectorCell.swift in Sources */,
 				A3330C281A6C8A2B001DF590 /* FormButtonCell.swift in Sources */,
@@ -567,6 +584,7 @@
 				A38E2EA71A70BDF900ECD40E /* MHLogInViewController.swift in Sources */,
 				A3330C2C1A6C8A2B001DF590 /* FormSegmentedControlCell.swift in Sources */,
 				A3330C2B1A6C8A2B001DF590 /* FormPickerCell.swift in Sources */,
+				A3ED81C91A7A02E2009FFBF5 /* DDHTimerControl.m in Sources */,
 				A3330C2F1A6C8A2B001DF590 /* FormTextFieldCell.swift in Sources */,
 				A3B9AF401A625CCF00234F80 /* MHMeditationViewController.swift in Sources */,
 				A3330C2A1A6C8A2B001DF590 /* FormDateCell.swift in Sources */,
