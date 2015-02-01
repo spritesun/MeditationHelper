@@ -8,6 +8,8 @@
 
 class MHMeditationForm : NSObject, FXForm {
 
+  var startTime: NSDate?
+  var endTime: NSDate?
   var duration: String?
   var location: String?
   var weather: String?
@@ -16,7 +18,9 @@ class MHMeditationForm : NSObject, FXForm {
   
   func fields() -> [AnyObject]! {
     return [
-      [FXFormFieldHeader: "", FXFormFieldKey: "duration", FXFormFieldTitle: "時長", "textField.enabled": false, "textField.textColor": UIColor.lightGrayColor()],
+      [FXFormFieldHeader: "", FXFormFieldKey: "startTime", FXFormFieldTitle: "開始時間", FXFormFieldType: FXFormFieldTypeDateTime, FXFormFieldAction: "updateDuration"],
+      [FXFormFieldKey: "endTime", FXFormFieldTitle: "結束時間", FXFormFieldType: FXFormFieldTypeDateTime, FXFormFieldAction: "updateDuration"],
+      [FXFormFieldKey: "duration", FXFormFieldTitle: "時長", "textField.enabled": false, "textField.textColor": UIColor.lightGrayColor()],
       
       [FXFormFieldHeader: "", FXFormFieldKey: "location", FXFormFieldTitle: "地點", FXFormFieldPlaceholder:"例如: 家中"],
       [FXFormFieldKey: "weather", FXFormFieldTitle: "天氣", FXFormFieldPlaceholder:"例如: 晴天"],
@@ -29,5 +33,5 @@ class MHMeditationForm : NSObject, FXForm {
       [FXFormFieldHeader:"" ,FXFormFieldKey: "comment", FXFormFieldTitle: "心得", FXFormFieldType: FXFormFieldTypeLongText]
     ]
   }
-  
+    
 }

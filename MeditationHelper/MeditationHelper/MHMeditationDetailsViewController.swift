@@ -8,6 +8,10 @@
 
 class MHMeditationDetailsViewController: FXFormViewController {
 
+  enum Mode {
+    case Create, Update, FreeformCreate
+  }
+  
   struct FormTag {
     static let duration = "duration"
     static let location = "location"
@@ -17,8 +21,8 @@ class MHMeditationDetailsViewController: FXFormViewController {
   }
   
   var meditation: MHMeditation!
-  var isEditingMode = false
-  
+  var mode : Mode = .Create
+
   override func awakeFromNib() {
     formController.form = MHMeditationForm()
   }
@@ -26,16 +30,21 @@ class MHMeditationDetailsViewController: FXFormViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    if isEditingMode {
-      navigationItem.hidesBackButton = false
-      title = "修改禪修記錄"
-    } else {
+    switch mode {
+    case .Create, .FreeformCreate:
       navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("cancel"))
       navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: Selector("save"))
       title = "保存禪修記錄"
+    case .Update:
+      navigationItem.hidesBackButton = false
+      title = "修改禪修記錄"
+    default:
+      println("error to be here")
     }
 
     var form  = formController.form as MHMeditationForm
+    form.startTime = meditation.startTime
+    form.endTime = meditation.endTime
     form.duration = meditation.duration()
     form.location = meditation.location
     form.weather = meditation.weather
@@ -44,7 +53,7 @@ class MHMeditationDetailsViewController: FXFormViewController {
   }
   
   override func viewWillDisappear(animated: Bool) {
-    if isEditingMode {
+    if mode == .Update {
       save()
     }
     super.viewWillDisappear(animated)
@@ -55,7 +64,15 @@ class MHMeditationDetailsViewController: FXFormViewController {
   }
   
   func save() {
+    if !isValid() {
+      let alert = UIAlertController(title: "Missing Information", message: "開始/結束時間不能為空", preferredStyle: .Alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+      presentViewController(alert, animated: true) {}
+      return
+    }
     var form = formController.form as MHMeditationForm
+    meditation.startTime = form.startTime
+    meditation.endTime = form.endTime
     meditation.location = form.location
     meditation.weather = form.weather
     meditation.rate = form.rate?.toInt() ?? 3
@@ -72,9 +89,25 @@ class MHMeditationDetailsViewController: FXFormViewController {
     
     NSNotificationCenter.defaultCenter().postNotificationName(MHNotification.MeditationDidUpdate, object: nil)
 
-    if !isEditingMode {
+    if mode != .Update {
       dismissViewControllerAnimated(true, completion: nil)
     }
   }
   
+  func isValid() -> Bool {
+    var form = formController.form as MHMeditationForm
+    return form.startTime != nil && form.endTime != nil
+  }
+  
+  func updateDuration() {
+    if isValid() {
+      var form  = formController.form as MHMeditationForm
+      meditation.startTime = form.startTime
+      meditation.endTime = form.endTime
+      form.duration = meditation.duration()
+      var durationCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 0)) as FXFormBaseCell
+      durationCell.update()
+    }
+  }
+
 }

@@ -198,17 +198,17 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="Cdu-9S-WIT" firstAttribute="leading" secondItem="EUc-nw-x8R" secondAttribute="leadingMargin" constant="146" id="0Ue-FM-9cg"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ug7-tN-NxQ" secondAttribute="trailing" constant="10" id="2gh-mZ-X0h"/>
                                         <constraint firstItem="Cdu-9S-WIT" firstAttribute="top" secondItem="ug7-tN-NxQ" secondAttribute="top" constant="1" id="Glq-Ud-pP8"/>
                                         <constraint firstItem="DRl-HO-SKr" firstAttribute="bottom" secondItem="EUc-nw-x8R" secondAttribute="bottomMargin" id="OHI-eX-gkX"/>
                                         <constraint firstItem="DRl-HO-SKr" firstAttribute="top" secondItem="7Yb-1x-QX1" secondAttribute="bottom" constant="7" id="PhS-DE-7Al"/>
+                                        <constraint firstItem="vvS-MN-C02" firstAttribute="leading" secondItem="EUc-nw-x8R" secondAttribute="leadingMargin" constant="80" id="Rcf-d6-8M7"/>
                                         <constraint firstItem="7Yb-1x-QX1" firstAttribute="leading" secondItem="EUc-nw-x8R" secondAttribute="leadingMargin" constant="10" id="Rwx-fE-UoN"/>
-                                        <constraint firstItem="Cdu-9S-WIT" firstAttribute="leading" secondItem="vvS-MN-C02" secondAttribute="trailing" constant="20" id="TrL-hM-aiF"/>
                                         <constraint firstItem="DRl-HO-SKr" firstAttribute="bottom" secondItem="vvS-MN-C02" secondAttribute="bottom" id="X9j-1g-k8d"/>
                                         <constraint firstItem="6oG-ad-jJ0" firstAttribute="leading" secondItem="7Yb-1x-QX1" secondAttribute="trailing" constant="20" id="a35-3L-b8L"/>
                                         <constraint firstItem="Cdu-9S-WIT" firstAttribute="top" secondItem="vvS-MN-C02" secondAttribute="top" id="a5J-gd-gz3"/>
                                         <constraint firstItem="DRl-HO-SKr" firstAttribute="leading" secondItem="7Yb-1x-QX1" secondAttribute="leading" id="egW-bU-RU9"/>
-                                        <constraint firstItem="vvS-MN-C02" firstAttribute="leading" secondItem="DRl-HO-SKr" secondAttribute="trailing" constant="21" id="i3h-SN-qsW"/>
                                         <constraint firstItem="7Yb-1x-QX1" firstAttribute="top" secondItem="EUc-nw-x8R" secondAttribute="topMargin" id="ih7-0v-EtW"/>
                                         <constraint firstItem="Cdu-9S-WIT" firstAttribute="bottom" secondItem="vvS-MN-C02" secondAttribute="bottom" id="mcu-sh-DoV"/>
                                         <constraint firstItem="DRl-HO-SKr" firstAttribute="leading" secondItem="EUc-nw-x8R" secondAttribute="leadingMargin" constant="21" id="o4m-al-Oc1"/>
@@ -238,7 +238,13 @@
                             <outlet property="delegate" destination="VaE-R5-r8v" id="Nvc-gu-pi7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="日記" id="gxa-uU-v4K"/>
+                    <navigationItem key="navigationItem" title="日記" id="gxa-uU-v4K">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oRw-1D-uoM">
+                            <connections>
+                                <segue destination="iej-0U-0ow" kind="presentation" identifier="MHMeditationFreeformCreate" id="oqo-9w-8HX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AR4-KG-GCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -360,6 +366,7 @@
         <image name="stop" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3IH-t7-xXO"/>
+        <segue reference="KOB-3u-clP"/>
+        <segue reference="oqo-9w-8HX"/>
     </inferredMetricsTieBreakers>
 </document>

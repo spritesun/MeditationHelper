@@ -114,7 +114,11 @@ class MHMeditationListViewController: PFQueryTableViewController {
     if segue.identifier == "MHMeditationEdit" {
       let saveRecordVC = segue.destinationViewController as MHMeditationDetailsViewController
       saveRecordVC.meditation = objectAtIndexPath(tableView.indexPathForSelectedRow()) as MHMeditation
-      saveRecordVC.isEditingMode = true
+      saveRecordVC.mode = .Update
+    } else if segue.identifier == "MHMeditationFreeformCreate" {
+      let saveRecordVC = segue.destinationViewController.topViewController as MHMeditationDetailsViewController
+      saveRecordVC.meditation = MHMeditation()
+      saveRecordVC.mode = .FreeformCreate
     }
   }
 
