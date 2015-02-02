@@ -52,11 +52,9 @@ class MHMeditationListViewController: PFQueryTableViewController {
   override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!, object: PFObject!) -> PFTableViewCell! {
     var cell = tableView.dequeueReusableCellWithIdentifier("MHMeditationCell") as MHMeditationCell!
     let meditation = object as MHMeditation
-    cell.location.text = meditation.location
-    cell.weather.text = meditation.weather
+    cell.metadata.text = "\(meditation.location ?? String()) | \(meditation.weather ?? String()) | \(meditation.rate)分"
     cell.comment.text = meditation.comment
     cell.duration.text = meditation.duration()
-    cell.rate.text = "評分: \(meditation.rate)"
     if meditation.startTime != nil && meditation.endTime != nil {
       cell.timeRange.text = "\(dateFormatter.stringFromDate(meditation.startTime!)) - \(dateFormatter.stringFromDate(meditation.endTime!))"
 

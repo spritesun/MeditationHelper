@@ -20,8 +20,9 @@ class MHMeditationListViewModel {
     sortedKeys = meditationsDict.keys.array.sorted({$0.compare($1) == NSComparisonResult.OrderedDescending})
     
     dateFormatter.locale = NSLocale(localeIdentifier: "zh_Hant")
-    dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-    dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
+    dateFormatter.dateFormat = "u年M月d日 ccc"
+//    dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+//    dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
   }
 
   func objectAtIndexPath(indexPath: NSIndexPath!) -> MHMeditation! {

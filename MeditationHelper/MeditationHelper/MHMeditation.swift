@@ -36,13 +36,17 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
     return "MHMeditation"
   }
   
+  override init() {
+    super.init()
+    rate = 3
+  }
+  
   func start() {
     startTime = NSDate()
   }
   
   func stop() {
     endTime = NSDate()
-    rate = 3
   }
   
   // Should be in meditation view model 

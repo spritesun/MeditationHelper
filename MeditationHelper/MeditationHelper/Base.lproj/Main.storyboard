@@ -159,26 +159,14 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRl-HO-SKr">
-                                            <rect key="frame" x="18" y="90" width="49" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="家中 | 雨天 | 3分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRl-HO-SKr" userLabel="Metadata">
+                                            <rect key="frame" x="18" y="97" width="87" height="15"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvS-MN-C02">
-                                            <rect key="frame" x="88" y="90" width="46" height="21"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate: 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdu-9S-WIT">
-                                            <rect key="frame" x="154" y="90" width="40" height="21"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00-11:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug7-tN-NxQ">
-                                            <rect key="frame" x="432" y="89" width="150" height="15"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00-11:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug7-tN-NxQ" userLabel="Time Range">
+                                            <rect key="frame" x="432" y="94" width="150" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="vH6-ec-alL"/>
                                             </constraints>
@@ -198,37 +186,22 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Cdu-9S-WIT" firstAttribute="leading" secondItem="EUc-nw-x8R" secondAttribute="leadingMargin" constant="146" id="0Ue-FM-9cg"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ug7-tN-NxQ" secondAttribute="trailing" constant="10" id="2gh-mZ-X0h"/>
-                                        <constraint firstItem="Cdu-9S-WIT" firstAttribute="top" secondItem="ug7-tN-NxQ" secondAttribute="top" constant="1" id="Glq-Ud-pP8"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ug7-tN-NxQ" secondAttribute="bottom" constant="2.5" id="K1A-eS-iI0"/>
                                         <constraint firstItem="DRl-HO-SKr" firstAttribute="bottom" secondItem="EUc-nw-x8R" secondAttribute="bottomMargin" id="OHI-eX-gkX"/>
-                                        <constraint firstItem="DRl-HO-SKr" firstAttribute="top" secondItem="7Yb-1x-QX1" secondAttribute="bottom" constant="7" id="PhS-DE-7Al"/>
-                                        <constraint firstItem="vvS-MN-C02" firstAttribute="leading" secondItem="EUc-nw-x8R" secondAttribute="leadingMargin" constant="80" id="Rcf-d6-8M7"/>
                                         <constraint firstItem="7Yb-1x-QX1" firstAttribute="leading" secondItem="EUc-nw-x8R" secondAttribute="leadingMargin" constant="10" id="Rwx-fE-UoN"/>
-                                        <constraint firstItem="DRl-HO-SKr" firstAttribute="bottom" secondItem="vvS-MN-C02" secondAttribute="bottom" id="X9j-1g-k8d"/>
+                                        <constraint firstItem="DRl-HO-SKr" firstAttribute="leading" secondItem="EUc-nw-x8R" secondAttribute="leadingMargin" constant="10" id="We5-Lp-VQ1"/>
                                         <constraint firstItem="6oG-ad-jJ0" firstAttribute="leading" secondItem="7Yb-1x-QX1" secondAttribute="trailing" constant="20" id="a35-3L-b8L"/>
-                                        <constraint firstItem="Cdu-9S-WIT" firstAttribute="top" secondItem="vvS-MN-C02" secondAttribute="top" id="a5J-gd-gz3"/>
-                                        <constraint firstItem="DRl-HO-SKr" firstAttribute="leading" secondItem="7Yb-1x-QX1" secondAttribute="leading" id="egW-bU-RU9"/>
                                         <constraint firstItem="7Yb-1x-QX1" firstAttribute="top" secondItem="EUc-nw-x8R" secondAttribute="topMargin" id="ih7-0v-EtW"/>
-                                        <constraint firstItem="Cdu-9S-WIT" firstAttribute="bottom" secondItem="vvS-MN-C02" secondAttribute="bottom" id="mcu-sh-DoV"/>
-                                        <constraint firstItem="DRl-HO-SKr" firstAttribute="leading" secondItem="EUc-nw-x8R" secondAttribute="leadingMargin" constant="21" id="o4m-al-Oc1"/>
-                                        <constraint firstItem="DRl-HO-SKr" firstAttribute="top" secondItem="vvS-MN-C02" secondAttribute="top" id="rcT-zS-PDF"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="6oG-ad-jJ0" secondAttribute="trailing" constant="10" id="sSQ-L6-kj4"/>
                                         <constraint firstItem="6oG-ad-jJ0" firstAttribute="top" secondItem="EUc-nw-x8R" secondAttribute="topMargin" constant="13" id="u2o-zT-F6V"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="o4m-al-Oc1"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="comment" destination="7Yb-1x-QX1" id="UDQ-ry-tnx"/>
                                     <outlet property="duration" destination="6oG-ad-jJ0" id="FeV-Rg-KWT"/>
-                                    <outlet property="location" destination="DRl-HO-SKr" id="0oE-3n-bOT"/>
-                                    <outlet property="rate" destination="Cdu-9S-WIT" id="LPQ-lR-dx7"/>
+                                    <outlet property="metadata" destination="DRl-HO-SKr" id="k57-56-qsv"/>
                                     <outlet property="timeRange" destination="ug7-tN-NxQ" id="B0v-3P-Aso"/>
-                                    <outlet property="weather" destination="vvS-MN-C02" id="ZOP-er-xnG"/>
                                     <segue destination="P2P-h9-WfC" kind="show" identifier="MHMeditationEdit" id="KOB-3u-clP"/>
                                 </connections>
                             </tableViewCell>

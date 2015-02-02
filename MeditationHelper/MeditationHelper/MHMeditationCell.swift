@@ -5,9 +5,7 @@
 
 class MHMeditationCell : PFTableViewCell {
   @IBOutlet var comment: UILabel!
-  @IBOutlet var location: UILabel!
-  @IBOutlet var weather: UILabel!
-  @IBOutlet var rate: UILabel!
+  @IBOutlet var metadata: UILabel!
   @IBOutlet var duration: UILabel!
   @IBOutlet var timeRange: UILabel!
 }
