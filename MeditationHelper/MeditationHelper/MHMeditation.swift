@@ -38,7 +38,6 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
   
   override init() {
     super.init()
-    rate = 3
   }
   
   func start() {
@@ -47,6 +46,15 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
   
   func stop() {
     endTime = NSDate()
+    rate = 3
+  }
+    
+  func shortDuration() -> String {
+    if endTime == nil || startTime == nil {
+      return ""
+    } else {
+      return "\((Int)(endTime!.timeIntervalSinceDate(startTime!) / 60))"
+    }
   }
   
   // Should be in meditation view model 
@@ -54,11 +62,11 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
     if endTime == nil || startTime == nil {
       return ""
     } else {
-      return "\((Int)(endTime!.timeIntervalSinceDate(startTime!) / 60)) 分鐘"
+      return "\(shortDuration()) 分鐘"
     }
   }
   
-  func date() -> NSDate {
+  func dateWithoutTime() -> NSDate {
     if let endTime = self.endTime? {
       let calendar = CFCalendarCopyCurrent() as NSCalendar
       let components = calendar.components(.CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay, fromDate: endTime)

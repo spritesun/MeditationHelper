@@ -11,7 +11,9 @@ class MHMeditationListViewController: PFQueryTableViewController {
   var viewModel = MHMeditationListViewModel(meditations: [MHMeditation]())
   var dateFormatter = NSDateFormatter()
   var needRefresh = false
-
+  
+  @IBOutlet var footer: UIView!
+  
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     self.parseClassName = MHMeditation.parseClassName()
@@ -54,22 +56,23 @@ class MHMeditationListViewController: PFQueryTableViewController {
     let meditation = object as MHMeditation
     cell.metadata.text = "\(meditation.location ?? String()) | \(meditation.weather ?? String()) | \(meditation.rate)分"
     cell.comment.text = meditation.comment
-    cell.duration.text = meditation.duration()
+    cell.duration.text = meditation.shortDuration()
     if meditation.startTime != nil && meditation.endTime != nil {
       cell.timeRange.text = "\(dateFormatter.stringFromDate(meditation.startTime!)) - \(dateFormatter.stringFromDate(meditation.endTime!))"
 
     }
     return cell
   }
-
+    
   override func objectsDidLoad(error: NSError!) {
     super.objectsDidLoad(error)
     viewModel = MHMeditationListViewModel(meditations: objects as [MHMeditation])
     tableView.reloadData()
+    updateFooter()
   }
 
   override func objectAtIndexPath(indexPath: NSIndexPath!) -> PFObject! {
-    return viewModel.objectAtIndexPath(indexPath)
+    return viewModel.objectAtIndexPath(indexPath) as PFObject!
   }
 
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -108,6 +111,29 @@ class MHMeditationListViewController: PFQueryTableViewController {
     }
   }
   
+  override func scrollViewDidScroll(scrollView: UIScrollView) {
+    if !footer.hidden && scrollView.contentOffset.y >= scrollView.contentSize.height + scrollView.contentInset.bottom - scrollView.bounds.height - footer.frame.height {
+      if !loading {
+        loadNextPage()
+        updateFooter()
+      }
+    }
+  }
+
+  //Hack
+  override func _shouldShowPaginationCell() -> Bool {
+    return false;
+  }
+  
+  func updateFooter() {
+    footer.hidden = !super._shouldShowPaginationCell()
+  }
+  
+  override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    var header = view as UITableViewHeaderFooterView
+    header.textLabel.textColor = MHTheme.mainBgColor
+  }
+  
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "MHMeditationEdit" {
       let saveRecordVC = segue.destinationViewController as MHMeditationDetailsViewController
@@ -116,6 +142,7 @@ class MHMeditationListViewController: PFQueryTableViewController {
     } else if segue.identifier == "MHMeditationFreeformCreate" {
       let saveRecordVC = segue.destinationViewController.topViewController as MHMeditationDetailsViewController
       saveRecordVC.meditation = MHMeditation()
+      saveRecordVC.meditation.rate = 3
       saveRecordVC.mode = .FreeformCreate
     }
   }

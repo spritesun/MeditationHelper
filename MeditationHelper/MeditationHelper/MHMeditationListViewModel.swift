@@ -4,13 +4,14 @@
 //
 
 class MHMeditationListViewModel {
-  var meditationsDict = [NSDate: [MHMeditation]]()
+//  let loadMorePlaceholder = "loadMorePlaceholder"
+  var meditationsDict = [NSDate: [AnyObject]]()
   var sortedKeys : [NSDate]
   var dateFormatter = NSDateFormatter()
 
   init(meditations : [MHMeditation]) {
     for meditation in meditations {
-      var key = meditation.date()
+      var key = meditation.dateWithoutTime()
       if meditationsDict[key] == nil {
         meditationsDict[key] = []
       }
@@ -18,14 +19,15 @@ class MHMeditationListViewModel {
     }
     
     sortedKeys = meditationsDict.keys.array.sorted({$0.compare($1) == NSComparisonResult.OrderedDescending})
+//    if let lastKey = sortedKeys.last as NSDate! {
+//      meditationsDict[lastKey]?.append(loadMorePlaceholder)
+//    }
     
     dateFormatter.locale = NSLocale(localeIdentifier: "zh_Hant")
     dateFormatter.dateFormat = "u年M月d日 ccc"
-//    dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-//    dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
   }
 
-  func objectAtIndexPath(indexPath: NSIndexPath!) -> MHMeditation! {
+  func objectAtIndexPath(indexPath: NSIndexPath!) -> AnyObject! {
     return meditationsDict[sortedKeys[indexPath.section]]![indexPath.row]
   }
 
@@ -38,6 +40,14 @@ class MHMeditationListViewModel {
   }
 
   func titleForSection(section: Int) -> String {
-    return dateFormatter.stringFromDate(sortedKeys[section])
+    var dateKey = sortedKeys[section]
+    var dateStr = dateFormatter.stringFromDate(dateKey)
+    var sumTimeInterval = 0.0
+    for object in meditationsDict[dateKey]! {
+      if let meditation = object as? MHMeditation {
+        sumTimeInterval += meditation.endTime!.timeIntervalSinceDate(meditation.startTime!)
+      }
+    }
+    return "\(dateStr) | \(TimeUtil.hoursOf(sumTimeInterval))時\(TimeUtil.minutesOf(sumTimeInterval))分"
   }
 }

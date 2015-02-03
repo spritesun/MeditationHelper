@@ -85,6 +85,7 @@
 /* Begin PBXFileReference section */
 		5587024FC360C5E22EE6BF2E /* MHMeditationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationCell.swift; sourceTree = "<group>"; };
 		558707F66F5E156EAD455CF6 /* MHMeditationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationListViewModel.swift; sourceTree = "<group>"; };
+		A314C6F31A8074D80040E65F /* PFQueryTableViewController+Hack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFQueryTableViewController+Hack.h"; sourceTree = "<group>"; };
 		A3330C111A6C8A2B001DF590 /* FormBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormBaseCell.swift; sourceTree = "<group>"; };
 		A3330C121A6C8A2B001DF590 /* FormTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTitleCell.swift; sourceTree = "<group>"; };
 		A3330C131A6C8A2B001DF590 /* FormValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValueCell.swift; sourceTree = "<group>"; };
@@ -260,6 +261,7 @@
 				A38E2EA31A70BBBE00ECD40E /* MHNotificationManager.swift */,
 				A38E2EA11A70BB2000ECD40E /* MHDebugger.swift */,
 				A38E2EAA1A70CE0C00ECD40E /* MHMigrator.swift */,
+				A314C6F31A8074D80040E65F /* PFQueryTableViewController+Hack.h */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";

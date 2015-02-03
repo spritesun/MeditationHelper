@@ -8,3 +8,4 @@
 @import ParseUI;
 #import "FXForms.h"
 #import "DDHTimerControl.h"
+#import "PFQueryTableViewController+Hack.h"
