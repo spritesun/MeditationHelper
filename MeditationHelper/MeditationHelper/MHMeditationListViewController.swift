@@ -39,6 +39,14 @@ class MHMeditationListViewController: PFQueryTableViewController {
       loadObjects()
       needRefresh = false
     }
+    MHMeditationUploader.upload(slient: true) { (success : Bool) -> Void in
+      if success { self.reloadTable() }
+    }
+  }
+    
+  func reloadTable () {
+    tableView.reloadData()
+    updateFooter()
   }
   
   func markAsNeedRefresh() {
@@ -63,12 +71,15 @@ class MHMeditationListViewController: PFQueryTableViewController {
     }
     return cell
   }
-    
+  
   override func objectsDidLoad(error: NSError!) {
     super.objectsDidLoad(error)
-    viewModel = MHMeditationListViewModel(meditations: objects as [MHMeditation])
-    tableView.reloadData()
-    updateFooter()
+    if error == nil {
+      viewModel = MHMeditationListViewModel(meditations: objects as [MHMeditation])
+      reloadTable()
+    } else {
+      alert(title: "加載失敗", message: "請檢查您的網絡鏈接")
+    }
   }
 
   override func objectAtIndexPath(indexPath: NSIndexPath!) -> PFObject! {
@@ -131,6 +142,7 @@ class MHMeditationListViewController: PFQueryTableViewController {
   
   override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
     var header = view as UITableViewHeaderFooterView
+//    header.contentView.backgroundColor = MHTheme.mainBgColor
     header.textLabel.textColor = MHTheme.mainBgColor
   }
   

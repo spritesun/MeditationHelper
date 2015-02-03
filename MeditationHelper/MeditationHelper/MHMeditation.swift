@@ -15,6 +15,7 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
   @NSManaged var geocode: CLLocationCoordinate2D
   @NSManaged var tags: [String]?
   @NSManaged private var commentRaw: NSData?
+  var uploading = false
 
   var comment: String? {
     get {

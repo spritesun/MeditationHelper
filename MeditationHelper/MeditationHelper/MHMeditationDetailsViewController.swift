@@ -51,7 +51,7 @@ class MHMeditationDetailsViewController: FXFormViewController {
     form.rate = String(meditation.rate)
     form.comment = meditation.comment
   }
-  
+    
   override func viewWillDisappear(animated: Bool) {
     if mode == .Update {
       save()
@@ -65,9 +65,7 @@ class MHMeditationDetailsViewController: FXFormViewController {
   
   func save() {
     if !isValid() {
-      let alert = UIAlertController(title: "Missing Information", message: "開始/結束時間不能為空", preferredStyle: .Alert)
-      alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-      presentViewController(alert, animated: true) {}
+      alert(title: "Missing Information", message: "開始/結束時間不能為空")
       return
     }
     var form = formController.form as MHMeditationForm
@@ -78,14 +76,8 @@ class MHMeditationDetailsViewController: FXFormViewController {
     meditation.rate = form.rate?.toInt() ?? 3
     meditation.comment = form.comment
     
-    meditation.pinInBackground()    
-    if IJReachability.isConnectedToNetwork() && nil != PFUser.currentUser() {
-      meditation.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
-        if succeeded {
-          self.meditation.unpinInBackground()
-        }
-      })
-    }
+    meditation.pinInBackground()
+    MHMeditationUploader.upload(slient: true) {(sucess: Bool) -> Void in}
     
     NSNotificationCenter.defaultCenter().postNotificationName(MHNotification.MeditationDidUpdate, object: nil)
 

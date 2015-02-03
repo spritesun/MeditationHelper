@@ -36,7 +36,7 @@ class MHSettingsTableViewController: UITableViewController {
     case 0:
       nil == PFUser.currentUser() ? presentLogin() : logout()
     case 1:
-      upload()
+      MHMeditationUploader.upload(slient: false) {(sucess: Bool) -> Void in}
     default:
       println("Should never go here")
     }
@@ -52,27 +52,8 @@ class MHSettingsTableViewController: UITableViewController {
   func logout() {
     PFUser.logOut()
     tableView.reloadData()
-    upload()
+    MHMeditationUploader.upload(slient: true) {(sucess: Bool) -> Void in}
     PFACL.setDefaultACL(nil, withAccessForCurrentUser:true)
   }
   
-  // MARK: Upload
-  func upload() {
-    if IJReachability.isConnectedToNetwork() && nil != PFUser.currentUser() {
-      let query = MHMeditation.query()
-      query.fromLocalDatastore()
-      query.findObjectsInBackgroundWithBlock({ (meditations, error) -> Void in
-        if error == nil {
-          for meditation in meditations as [MHMeditation] {
-            meditation.saveInBackgroundWithBlock({ (successed, error) -> Void in
-              if successed {
-                meditation.unpinInBackground()
-              }
-            })
-          }
-        }
-      })
-    }
-  }  
-
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		55870EA1C2DC8AD4E4970F26 /* MHMeditationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558707F66F5E156EAD455CF6 /* MHMeditationListViewModel.swift */; };
+		A314C7491A8091F50040E65F /* MHMeditationUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A314C7481A8091F50040E65F /* MHMeditationUploader.swift */; };
+		A314C74B1A8095E70040E65F /* MHAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A314C74A1A8095E70040E65F /* MHAlert.swift */; };
 		A3330C251A6C8A2B001DF590 /* FormBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C111A6C8A2B001DF590 /* FormBaseCell.swift */; };
 		A3330C261A6C8A2B001DF590 /* FormTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C121A6C8A2B001DF590 /* FormTitleCell.swift */; };
 		A3330C271A6C8A2B001DF590 /* FormValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C131A6C8A2B001DF590 /* FormValueCell.swift */; };
@@ -86,6 +88,8 @@
 		5587024FC360C5E22EE6BF2E /* MHMeditationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationCell.swift; sourceTree = "<group>"; };
 		558707F66F5E156EAD455CF6 /* MHMeditationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationListViewModel.swift; sourceTree = "<group>"; };
 		A314C6F31A8074D80040E65F /* PFQueryTableViewController+Hack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFQueryTableViewController+Hack.h"; sourceTree = "<group>"; };
+		A314C7481A8091F50040E65F /* MHMeditationUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationUploader.swift; sourceTree = "<group>"; };
+		A314C74A1A8095E70040E65F /* MHAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHAlert.swift; sourceTree = "<group>"; };
 		A3330C111A6C8A2B001DF590 /* FormBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormBaseCell.swift; sourceTree = "<group>"; };
 		A3330C121A6C8A2B001DF590 /* FormTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTitleCell.swift; sourceTree = "<group>"; };
 		A3330C131A6C8A2B001DF590 /* FormValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValueCell.swift; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 				A38E2EA11A70BB2000ECD40E /* MHDebugger.swift */,
 				A38E2EAA1A70CE0C00ECD40E /* MHMigrator.swift */,
 				A314C6F31A8074D80040E65F /* PFQueryTableViewController+Hack.h */,
+				A314C7481A8091F50040E65F /* MHMeditationUploader.swift */,
+				A314C74A1A8095E70040E65F /* MHAlert.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -576,6 +582,7 @@
 				A3B9AF641A6292B200234F80 /* MHMeditationDetailsViewController.swift in Sources */,
 				A36CCC101A7211BD00F035D3 /* MHMeditationCell.swift in Sources */,
 				A3330C291A6C8A2B001DF590 /* FormCheckCell.swift in Sources */,
+				A314C7491A8091F50040E65F /* MHMeditationUploader.swift in Sources */,
 				A38E2EAB1A70CE0C00ECD40E /* MHMigrator.swift in Sources */,
 				A3330C261A6C8A2B001DF590 /* FormTitleCell.swift in Sources */,
 				A36CCC121A7212A700F035D3 /* MHMeditationViewModel.swift in Sources */,
@@ -596,6 +603,7 @@
 				A3330C2A1A6C8A2B001DF590 /* FormDateCell.swift in Sources */,
 				A3330C301A6C8A2B001DF590 /* FormTextViewCell.swift in Sources */,
 				A3ABB8FA1A6A8A9700914A0E /* IJReachability.swift in Sources */,
+				A314C74B1A8095E70040E65F /* MHAlert.swift in Sources */,
 				A3330C321A6C8A2B001DF590 /* FormSelector.swift in Sources */,
 				A3B4121F1A6628AC00F74BDC /* MHSettingsTableViewController.swift in Sources */,
 				A3330C351A6C8A2B001DF590 /* FormRowDescriptor.swift in Sources */,

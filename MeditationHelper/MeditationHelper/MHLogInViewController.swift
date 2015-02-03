@@ -46,9 +46,7 @@ class MHLogInViewController: PFLogInViewController, PFLogInViewControllerDelegat
       return true
     }
   
-    let alert = UIAlertController(title: "Missing Information", message: "Please fill out all of the information", preferredStyle: .Alert)
-    alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-    logInController.presentViewController(alert, animated: true) {}
+    logInController.alert(title: "Missing Information", message: "Please fill out all of the information")
     return false
   }
   
@@ -87,9 +85,7 @@ class MHLogInViewController: PFLogInViewController, PFLogInViewControllerDelegat
     }
     
     if (!informationComplete) {
-      let alert = UIAlertController(title: "Missing Information", message: "Please fill out all of the information", preferredStyle: .Alert)
-      alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-      signUpController.presentViewController(alert, animated: true) {}
+      signUpController.alert(title: "Missing Information", message: "Please fill out all of the information")
     }
     return informationComplete
   }
