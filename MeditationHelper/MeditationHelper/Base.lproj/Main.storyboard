@@ -33,6 +33,10 @@
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeM-eX-n1Z" userLabel="stop">
                                 <rect key="frame" x="268" y="376" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="3mJ-hi-jYN"/>
+                                    <constraint firstAttribute="width" constant="64" id="IFM-I3-FfY"/>
+                                </constraints>
                                 <state key="normal" image="stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -40,14 +44,6 @@
                                     <segue destination="iej-0U-0ow" kind="presentation" identifier="MHMeditationStop" id="TVS-fv-XVi"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUR-uY-Np7" userLabel="hourControl" customClass="DDHTimerControl">
-                                <rect key="frame" x="155" y="260" width="80" height="80"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="6vE-db-8aB"/>
-                                    <constraint firstAttribute="width" constant="80" id="rz4-Ec-GaX"/>
-                                </constraints>
-                            </view>
                             <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8XQ-Ao-2W6" userLabel="secControl" customClass="DDHTimerControl">
                                 <rect key="frame" x="365" y="280" width="60" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -70,6 +66,14 @@
                                     <constraint firstAttribute="width" constant="130" id="8uj-np-cBu"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUR-uY-Np7" userLabel="hourControl" customClass="DDHTimerControl">
+                                <rect key="frame" x="155" y="260" width="80" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="6vE-db-8aB"/>
+                                    <constraint firstAttribute="width" constant="80" id="rz4-Ec-GaX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -77,13 +81,14 @@
                             <constraint firstAttribute="centerX" secondItem="OK6-0I-kyE" secondAttribute="centerX" id="31u-VX-LCS"/>
                             <constraint firstItem="OK6-0I-kyE" firstAttribute="top" secondItem="fZL-Jb-1bz" secondAttribute="bottom" constant="24" id="4WW-DP-a2i"/>
                             <constraint firstItem="jeM-eX-n1Z" firstAttribute="centerX" secondItem="83v-lb-IKx" secondAttribute="centerX" id="4rT-HV-Bpc"/>
-                            <constraint firstItem="jeM-eX-n1Z" firstAttribute="top" secondItem="OK6-0I-kyE" secondAttribute="bottom" constant="36" id="IZe-WP-mME"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jeM-eX-n1Z" secondAttribute="bottom" constant="20" id="7Mc-zS-cY6"/>
+                            <constraint firstItem="jeM-eX-n1Z" firstAttribute="top" secondItem="OK6-0I-kyE" secondAttribute="bottom" priority="900" constant="36" id="IZe-WP-mME"/>
                             <constraint firstItem="OK6-0I-kyE" firstAttribute="leading" secondItem="CUR-uY-Np7" secondAttribute="trailing" id="Mgw-Jl-y7v"/>
                             <constraint firstItem="8XQ-Ao-2W6" firstAttribute="bottom" secondItem="CUR-uY-Np7" secondAttribute="bottom" id="UZK-9A-yH1"/>
                             <constraint firstItem="CUR-uY-Np7" firstAttribute="bottom" secondItem="OK6-0I-kyE" secondAttribute="bottom" id="Wg9-0J-fNG"/>
                             <constraint firstAttribute="centerX" secondItem="83v-lb-IKx" secondAttribute="centerX" id="bqR-la-41g"/>
                             <constraint firstItem="8XQ-Ao-2W6" firstAttribute="leading" secondItem="OK6-0I-kyE" secondAttribute="trailing" id="gLI-oY-Dje"/>
-                            <constraint firstAttribute="centerY" secondItem="CUR-uY-Np7" secondAttribute="centerY" id="rTb-P2-Odx"/>
+                            <constraint firstAttribute="centerY" secondItem="CUR-uY-Np7" secondAttribute="centerY" priority="800" id="rTb-P2-Odx"/>
                             <constraint firstItem="jeM-eX-n1Z" firstAttribute="centerY" secondItem="83v-lb-IKx" secondAttribute="centerY" id="zWp-bB-TSC"/>
                         </constraints>
                     </view>
