@@ -33,12 +33,14 @@ class MHMeditationViewController: UIViewController {
     }
 
     hourControl.color = MHTheme.mainBgColor
+    hourControl.highlightColor = UIColor.lightGrayColor()
     hourControl.maxValue = 12
     hourControl.minutesOrSeconds = TimeUtil.hoursOf(lastCountDown)
     hourControl.titleLabel.text = "時"
     
     minControl.type = DDHTimerType.EqualElements
     minControl.color = UIColor.orangeColor()
+    minControl.highlightColor = UIColor.lightGrayColor()
     minControl.minutesOrSeconds = TimeUtil.minutesOf(lastCountDown)
     minControl.titleLabel.text = "分"
     

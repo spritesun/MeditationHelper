@@ -331,7 +331,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="MHTabBarController" customModule="MeditationHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -358,6 +358,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="KOB-3u-clP"/>
-        <segue reference="oqo-9w-8HX"/>
+        <segue reference="TVS-fv-XVi"/>
     </inferredMetricsTieBreakers>
 </document>
