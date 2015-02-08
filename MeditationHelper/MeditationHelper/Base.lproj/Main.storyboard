@@ -52,8 +52,8 @@
                                     <constraint firstAttribute="width" constant="60" id="wHq-0d-65Y"/>
                                 </constraints>
                             </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="還剩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZL-Jb-1bz">
-                                <rect key="frame" x="264" y="143" width="72" height="43"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZL-Jb-1bz">
+                                <rect key="frame" x="240" y="143" width="120" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -92,7 +92,7 @@
                             <constraint firstItem="jeM-eX-n1Z" firstAttribute="centerY" secondItem="83v-lb-IKx" secondAttribute="centerY" id="zWp-bB-TSC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="禪修" image="meditate" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Meditate" image="meditate" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="hourControl" destination="CUR-uY-Np7" id="WsB-GH-N5v"/>
                         <outlet property="minControl" destination="OK6-0I-kyE" id="g0t-eb-HfE"/>
@@ -141,7 +141,7 @@
             </objects>
             <point key="canvasLocation" x="2262" y="-311"/>
         </scene>
-        <!--日記-->
+        <!--Journal-->
         <scene sceneID="1wr-KU-LQU">
             <objects>
                 <tableViewController id="VaE-R5-r8v" customClass="MHMeditationListViewController" customModule="MeditationHelper" customModuleProvider="target" sceneMemberID="viewController">
@@ -178,8 +178,8 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="家中 | 雨天 | 3分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRl-HO-SKr" userLabel="Metadata">
-                                            <rect key="frame" x="18" y="96" width="87" height="15"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home | Rain | 3 Star" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRl-HO-SKr" userLabel="Metadata">
+                                            <rect key="frame" x="18" y="96" width="112" height="15"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <color key="textColor" red="0.2666666667" green="0.43137254899999999" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -231,7 +231,7 @@
                             <outlet property="delegate" destination="VaE-R5-r8v" id="Nvc-gu-pi7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="日記" id="gxa-uU-v4K">
+                    <navigationItem key="navigationItem" title="Journal" id="gxa-uU-v4K">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="oRw-1D-uoM">
                             <connections>
                                 <segue destination="iej-0U-0ow" kind="presentation" identifier="MHMeditationFreeformCreate" id="oqo-9w-8HX"/>
@@ -246,11 +246,11 @@
             </objects>
             <point key="canvasLocation" x="1509" y="369"/>
         </scene>
-        <!--日記-->
+        <!--Journal-->
         <scene sceneID="qW7-VD-yeB">
             <objects>
                 <navigationController id="SN0-I1-Vt2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="日記" image="list" id="82x-YZ-pyb"/>
+                    <tabBarItem key="tabBarItem" title="Journal" image="list" id="82x-YZ-pyb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h6G-33-Vem">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -277,7 +277,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xd0-fM-SV8" id="W0w-d5-uj0">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="登入/註冊" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WcA-qi-rVB">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sign in / Sign up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WcA-qi-rVB">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -291,7 +291,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yvW-eu-4T4" id="6Mz-9c-lWM">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="登出" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uAa-eu-7rB">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sign out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uAa-eu-7rB">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -311,7 +311,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Sm-Ry-Ug6" id="N3n-E8-4Aa">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="同步記錄至網路" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5UC-Qf-U6E">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sync offline data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5UC-Qf-U6E">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -327,7 +327,7 @@
                             <outlet property="delegate" destination="zXe-Vl-hcR" id="nzn-nK-UPF"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="設置" image="setting" id="9GL-Ri-Ydu"/>
+                    <tabBarItem key="tabBarItem" title="Setting" image="setting" id="9GL-Ri-Ydu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zin-4m-WeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

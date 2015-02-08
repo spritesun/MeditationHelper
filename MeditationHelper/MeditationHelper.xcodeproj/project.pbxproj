@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		55870EA1C2DC8AD4E4970F26 /* MHMeditationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558707F66F5E156EAD455CF6 /* MHMeditationListViewModel.swift */; };
+		A3050A1D1A83295000340A31 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3050A1F1A83295000340A31 /* Localizable.strings */; };
 		A314C7491A8091F50040E65F /* MHMeditationUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A314C7481A8091F50040E65F /* MHMeditationUploader.swift */; };
 		A314C74B1A8095E70040E65F /* MHAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A314C74A1A8095E70040E65F /* MHAlert.swift */; };
 		A3330C251A6C8A2B001DF590 /* FormBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C111A6C8A2B001DF590 /* FormBaseCell.swift */; };
@@ -87,6 +88,8 @@
 /* Begin PBXFileReference section */
 		5587024FC360C5E22EE6BF2E /* MHMeditationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationCell.swift; sourceTree = "<group>"; };
 		558707F66F5E156EAD455CF6 /* MHMeditationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationListViewModel.swift; sourceTree = "<group>"; };
+		A3050A1E1A83295000340A31 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A3050A201A83295B00340A31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A314C6F31A8074D80040E65F /* PFQueryTableViewController+Hack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFQueryTableViewController+Hack.h"; sourceTree = "<group>"; };
 		A314C7481A8091F50040E65F /* MHMeditationUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationUploader.swift; sourceTree = "<group>"; };
 		A314C74A1A8095E70040E65F /* MHAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHAlert.swift; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 		A3ED81881A775C59009FFBF5 /* MHMeditationForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationForm.swift; sourceTree = "<group>"; };
 		A3ED81C71A7A02E2009FFBF5 /* DDHTimerControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHTimerControl.h; sourceTree = "<group>"; };
 		A3ED81C81A7A02E2009FFBF5 /* DDHTimerControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHTimerControl.m; sourceTree = "<group>"; };
+		A3F5B0011A81F10C00F31E73 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		A3F5B0021A81F10C00F31E73 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				A3B9AF3C1A625CCF00234F80 /* Info.plist */,
+				A3050A1F1A83295000340A31 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -529,6 +535,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3050A1D1A83295000340A31 /* Localizable.strings in Resources */,
 				A3B9AF451A625CCF00234F80 /* Main.storyboard in Resources */,
 				A3B9AF4A1A625CCF00234F80 /* LaunchScreen.xib in Resources */,
 				A3B9AF471A625CCF00234F80 /* Images.xcassets in Resources */,
@@ -630,10 +637,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A3050A1F1A83295000340A31 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3050A1E1A83295000340A31 /* zh-Hant */,
+				A3050A201A83295B00340A31 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		A3B9AF431A625CCF00234F80 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A3B9AF441A625CCF00234F80 /* Base */,
+				A3F5B0021A81F10C00F31E73 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -642,6 +659,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A3B9AF491A625CCF00234F80 /* Base */,
+				A3F5B0011A81F10C00F31E73 /* zh-Hant */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

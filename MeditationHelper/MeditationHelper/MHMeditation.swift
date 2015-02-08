@@ -52,7 +52,7 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
     
   func shortDuration() -> String {
     if endTime == nil || startTime == nil {
-      return ""
+      return "-"
     } else {
       return "\((Int)(endTime!.timeIntervalSinceDate(startTime!) / 60))"
     }
@@ -63,7 +63,7 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
     if endTime == nil || startTime == nil {
       return ""
     } else {
-      return "\(shortDuration()) 分鐘"
+      return String(format: NSLocalizedString("%@ Minutes", comment: "Duration Minutes"), shortDuration())
     }
   }
   
@@ -85,17 +85,4 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
     return query;
   }
   
-//  override var description : String {
-//    let dateFormatter = NSDateFormatter()
-//    dateFormatter.locale = NSLocale(localeIdentifier: "zh_Hant")
-//    dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-//    dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
-//    let str = dateFormatter.stringFromDate(NSDate())
-//    var locationStr = ""
-//    if location != nil {
-//      locationStr = location!
-//    }
-//    return "開始時間: \(dateFormatter.stringFromDate(startTime?))\n結束時間: \(dateFormatter.stringFromDate(endTime?))\n地點: \(locationStr)\n天氣: \(weather)\n評分: \(rate)\n心得: \(comment)"
-//  }
-
 }
