@@ -112,6 +112,10 @@
 		A3330C231A6C8A2B001DF590 /* FormRowDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormRowDescriptor.swift; sourceTree = "<group>"; };
 		A3330C241A6C8A2B001DF590 /* FormSectionDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSectionDescriptor.swift; sourceTree = "<group>"; };
 		A34781501A88785D00807793 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A34781541A887D6F00807793 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		A34781551A887D6F00807793 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		A34781561A887D6F00807793 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A34781571A887D6F00807793 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		A36CCC111A7212A700F035D3 /* MHMeditationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationViewModel.swift; sourceTree = "<group>"; };
 		A38E2E9F1A70B5D800ECD40E /* MHParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHParseManager.swift; sourceTree = "<group>"; };
 		A38E2EA11A70BB2000ECD40E /* MHDebugger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHDebugger.swift; sourceTree = "<group>"; };
@@ -520,6 +524,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = A3B9AF2F1A625CCF00234F80;
 			productRefGroup = A3B9AF391A625CCF00234F80 /* Products */;
@@ -644,6 +649,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A3050A1E1A83295000340A31 /* zh-Hant */,
+				A34781561A887D6F00807793 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -652,6 +658,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A34781501A88785D00807793 /* zh-Hant */,
+				A34781571A887D6F00807793 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -661,6 +668,7 @@
 			children = (
 				A3B9AF441A625CCF00234F80 /* Base */,
 				A3F5B0021A81F10C00F31E73 /* zh-Hant */,
+				A34781551A887D6F00807793 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -670,6 +678,7 @@
 			children = (
 				A3B9AF491A625CCF00234F80 /* Base */,
 				A3F5B0011A81F10C00F31E73 /* zh-Hant */,
+				A34781541A887D6F00807793 /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -760,6 +769,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -780,6 +790,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

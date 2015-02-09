@@ -13,14 +13,14 @@ class MHLogInViewController: PFLogInViewController, PFLogInViewControllerDelegat
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let logInlogoView = UIImageView(image: UIImage(named: "logo"))
+    let logInlogoView = UIView()
     logInlogoView.contentMode = UIViewContentMode.ScaleAspectFit
     logInView.logo = logInlogoView
     logInView.emailAsUsername = true
     delegate = self
     
     let signUpViewController = PFSignUpViewController()
-    let signUplogoView = UIImageView(image: UIImage(named: "logo"))
+    let signUplogoView = UIView()
     signUplogoView.contentMode = UIViewContentMode.ScaleAspectFit
     signUpViewController.signUpView.logo = signUplogoView
     signUpViewController.signUpView.emailAsUsername = true

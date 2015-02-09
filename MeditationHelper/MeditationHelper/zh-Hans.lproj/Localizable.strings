@@ -1,0 +1,87 @@
+/* 
+  Localizable.strings
+  MeditationHelper
+
+  Created by Long Sun on 5/02/2015.
+  Copyright (c) 2015 Sunlong. All rights reserved.
+*/
+
+/* Duration Minutes */
+"%@ Minutes" = "%@ 分钟";
+
+/* Meditation list section title */
+"%@ | %dh%dm" = "%1$@ | %2$d时%3$d分";
+
+/* Form comment */
+"Comment" = "心得";
+
+/* Create meditation form title */
+"Create record" = "创建禅修记录";
+
+/* Form duration */
+"Duration" = "时长";
+
+/* Form location placeholder */
+"e.g. Home" = "例如 家中";
+
+/* Form weather placeholder */
+"e.g. Sunny" = "例如 晴天";
+
+/* Form end time */
+"End time" = "结束时间";
+
+/* Fail to load records title */
+"Fail to load" = "暂时不能加载记录";
+
+/* Uploader upload fail title */
+"Fail to upload" = "暂时不能上传记录";
+
+/* Clock title hour */
+"hour" = "时";
+
+/* Form location */
+"Location" = "地点";
+
+/* Clock title minute */
+"min" = "分";
+
+/* Uploader empty upload list title */
+"No record need to upload" = "没有记录需要上传";
+
+/* Alert confirm */
+"OK" = "好的";
+
+/* Fail to load records message */
+"Please check you network" = "请检查您的网络连接";
+
+/* Notification alert message */
+"Please come out softly" = "请慢慢下座";
+
+/* Fail to login/signup title */
+"Please fill out your email/password" = "请填写邮箱/密码";
+
+/* Fail to save change alert title */
+"Please fill start/end time" = "请填写开始/结束时间";
+
+/* Form rate */
+"Rate" = "评分";
+
+/* Clock title seconds */
+"sec" = "秒";
+
+/* Form start time */
+"Start time" = "开始时间";
+
+/* Update meditation form title */
+"Update record" = "修改记录";
+
+/* Uploader upload success title */
+"Upload successfully" = "成功上传记录";
+
+/* Uploader uploading title */
+"Uploading" = "上传中";
+
+/* Form weather */
+"Weather" = "天气";
+
+
