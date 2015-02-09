@@ -15,7 +15,7 @@ struct MHMeditationUploader {
         let vc = UIApplication.sharedApplication().keyWindow?.rootViewController
         if error == nil {
           if meditations.isEmpty {
-            if !silent { vc?.alert(title: "沒有記錄需要同步", message: "") }
+            if !silent { vc?.alert(title: NSLocalizedString("No record need to upload", comment: "Uploader empty upload list title"), message: "") }
           }
           for meditation in meditations as [MHMeditation] {
             if !meditation.uploading {
@@ -23,15 +23,15 @@ struct MHMeditationUploader {
                 meditation.uploading = false
                 if successed {
                   meditation.unpinInBackground()
-                  if !silent { vc?.alert(title: "記錄同步成功", message: "") }
+                  if !silent { vc?.alert(title: NSLocalizedString("Upload successfully", comment: "Uploader upload success title"), message: "") }
                 } else {
-                  if !silent { vc?.alert(title: "記錄同步失敗", message: "") }
+                  if !silent { vc?.alert(title: NSLocalizedString("Fail to upload", comment: "Uploader upload fail title"), message: "") }
                 }
                 completion?(success: successed)
               })
               meditation.uploading = true
             } else {
-              if !silent { vc?.alert(title: "正在上傳", message: "") }
+              if !silent { vc?.alert(title: NSLocalizedString("Uploading", comment: "Uploader uploading title"), message: "") }
             }
           }
         }

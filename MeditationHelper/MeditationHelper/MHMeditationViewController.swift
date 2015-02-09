@@ -36,18 +36,18 @@ class MHMeditationViewController: UIViewController {
     hourControl.highlightColor = UIColor.lightGrayColor()
     hourControl.maxValue = 12
     hourControl.minutesOrSeconds = TimeUtil.hoursOf(lastCountDown)
-    hourControl.titleLabel.text = "時"
+    hourControl.titleLabel.text = NSLocalizedString("hour", comment: "Clock title hour")
     
     minControl.type = DDHTimerType.EqualElements
     minControl.color = UIColor.orangeColor()
     minControl.highlightColor = UIColor.lightGrayColor()
     minControl.minutesOrSeconds = TimeUtil.minutesOf(lastCountDown)
-    minControl.titleLabel.text = "分"
+    minControl.titleLabel.text = NSLocalizedString("min", comment: "Clock title minute")
     
     secControl.type = DDHTimerType.Solid
     secControl.color = UIColor.purpleColor()
     secControl.minutesOrSeconds = 59
-    secControl.titleLabel.text = "秒"
+    secControl.titleLabel.text = NSLocalizedString("sec", comment: "Clock title seconds")
   }
   
   @IBAction func start(sender: AnyObject) {
@@ -103,10 +103,9 @@ class MHMeditationViewController: UIViewController {
   func registerNotification() {
     let notification = UILocalNotification()
     notification.fireDate = endTime
-    notification.alertBody = "請慢慢下座";
-    notification.soundName = "tibetan-bell-low.caf";
+    notification.alertBody = NSLocalizedString("Please come out softly", comment: "Notification alert message")
+    notification.soundName = "tibetan-bell-low.caf"
     UIApplication.sharedApplication().scheduleLocalNotification(notification)
-    println("alarm ready")
   }
   
   func clearNotifications() {

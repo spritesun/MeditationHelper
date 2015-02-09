@@ -9,3 +9,79 @@
 /* Duration Minutes */
 "%@ Minutes" = "%@ 分鐘";
 
+/* Meditation list section title */
+"%@ | %dh%dm" = "%1$@ | %2$d時%3$d分";
+
+/* Form comment */
+"Comment" = "心得";
+
+/* Create meditation form title */
+"Create record" = "創建禪修記錄";
+
+/* Form duration */
+"Duration" = "時長";
+
+/* Form location placeholder */
+"e.g. Home" = "例如 家中";
+
+/* Form weather placeholder */
+"e.g. Sunny" = "例如 晴天";
+
+/* Form end time */
+"End time" = "結束時間";
+
+/* Fail to load records title */
+"Fail to load" = "暫時不能加載記錄";
+
+/* Uploader upload fail title */
+"Fail to upload" = "暫時不能上傳記錄";
+
+/* Clock title hour */
+"hour" = "時";
+
+/* Form location */
+"Location" = "地點";
+
+/* Clock title minute */
+"min" = "分";
+
+/* Uploader empty upload list title */
+"No record need to upload" = "沒有記錄需要上傳";
+
+/* Alert confirm */
+"OK" = "好的";
+
+/* Fail to load records message */
+"Please check you network" = "請檢查您的網絡連接";
+
+/* Notification alert message */
+"Please come out softly" = "請慢慢下座";
+
+/* Fail to login/signup title */
+"Please fill out your email/password" = "請填寫郵箱/密碼";
+
+/* Fail to save change alert title */
+"Please fill start/end time" = "請填寫開始/結束時間";
+
+/* Form rate */
+"Rate" = "評分";
+
+/* Clock title seconds */
+"sec" = "秒";
+
+/* Form start time */
+"Start time" = "開始時間";
+
+/* Update meditation form title */
+"Update record" = "修改記錄";
+
+/* Uploader upload success title */
+"Upload successfully" = "成功上傳記錄";
+
+/* Uploader uploading title */
+"Uploading" = "上傳中";
+
+/* Form weather */
+"Weather" = "天氣";
+
+

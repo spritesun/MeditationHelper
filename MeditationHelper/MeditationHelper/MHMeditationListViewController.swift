@@ -18,7 +18,7 @@ class MHMeditationListViewController: PFQueryTableViewController {
     super.init(coder: aDecoder)
     self.parseClassName = MHMeditation.parseClassName()
     
-    dateFormatter.locale = NSLocale(localeIdentifier: "zh_Hant")
+//    dateFormatter.locale = NSLocale(localeIdentifier: "zh_Hant")
     dateFormatter.dateStyle = NSDateFormatterStyle.NoStyle
     dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
 
@@ -62,7 +62,7 @@ class MHMeditationListViewController: PFQueryTableViewController {
   override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!, object: PFObject!) -> PFTableViewCell! {
     var cell = tableView.dequeueReusableCellWithIdentifier("MHMeditationCell") as MHMeditationCell!
     let meditation = object as MHMeditation
-    cell.metadata.text = "\(meditation.location ?? String()) | \(meditation.weather ?? String()) | \(meditation.rate)分"
+    cell.metadata.text = "\(meditation.location ?? String()) | \(meditation.weather ?? String()) | \(meditation.rate)"
     cell.comment.text = meditation.comment
     cell.duration.text = meditation.shortDuration()
     if meditation.startTime != nil && meditation.endTime != nil {
@@ -78,7 +78,7 @@ class MHMeditationListViewController: PFQueryTableViewController {
       viewModel = MHMeditationListViewModel(meditations: objects as [MHMeditation])
       reloadTable()
     } else {
-      alert(title: "加載失敗", message: "請檢查您的網絡鏈接")
+      alert(title: NSLocalizedString("Fail to load", comment: "Fail to load records title"), message: NSLocalizedString("Please check you network", comment: "Fail to load records message"))
     }
   }
 
@@ -108,13 +108,11 @@ class MHMeditationListViewController: PFQueryTableViewController {
       if nil == PFUser.currentUser() {
         //unpin aysnc task, callback not been called properly everytime.
         meditation.unpinInBackground()
-        println("==delete from local")
         self.loadObjects()
       } else {
         //repeat delete same thing again and again seems be handle properly by Parse
         meditation.deleteInBackgroundWithBlock({ (success, error) -> Void in
           if success {
-            println("==delete from internet")
             self.loadObjects()
           }
         })

@@ -29,6 +29,7 @@
 		A3330C341A6C8A2B001DF590 /* FormDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C221A6C8A2B001DF590 /* FormDescriptor.swift */; };
 		A3330C351A6C8A2B001DF590 /* FormRowDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C231A6C8A2B001DF590 /* FormRowDescriptor.swift */; };
 		A3330C361A6C8A2B001DF590 /* FormSectionDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C241A6C8A2B001DF590 /* FormSectionDescriptor.swift */; };
+		A347814F1A88785D00807793 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A34781511A88785D00807793 /* InfoPlist.strings */; };
 		A36CCC101A7211BD00F035D3 /* MHMeditationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587024FC360C5E22EE6BF2E /* MHMeditationCell.swift */; };
 		A36CCC121A7212A700F035D3 /* MHMeditationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36CCC111A7212A700F035D3 /* MHMeditationViewModel.swift */; };
 		A38E2EA01A70B5D800ECD40E /* MHParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38E2E9F1A70B5D800ECD40E /* MHParseManager.swift */; };
@@ -89,7 +90,6 @@
 		5587024FC360C5E22EE6BF2E /* MHMeditationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationCell.swift; sourceTree = "<group>"; };
 		558707F66F5E156EAD455CF6 /* MHMeditationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationListViewModel.swift; sourceTree = "<group>"; };
 		A3050A1E1A83295000340A31 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		A3050A201A83295B00340A31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A314C6F31A8074D80040E65F /* PFQueryTableViewController+Hack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFQueryTableViewController+Hack.h"; sourceTree = "<group>"; };
 		A314C7481A8091F50040E65F /* MHMeditationUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationUploader.swift; sourceTree = "<group>"; };
 		A314C74A1A8095E70040E65F /* MHAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHAlert.swift; sourceTree = "<group>"; };
@@ -111,6 +111,7 @@
 		A3330C221A6C8A2B001DF590 /* FormDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDescriptor.swift; sourceTree = "<group>"; };
 		A3330C231A6C8A2B001DF590 /* FormRowDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormRowDescriptor.swift; sourceTree = "<group>"; };
 		A3330C241A6C8A2B001DF590 /* FormSectionDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSectionDescriptor.swift; sourceTree = "<group>"; };
+		A34781501A88785D00807793 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		A36CCC111A7212A700F035D3 /* MHMeditationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationViewModel.swift; sourceTree = "<group>"; };
 		A38E2E9F1A70B5D800ECD40E /* MHParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHParseManager.swift; sourceTree = "<group>"; };
 		A38E2EA11A70BB2000ECD40E /* MHDebugger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHDebugger.swift; sourceTree = "<group>"; };
@@ -388,6 +389,7 @@
 			children = (
 				A3B9AF3C1A625CCF00234F80 /* Info.plist */,
 				A3050A1F1A83295000340A31 /* Localizable.strings */,
+				A34781511A88785D00807793 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -536,6 +538,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3050A1D1A83295000340A31 /* Localizable.strings in Resources */,
+				A347814F1A88785D00807793 /* InfoPlist.strings in Resources */,
 				A3B9AF451A625CCF00234F80 /* Main.storyboard in Resources */,
 				A3B9AF4A1A625CCF00234F80 /* LaunchScreen.xib in Resources */,
 				A3B9AF471A625CCF00234F80 /* Images.xcassets in Resources */,
@@ -641,9 +644,16 @@
 			isa = PBXVariantGroup;
 			children = (
 				A3050A1E1A83295000340A31 /* zh-Hant */,
-				A3050A201A83295B00340A31 /* Base */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		A34781511A88785D00807793 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A34781501A88785D00807793 /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		A3B9AF431A625CCF00234F80 /* Main.storyboard */ = {

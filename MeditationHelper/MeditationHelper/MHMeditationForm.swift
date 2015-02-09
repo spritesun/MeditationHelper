@@ -18,19 +18,19 @@ class MHMeditationForm : NSObject, FXForm {
   
   func fields() -> [AnyObject]! {
     return [
-      [FXFormFieldHeader: "", FXFormFieldKey: "startTime", FXFormFieldTitle: "開始時間", FXFormFieldType: FXFormFieldTypeDateTime, FXFormFieldAction: "updateDuration"],
-      [FXFormFieldKey: "endTime", FXFormFieldTitle: "結束時間", FXFormFieldType: FXFormFieldTypeDateTime, FXFormFieldAction: "updateDuration"],
-      [FXFormFieldKey: "duration", FXFormFieldTitle: "時長", "textField.enabled": false, "textField.textColor": UIColor.lightGrayColor()],
+      [FXFormFieldHeader: "", FXFormFieldKey: "startTime", FXFormFieldTitle: NSLocalizedString("Start time", comment: "Form start time"), FXFormFieldType: FXFormFieldTypeDateTime, FXFormFieldAction: "updateDuration"],
+      [FXFormFieldKey: "endTime", FXFormFieldTitle: NSLocalizedString("End time", comment: "Form end time"), FXFormFieldType: FXFormFieldTypeDateTime, FXFormFieldAction: "updateDuration"],
+      [FXFormFieldKey: "duration", FXFormFieldTitle: NSLocalizedString("Duration", comment: "Form duration"), "textField.enabled": false, "textField.textColor": UIColor.lightGrayColor()],
       
-      [FXFormFieldHeader: "", FXFormFieldKey: "location", FXFormFieldTitle: "地點", FXFormFieldPlaceholder:"例如: 家中"],
-      [FXFormFieldKey: "weather", FXFormFieldTitle: "天氣", FXFormFieldPlaceholder:"例如: 晴天"],
+      [FXFormFieldHeader: "", FXFormFieldKey: "location", FXFormFieldTitle: NSLocalizedString("Location", comment: "Form location"), FXFormFieldPlaceholder:NSLocalizedString("e.g. Home", comment: "Form location placeholder")],
+      [FXFormFieldKey: "weather", FXFormFieldTitle: NSLocalizedString("Weather", comment: "Form weather"), FXFormFieldPlaceholder:NSLocalizedString("e.g. Sunny", comment: "Form weather placeholder")],
       [FXFormFieldKey: "rate",
-        FXFormFieldTitle: "評分",
+        FXFormFieldTitle: NSLocalizedString("Rate", comment: "Form rate"),
         FXFormFieldOptions: ["1", "2", "3", "4", "5"],
         FXFormFieldCell: FXFormOptionSegmentsCell.self
       ],
 
-      [FXFormFieldHeader:"" ,FXFormFieldKey: "comment", FXFormFieldTitle: "心得", FXFormFieldType: FXFormFieldTypeLongText]
+      [FXFormFieldHeader:"" ,FXFormFieldKey: "comment", FXFormFieldTitle: NSLocalizedString("Comment", comment: "Form comment"), FXFormFieldType: FXFormFieldTypeLongText]
     ]
   }
     

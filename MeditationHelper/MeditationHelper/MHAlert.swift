@@ -9,7 +9,7 @@
 extension UIViewController {
   func alert(#title : String, message : String) {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-    alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+    alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Alert confirm"), style: .Default, handler: nil))
     presentViewController(alert, animated: true) {}
 
   }

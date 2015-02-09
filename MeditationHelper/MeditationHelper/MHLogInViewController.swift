@@ -46,7 +46,7 @@ class MHLogInViewController: PFLogInViewController, PFLogInViewControllerDelegat
       return true
     }
   
-    logInController.alert(title: "Missing Information", message: "Please fill out all of the information")
+    logInController.alert(title: NSLocalizedString("Please fill out your email/password", comment: "Fail to login/signup title"), message: "")
     return false
   }
   
@@ -65,11 +65,11 @@ class MHLogInViewController: PFLogInViewController, PFLogInViewControllerDelegat
   }
   
   func logInViewController(logInController: PFLogInViewController!, didFailToLogInWithError error: NSError!) {
-    println("fail to login, may need track")
+
   }
   
   func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController!) {
-    println("User dismissed the logInViewController, may need track event")
+
   }
 
   // MARK: PFSignUpViewControllerDelegate
@@ -85,7 +85,7 @@ class MHLogInViewController: PFLogInViewController, PFLogInViewControllerDelegat
     }
     
     if (!informationComplete) {
-      signUpController.alert(title: "Missing Information", message: "Please fill out all of the information")
+      signUpController.alert(title: NSLocalizedString("Please fill out your email/password", comment: "Fail to login/signup title"), message: "")
     }
     return informationComplete
   }
@@ -95,10 +95,8 @@ class MHLogInViewController: PFLogInViewController, PFLogInViewControllerDelegat
   }
   
   func signUpViewController(signUpController: PFSignUpViewController!, didFailToSignUpWithError error: NSError!) {
-    println("fail to sign up, need track")
   }
   
   func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController!) {
-    println("dismiss sign up, need track")
   }
 }

@@ -4,7 +4,6 @@
 //
 
 class MHMeditationListViewModel {
-//  let loadMorePlaceholder = "loadMorePlaceholder"
   var meditationsDict = [NSDate: [AnyObject]]()
   var sortedKeys : [NSDate]
   var dateFormatter = NSDateFormatter()
@@ -19,12 +18,9 @@ class MHMeditationListViewModel {
     }
     
     sortedKeys = meditationsDict.keys.array.sorted({$0.compare($1) == NSComparisonResult.OrderedDescending})
-//    if let lastKey = sortedKeys.last as NSDate! {
-//      meditationsDict[lastKey]?.append(loadMorePlaceholder)
-//    }
     
-    dateFormatter.locale = NSLocale(localeIdentifier: "zh_Hant")
-    dateFormatter.dateFormat = "u年M月d日 ccc"
+//    dateFormatter.locale = NSLocale(localeIdentifier: "zh_Hant")
+    dateFormatter.dateFormat = "u-M-d ccc"
   }
 
   func objectAtIndexPath(indexPath: NSIndexPath!) -> AnyObject! {
@@ -48,6 +44,6 @@ class MHMeditationListViewModel {
         sumTimeInterval += meditation.endTime!.timeIntervalSinceDate(meditation.startTime!)
       }
     }
-    return "\(dateStr) | \(TimeUtil.hoursOf(sumTimeInterval))時\(TimeUtil.minutesOf(sumTimeInterval))分"
+    return String(format: NSLocalizedString("%@ | %dh%dm", comment: "Meditation list section title"), dateStr, TimeUtil.hoursOf(sumTimeInterval), TimeUtil.minutesOf(sumTimeInterval))
   }
 }

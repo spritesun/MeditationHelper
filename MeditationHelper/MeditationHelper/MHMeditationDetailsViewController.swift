@@ -34,10 +34,10 @@ class MHMeditationDetailsViewController: FXFormViewController {
     case .Create, .FreeformCreate:
       navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("cancel"))
       navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: Selector("save"))
-      title = "保存禪修記錄"
+      title = NSLocalizedString("Create record", comment: "Create meditation form title")
     case .Update:
       navigationItem.hidesBackButton = false
-      title = "修改禪修記錄"
+      title = NSLocalizedString("Update record", comment: "Update meditation form title")
     default:
       println("error to be here")
     }
@@ -65,7 +65,7 @@ class MHMeditationDetailsViewController: FXFormViewController {
   
   func save() {
     if !isValid() {
-      alert(title: "Missing Information", message: "開始/結束時間不能為空")
+      alert(title: NSLocalizedString("Please fill start/end time", comment: "Fail to save change alert title"), message: "")
       return
     }
     var form = formController.form as MHMeditationForm
