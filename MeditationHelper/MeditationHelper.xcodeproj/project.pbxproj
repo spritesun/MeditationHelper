@@ -90,6 +90,8 @@
 		5587024FC360C5E22EE6BF2E /* MHMeditationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationCell.swift; sourceTree = "<group>"; };
 		558707F66F5E156EAD455CF6 /* MHMeditationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationListViewModel.swift; sourceTree = "<group>"; };
 		A3050A1E1A83295000340A31 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A30F22011A89A8B2000BF11D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		A30F22021A89A8B8000BF11D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		A314C6F31A8074D80040E65F /* PFQueryTableViewController+Hack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFQueryTableViewController+Hack.h"; sourceTree = "<group>"; };
 		A314C7481A8091F50040E65F /* MHMeditationUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationUploader.swift; sourceTree = "<group>"; };
 		A314C74A1A8095E70040E65F /* MHAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHAlert.swift; sourceTree = "<group>"; };
@@ -113,7 +115,6 @@
 		A3330C241A6C8A2B001DF590 /* FormSectionDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSectionDescriptor.swift; sourceTree = "<group>"; };
 		A34781501A88785D00807793 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		A34781541A887D6F00807793 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		A34781551A887D6F00807793 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		A34781561A887D6F00807793 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A34781571A887D6F00807793 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		A36CCC111A7212A700F035D3 /* MHMeditationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationViewModel.swift; sourceTree = "<group>"; };
@@ -168,7 +169,6 @@
 		A3ED81C71A7A02E2009FFBF5 /* DDHTimerControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHTimerControl.h; sourceTree = "<group>"; };
 		A3ED81C81A7A02E2009FFBF5 /* DDHTimerControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHTimerControl.m; sourceTree = "<group>"; };
 		A3F5B0011A81F10C00F31E73 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		A3F5B0021A81F10C00F31E73 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -572,7 +572,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#export PATH=/usr/local/bin:$PATH\n#cd \"${SRCROOT}/../parse\"\n\n#parse symbols \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\"\n";
+			shellScript = "export PATH=/usr/local/bin:$PATH\ncd \"${SRCROOT}/../parse\"\n\nparse symbols \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -667,8 +667,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				A3B9AF441A625CCF00234F80 /* Base */,
-				A3F5B0021A81F10C00F31E73 /* zh-Hant */,
-				A34781551A887D6F00807793 /* zh-Hans */,
+				A30F22011A89A8B2000BF11D /* zh-Hans */,
+				A30F22021A89A8B8000BF11D /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

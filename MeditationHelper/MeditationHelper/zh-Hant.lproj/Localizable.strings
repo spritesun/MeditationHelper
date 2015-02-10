@@ -84,4 +84,11 @@
 /* Form weather */
 "Weather" = "天氣";
 
+/* Email not configured message title */
+"Please configure your email in Settings" = "請設置好您的電子郵箱";
 
+/* Feedback thanks title */
+"Thank you very much for your feedback" = "謝謝您寶貴的意見";
+
+/* Feedback mail subject */
+"Feedback for Zen Path" = "「日日禪」意見反饋";

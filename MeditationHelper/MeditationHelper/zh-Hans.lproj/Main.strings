@@ -1,38 +1,42 @@
-/* Class = "UILabel"; text = "username"; ObjectID = "3cp-1f-yhc"; */
-"3cp-1f-yhc.text" = "username";
 
-/* Class = "UILabel"; text = "Sync meditation records"; ObjectID = "5UC-Qf-U6E"; */
+/* Class = "IBUILabel"; text = "意见反馈"; ObjectID = "3aN-8t-0jL"; */
+"3aN-8t-0jL.text" = "意见反馈";
+
+/* Class = "IBUILabel"; text = "用户名"; ObjectID = "3cp-1f-yhc"; */
+"3cp-1f-yhc.text" = "用户名";
+
+/* Class = "IBUILabel"; text = "同步离线数据"; ObjectID = "5UC-Qf-U6E"; */
 "5UC-Qf-U6E.text" = "同步离线数据";
 
-/* Class = "UILabel"; text = "Duration"; ObjectID = "6oG-ad-jJ0"; */
-"6oG-ad-jJ0.text" = "Duration";
+/* Class = "IBUILabel"; text = "时长"; ObjectID = "6oG-ad-jJ0"; */
+"6oG-ad-jJ0.text" = "时长";
 
-/* Class = "UILabel"; text = "Comment"; ObjectID = "7Yb-1x-QX1"; */
+/* Class = "IBUILabel"; text = "有所思"; ObjectID = "7Yb-1x-QX1"; */
 "7Yb-1x-QX1.text" = "有所思";
 
-/* Class = "UITabBarItem"; title = "Journal"; ObjectID = "82x-YZ-pyb"; */
+/* Class = "IBUITabBarItem"; title = "日记"; ObjectID = "82x-YZ-pyb"; */
 "82x-YZ-pyb.title" = "日记";
 
-/* Class = "UITabBarItem"; title = "Setting"; ObjectID = "9GL-Ri-Ydu"; */
+/* Class = "IBUITabBarItem"; title = "设置"; ObjectID = "9GL-Ri-Ydu"; */
 "9GL-Ri-Ydu.title" = "设置";
 
-/* Class = "UILabel"; text = "Home | Rain | 3 Star"; ObjectID = "DRl-HO-SKr"; */
+/* Class = "IBUILabel"; text = "家中 | 雨天 | 3分"; ObjectID = "DRl-HO-SKr"; */
 "DRl-HO-SKr.text" = "家中 | 雨天 | 3分";
 
-/* Class = "UILabel"; text = "Sign in / Sign up"; ObjectID = "WcA-qi-rVB"; */
+/* Class = "IBUILabel"; text = "登入/注册"; ObjectID = "WcA-qi-rVB"; */
 "WcA-qi-rVB.text" = "登入/注册";
 
-/* Class = "UITabBarItem"; title = "Meditate"; ObjectID = "acW-dT-cKf"; */
+/* Class = "IBUITabBarItem"; title = "禅修"; ObjectID = "acW-dT-cKf"; */
 "acW-dT-cKf.title" = "禅修";
 
-/* Class = "UILabel"; text = "還剩"; ObjectID = "fZL-Jb-1bz"; */
+/* Class = "IBUILabel"; text = "还剩"; ObjectID = "fZL-Jb-1bz"; */
 "fZL-Jb-1bz.text" = "还剩";
 
-/* Class = "UINavigationItem"; title = "Journal"; ObjectID = "gxa-uU-v4K"; */
+/* Class = "IBUINavigationItem"; title = "日记"; ObjectID = "gxa-uU-v4K"; */
 "gxa-uU-v4K.title" = "日记";
 
-/* Class = "UILabel"; text = "Sign out"; ObjectID = "uAa-eu-7rB"; */
+/* Class = "IBUILabel"; text = "登出"; ObjectID = "uAa-eu-7rB"; */
 "uAa-eu-7rB.text" = "登出";
 
-/* Class = "UILabel"; text = "10:00-11:00"; ObjectID = "ug7-tN-NxQ"; */
+/* Class = "IBUILabel"; text = "10:00-11:00"; ObjectID = "ug7-tN-NxQ"; */
 "ug7-tN-NxQ.text" = "10:00-11:00";

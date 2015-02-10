@@ -6,11 +6,13 @@
 //  Copyright (c) 2015 Sunlong. All rights reserved.
 //
 
-class MHSettingsTableViewController: UITableViewController {
+import MessageUI;
+
+class MHSettingsTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
   
   // MARK: UITableViewDelegate & UITableViewDataSource
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return nil == PFUser.currentUser() ? 1 : 2
+    return nil == PFUser.currentUser() ? 2 : 3
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -24,6 +26,8 @@ class MHSettingsTableViewController: UITableViewController {
         cell.detailTextLabel?.text = PFUser.currentUser().username
       }
     case 1:
+      cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsFeedbackCell") as UITableViewCell
+    case 2:
       cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsUploadCell") as UITableViewCell
     default:
       cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsLoginCell") as UITableViewCell
@@ -36,6 +40,8 @@ class MHSettingsTableViewController: UITableViewController {
     case 0:
       nil == PFUser.currentUser() ? presentLogin() : logout()
     case 1:
+      feedback()
+    case 2:
       MHMeditationUploader.upload(slient: false) {(sucess: Bool) -> Void in}
     default:
       println("Should never go here")
@@ -56,4 +62,24 @@ class MHSettingsTableViewController: UITableViewController {
     PFACL.setDefaultACL(nil, withAccessForCurrentUser:true)
   }
   
+  func feedback() {
+    if MFMailComposeViewController.canSendMail() {
+      var controller = MFMailComposeViewController()
+      controller.mailComposeDelegate = self
+      controller.setSubject(NSLocalizedString("Feedback for Zen Path", comment: "Feedback mail subject"))
+      controller.setToRecipients(["zen.path.app@gmail.com"])
+      controller.setMessageBody("", isHTML: false)
+      presentViewController(controller, animated: true, completion: nil)
+    }
+    else
+    {
+      alert(title: NSLocalizedString("Please configure your email in Settings", comment: "Email not configured message title"), message: "")
+    }
+  }
+  
+  func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+    dismissViewControllerAnimated(true, completion: nil)
+    alert(title: NSLocalizedString("Thank you very much for your feedback", comment: "Feedback thanks title"), message: "")
+
+  }
 }
