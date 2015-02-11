@@ -11,6 +11,9 @@ struct MHTheme {
   static let mainTextColor = UIColor(white: 0.95, alpha: 1.0)
   
   static func setup (window : UIWindow?) {
+//    NSUserDefaults.standardUserDefaults().setObject(["zh"], forKey: "AppleLanguages")
+//    NSUserDefaults.standardUserDefaults().synchronize()
+    
     window?.tintColor = mainBgColor
     
     let tabBar = UITabBar.appearance()
