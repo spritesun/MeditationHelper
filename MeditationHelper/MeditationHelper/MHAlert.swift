@@ -8,9 +8,18 @@
 
 extension UIViewController {
   func alert(#title : String, message : String) {
-    let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-    alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Alert confirm"), style: .Default, handler: nil))
-    presentViewController(alert, animated: true) {}
-
+    if isAtLeastiOS8() {
+      let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+      alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Alert confirm"), style: .Default, handler: nil))
+      presentViewController(alert, animated: true) {}
+    } else {
+      let alert = UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: NSLocalizedString("OK", comment: "Alert confirm"))
+      alert.show()
+    }
   }
+  
+  func isAtLeastiOS8() -> Bool {
+    return floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_7_1;
+  }
+  
 }
