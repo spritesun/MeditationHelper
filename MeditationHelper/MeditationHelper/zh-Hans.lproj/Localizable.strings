@@ -64,7 +64,7 @@
 "Please fill start/end time" = "请填写开始/结束时间";
 
 /* Form rate */
-"Rate" = "评分";
+"Rating" = "评分";
 
 /* Clock title seconds */
 "sec" = "秒";
@@ -93,3 +93,4 @@
 /* Feedback mail subject */
 "Feedback for Zen Path" = "【日日禅】意见反馈";
 
+"-star" = "分";

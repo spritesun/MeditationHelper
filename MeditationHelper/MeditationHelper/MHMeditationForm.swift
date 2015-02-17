@@ -25,7 +25,7 @@ class MHMeditationForm : NSObject, FXForm {
       [FXFormFieldHeader: "", FXFormFieldKey: "location", FXFormFieldTitle: NSLocalizedString("Location", comment: "Form location"), FXFormFieldPlaceholder:NSLocalizedString("e.g. Home", comment: "Form location placeholder")],
       [FXFormFieldKey: "weather", FXFormFieldTitle: NSLocalizedString("Weather", comment: "Form weather"), FXFormFieldPlaceholder:NSLocalizedString("e.g. Sunny", comment: "Form weather placeholder")],
       [FXFormFieldKey: "rate",
-        FXFormFieldTitle: NSLocalizedString("Rate", comment: "Form rate"),
+        FXFormFieldTitle: NSLocalizedString("Rating", comment: "Form rate"),
         FXFormFieldOptions: ["1", "2", "3", "4", "5"],
         FXFormFieldCell: FXFormOptionSegmentsCell.self
       ],

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -194,10 +194,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oG-ad-jJ0">
-                                            <rect key="frame" x="532" y="21" width="50" height="40"/>
+                                            <rect key="frame" x="502" y="24" width="80" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="5cp-Um-n81"/>
-                                                <constraint firstAttribute="width" constant="50" id="TaB-Xe-rw7"/>
+                                                <constraint firstAttribute="width" constant="80" id="TaB-Xe-rw7"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                             <color key="textColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -211,10 +211,10 @@
                                         <constraint firstItem="DRl-HO-SKr" firstAttribute="bottom" secondItem="EUc-nw-x8R" secondAttribute="bottomMargin" id="OHI-eX-gkX"/>
                                         <constraint firstItem="7Yb-1x-QX1" firstAttribute="leading" secondItem="EUc-nw-x8R" secondAttribute="leadingMargin" constant="10" id="Rwx-fE-UoN"/>
                                         <constraint firstItem="DRl-HO-SKr" firstAttribute="leading" secondItem="EUc-nw-x8R" secondAttribute="leadingMargin" constant="10" id="We5-Lp-VQ1"/>
-                                        <constraint firstItem="6oG-ad-jJ0" firstAttribute="leading" secondItem="7Yb-1x-QX1" secondAttribute="trailing" constant="38" id="a35-3L-b8L"/>
+                                        <constraint firstItem="6oG-ad-jJ0" firstAttribute="leading" secondItem="7Yb-1x-QX1" secondAttribute="trailing" constant="8" id="a35-3L-b8L"/>
                                         <constraint firstItem="7Yb-1x-QX1" firstAttribute="top" secondItem="EUc-nw-x8R" secondAttribute="topMargin" id="ih7-0v-EtW"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="6oG-ad-jJ0" secondAttribute="trailing" constant="10" id="sSQ-L6-kj4"/>
-                                        <constraint firstItem="6oG-ad-jJ0" firstAttribute="top" secondItem="EUc-nw-x8R" secondAttribute="topMargin" constant="13" id="u2o-zT-F6V"/>
+                                        <constraint firstItem="6oG-ad-jJ0" firstAttribute="top" secondItem="EUc-nw-x8R" secondAttribute="topMargin" constant="16" id="u2o-zT-F6V"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -244,7 +244,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AR4-KG-GCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1509" y="369"/>
+            <point key="canvasLocation" x="1509" y="366"/>
         </scene>
         <!--Journal-->
         <scene sceneID="qW7-VD-yeB">
@@ -376,7 +376,7 @@
         <image name="stop" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="oqo-9w-8HX"/>
         <segue reference="KOB-3u-clP"/>
-        <segue reference="TVS-fv-XVi"/>
     </inferredMetricsTieBreakers>
 </document>

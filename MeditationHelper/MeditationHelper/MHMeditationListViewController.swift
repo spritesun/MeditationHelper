@@ -62,7 +62,18 @@ class MHMeditationListViewController: PFQueryTableViewController {
   override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!, object: PFObject!) -> PFTableViewCell! {
     var cell = tableView.dequeueReusableCellWithIdentifier("MHMeditationCell") as MHMeditationCell!
     let meditation = object as MHMeditation
-    cell.metadata.text = "\(meditation.location ?? String()) | \(meditation.weather ?? String()) | \(meditation.rate)"
+    
+    var metadata = ""
+    if let location = meditation.location {
+      metadata += (location + " | ")
+    }
+    if let weather = meditation.weather {
+      metadata += (weather + " | ")
+    }
+    metadata += (String(meditation.rate) + NSLocalizedString("-star", comment: "star suffix"))
+    
+    cell.metadata.text = metadata
+    
     cell.comment.text = meditation.comment
     cell.duration.text = meditation.shortDuration()
     if meditation.startTime != nil && meditation.endTime != nil {
