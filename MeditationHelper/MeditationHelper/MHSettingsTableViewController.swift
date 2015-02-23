@@ -78,10 +78,11 @@ class MHSettingsTableViewController: UITableViewController, MFMailComposeViewCon
   }
   
   func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
-    dismissViewControllerAnimated(true, completion: nil)
-    if (result.value == MFMailComposeResultSent.value) {
-      alert(title: NSLocalizedString("Thank you very much for your feedback", comment: "Feedback thanks title"), message: "")
-    }
-
+    dismissViewControllerAnimated(true, completion: { () -> Void in
+      if (result.value == MFMailComposeResultSent.value) {
+        self.alert(title: NSLocalizedString("Thank you very much for your feedback", comment: "Feedback thanks title"), message: "")
+      }
+    })
+    controller.delegate = nil
   }
 }
