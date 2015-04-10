@@ -52,16 +52,21 @@ class MHLogInViewController: PFLogInViewController, PFLogInViewControllerDelegat
   
   func logInViewController(logInController: PFLogInViewController!, didLogInUser user: PFUser!) {
     dismissViewControllerAnimated(true, completion: reloadSettingsTable)
+    updateMeditationsWithUser(user)
+  }
+  
+  func updateMeditationsWithUser(user: PFUser!) {
     PFACL.setDefaultACL(PFACL(), withAccessForCurrentUser:true)
     let query = MHMeditation.query()
     query.fromLocalDatastore()
     query.findObjectsInBackgroundWithBlock({ (meditations, error) -> Void in
       if error == nil {
         for meditation in meditations as! [MHMeditation] {
-          meditation.ACL = PFACL(user: PFUser.currentUser())
+          meditation.ACL = PFACL(user: user)
         }
       }
-    })    
+    })
+
   }
   
   func logInViewController(logInController: PFLogInViewController!, didFailToLogInWithError error: NSError!) {
@@ -94,6 +99,7 @@ class MHLogInViewController: PFLogInViewController, PFLogInViewControllerDelegat
   
   func signUpViewController(signUpController: PFSignUpViewController!, didSignUpUser user: PFUser!) {
     settingsVC?.dismissViewControllerAnimated(true, completion: reloadSettingsTable)
+    updateMeditationsWithUser(user)
   }
   
   func signUpViewController(signUpController: PFSignUpViewController!, didFailToSignUpWithError error: NSError!) {

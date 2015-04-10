@@ -8,7 +8,8 @@
 
 struct MHMeditationUploader {
   static func upload (slient silent : Bool, completion : ((success : Bool) -> Void)?) {
-    if IJReachability.isConnectedToNetwork() && nil != PFUser.currentUser() {
+    var currentUser = PFUser.currentUser()
+    if IJReachability.isConnectedToNetwork() && nil != currentUser {
       let query = MHMeditation.query()
       query.fromLocalDatastore()
       query.findObjectsInBackgroundWithBlock({ (meditations, error) -> Void in
@@ -18,6 +19,7 @@ struct MHMeditationUploader {
             if !silent { vc?.alert(title: NSLocalizedString("No record need to upload", comment: "Uploader empty upload list title"), message: "") }
           }
           for meditation in meditations as! [MHMeditation] {
+//            meditation.ACL = PFACL(user: currentUser)
             if !meditation.uploading {
               meditation.saveInBackgroundWithBlock({ (successed, error) -> Void in
                 meditation.uploading = false
