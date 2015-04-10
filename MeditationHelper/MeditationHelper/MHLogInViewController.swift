@@ -32,7 +32,7 @@ class MHLogInViewController: PFLogInViewController, PFLogInViewControllerDelegat
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     
-    settingsVC = (presentingViewController as UITabBarController).selectedViewController as MHSettingsTableViewController? // keep a reference, when dismiss, parentVC will be nil.
+    settingsVC = (presentingViewController as! UITabBarController).selectedViewController as! MHSettingsTableViewController? // keep a reference, when dismiss, parentVC will be nil.
   }
   
   func reloadSettingsTable () {
@@ -57,7 +57,7 @@ class MHLogInViewController: PFLogInViewController, PFLogInViewControllerDelegat
     query.fromLocalDatastore()
     query.findObjectsInBackgroundWithBlock({ (meditations, error) -> Void in
       if error == nil {
-        for meditation in meditations as [MHMeditation] {
+        for meditation in meditations as! [MHMeditation] {
           meditation.ACL = PFACL(user: PFUser.currentUser())
         }
       }
@@ -74,13 +74,15 @@ class MHLogInViewController: PFLogInViewController, PFLogInViewControllerDelegat
 
   // MARK: PFSignUpViewControllerDelegate
   
-  func signUpViewController(signUpController: PFSignUpViewController!, shouldBeginSignUp info: [NSObject : String]!) -> Bool {
+  func signUpViewController(signUpController: PFSignUpViewController!, shouldBeginSignUp info: [NSObject : AnyObject]!) -> Bool {
     var informationComplete = true
     
     for (key, value) in info {
-      if (value.isEmpty) {
-        informationComplete = false;
-        break;
+      if let strValue = value as? String {
+        if (strValue.isEmpty) {
+          informationComplete = false;
+          break;
+        }
       }
     }
     

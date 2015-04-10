@@ -76,7 +76,7 @@ class MHMeditationViewController: UIViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "MHMeditationStop" {
       self.stop()
-      let saveRecordVC = segue.destinationViewController.topViewController as MHMeditationDetailsViewController
+      let saveRecordVC = segue.destinationViewController.topViewController as! MHMeditationDetailsViewController
       saveRecordVC.meditation = meditation
     }
   }

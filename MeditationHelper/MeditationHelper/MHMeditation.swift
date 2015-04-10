@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Sunlong. All rights reserved.
 //
 
+import Foundation
+
 class MHMeditation : PFObject, PFSubclassing, Printable {
   @NSManaged var startTime: NSDate?
   @NSManaged var endTime: NSDate?
@@ -20,7 +22,7 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
   var comment: String? {
     get {
       if let commentRaw = self.commentRaw as NSData! {
-        return NSString(data:commentRaw, encoding: NSUTF8StringEncoding)
+        return NSString(data:commentRaw, encoding: NSUTF8StringEncoding) as String?
       }
       return nil
     }
@@ -29,10 +31,12 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
     }
   }
 
-  override class func load() {
-    self.registerSubclass()
+  override class func initialize() {
+    var onceToken : dispatch_once_t = 0;
+    dispatch_once(&onceToken) {
+      self.registerSubclass()
+    }
   }
-  
   class func parseClassName() -> String! {
     return "MHMeditation"
   }
@@ -68,7 +72,7 @@ class MHMeditation : PFObject, PFSubclassing, Printable {
   }
   
   func dateWithoutTime() -> NSDate {
-    if let endTime = self.endTime? {
+    if let endTime = self.endTime {
       let calendar = CFCalendarCopyCurrent() as NSCalendar
       let components = calendar.components(.CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay, fromDate: endTime)
       return calendar.dateFromComponents(components)!

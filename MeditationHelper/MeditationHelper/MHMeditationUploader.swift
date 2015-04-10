@@ -17,7 +17,7 @@ struct MHMeditationUploader {
           if meditations.isEmpty {
             if !silent { vc?.alert(title: NSLocalizedString("No record need to upload", comment: "Uploader empty upload list title"), message: "") }
           }
-          for meditation in meditations as [MHMeditation] {
+          for meditation in meditations as! [MHMeditation] {
             if !meditation.uploading {
               meditation.saveInBackgroundWithBlock({ (successed, error) -> Void in
                 meditation.uploading = false

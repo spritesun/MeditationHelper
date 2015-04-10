@@ -42,7 +42,7 @@ class MHMeditationDetailsViewController: FXFormViewController {
       println("error to be here")
     }
 
-    var form  = formController.form as MHMeditationForm
+    var form  = formController.form as! MHMeditationForm
     form.startTime = meditation.startTime
     form.endTime = meditation.endTime
     form.duration = meditation.duration()
@@ -68,7 +68,7 @@ class MHMeditationDetailsViewController: FXFormViewController {
       alert(title: NSLocalizedString("Please fill start/end time", comment: "Fail to save change alert title"), message: "")
       return
     }
-    var form = formController.form as MHMeditationForm
+    var form = formController.form as! MHMeditationForm
     meditation.startTime = form.startTime
     meditation.endTime = form.endTime
     meditation.location = form.location
@@ -87,17 +87,17 @@ class MHMeditationDetailsViewController: FXFormViewController {
   }
   
   func isValid() -> Bool {
-    var form = formController.form as MHMeditationForm
+    var form = formController.form as! MHMeditationForm
     return form.startTime != nil && form.endTime != nil
   }
   
   func updateDuration() {
     if isValid() {
-      var form  = formController.form as MHMeditationForm
+      var form  = formController.form as! MHMeditationForm
       meditation.startTime = form.startTime
       meditation.endTime = form.endTime
       form.duration = meditation.duration()
-      var durationCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 0)) as FXFormBaseCell
+      var durationCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 0)) as! FXFormBaseCell
       durationCell.update()
     }
   }

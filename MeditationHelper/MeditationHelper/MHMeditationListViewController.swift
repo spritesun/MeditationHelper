@@ -60,8 +60,8 @@ class MHMeditationListViewController: PFQueryTableViewController {
   }
 
   override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!, object: PFObject!) -> PFTableViewCell! {
-    var cell = tableView.dequeueReusableCellWithIdentifier("MHMeditationCell") as MHMeditationCell!
-    let meditation = object as MHMeditation
+    var cell = tableView.dequeueReusableCellWithIdentifier("MHMeditationCell") as! MHMeditationCell!
+    let meditation = object as! MHMeditation
     
     var metadata = ""
     if let location = meditation.location {
@@ -86,7 +86,7 @@ class MHMeditationListViewController: PFQueryTableViewController {
   override func objectsDidLoad(error: NSError!) {
     super.objectsDidLoad(error)
     if error == nil {
-      viewModel = MHMeditationListViewModel(meditations: objects as [MHMeditation])
+      viewModel = MHMeditationListViewModel(meditations: objects as! [MHMeditation])
       reloadTable()
     } else {
       alert(title: NSLocalizedString("Fail to load", comment: "Fail to load records title"), message: NSLocalizedString("Please check you network", comment: "Fail to load records message"))
@@ -94,7 +94,7 @@ class MHMeditationListViewController: PFQueryTableViewController {
   }
 
   override func objectAtIndexPath(indexPath: NSIndexPath!) -> PFObject! {
-    return viewModel.objectAtIndexPath(indexPath) as PFObject!
+    return viewModel.objectAtIndexPath(indexPath) as! PFObject!
   }
 
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -150,18 +150,18 @@ class MHMeditationListViewController: PFQueryTableViewController {
   }
   
   override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-    var header = view as UITableViewHeaderFooterView
+    var header = view as! UITableViewHeaderFooterView
 //    header.contentView.backgroundColor = MHTheme.mainBgColor
     header.textLabel.textColor = MHTheme.mainBgColor
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "MHMeditationEdit" {
-      let saveRecordVC = segue.destinationViewController as MHMeditationDetailsViewController
-      saveRecordVC.meditation = objectAtIndexPath(tableView.indexPathForSelectedRow()) as MHMeditation
+      let saveRecordVC = segue.destinationViewController as! MHMeditationDetailsViewController
+      saveRecordVC.meditation = objectAtIndexPath(tableView.indexPathForSelectedRow()) as! MHMeditation
       saveRecordVC.mode = .Update
     } else if segue.identifier == "MHMeditationFreeformCreate" {
-      let saveRecordVC = segue.destinationViewController.topViewController as MHMeditationDetailsViewController
+      let saveRecordVC = segue.destinationViewController.topViewController as! MHMeditationDetailsViewController
       saveRecordVC.meditation = MHMeditation()
       saveRecordVC.meditation.rate = 3
       saveRecordVC.mode = .FreeformCreate

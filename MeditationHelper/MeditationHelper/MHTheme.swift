@@ -30,7 +30,7 @@ struct MHTheme {
 class MHTabBarController: UITabBarController {
   
   override func awakeFromNib() {
-    for vc in viewControllers as [UIViewController] {
+    for vc in viewControllers as! [UIViewController] {
       vc.tabBarItem.image = vc.tabBarItem.image?.imageWithRenderingMode(.AlwaysOriginal)
     }
   }

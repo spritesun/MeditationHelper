@@ -20,17 +20,17 @@ class MHSettingsTableViewController: UITableViewController, MFMailComposeViewCon
     switch indexPath.row {
     case 0:
       if nil == PFUser.currentUser() {
-        cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsLoginCell") as UITableViewCell
+        cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsLoginCell") as! UITableViewCell
       } else {
-        cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsLogoutCell") as UITableViewCell
+        cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsLogoutCell") as! UITableViewCell
         cell.detailTextLabel?.text = PFUser.currentUser().username
       }
     case 1:
-      cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsFeedbackCell") as UITableViewCell
+      cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsFeedbackCell") as! UITableViewCell
     case 2:
-      cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsUploadCell") as UITableViewCell
+      cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsUploadCell") as! UITableViewCell
     default:
-      cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsLoginCell") as UITableViewCell
+      cell = tableView.dequeueReusableCellWithIdentifier("MHSettingsLoginCell") as! UITableViewCell
     }
     return cell
   }

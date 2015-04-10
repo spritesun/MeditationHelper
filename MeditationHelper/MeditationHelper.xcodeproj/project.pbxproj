@@ -11,24 +11,6 @@
 		A3050A1D1A83295000340A31 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3050A1F1A83295000340A31 /* Localizable.strings */; };
 		A314C7491A8091F50040E65F /* MHMeditationUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A314C7481A8091F50040E65F /* MHMeditationUploader.swift */; };
 		A314C74B1A8095E70040E65F /* MHAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A314C74A1A8095E70040E65F /* MHAlert.swift */; };
-		A3330C251A6C8A2B001DF590 /* FormBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C111A6C8A2B001DF590 /* FormBaseCell.swift */; };
-		A3330C261A6C8A2B001DF590 /* FormTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C121A6C8A2B001DF590 /* FormTitleCell.swift */; };
-		A3330C271A6C8A2B001DF590 /* FormValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C131A6C8A2B001DF590 /* FormValueCell.swift */; };
-		A3330C281A6C8A2B001DF590 /* FormButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C141A6C8A2B001DF590 /* FormButtonCell.swift */; };
-		A3330C291A6C8A2B001DF590 /* FormCheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C151A6C8A2B001DF590 /* FormCheckCell.swift */; };
-		A3330C2A1A6C8A2B001DF590 /* FormDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C161A6C8A2B001DF590 /* FormDateCell.swift */; };
-		A3330C2B1A6C8A2B001DF590 /* FormPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C171A6C8A2B001DF590 /* FormPickerCell.swift */; };
-		A3330C2C1A6C8A2B001DF590 /* FormSegmentedControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C181A6C8A2B001DF590 /* FormSegmentedControlCell.swift */; };
-		A3330C2D1A6C8A2B001DF590 /* FormSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C191A6C8A2B001DF590 /* FormSelectorCell.swift */; };
-		A3330C2E1A6C8A2B001DF590 /* FormSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C1A1A6C8A2B001DF590 /* FormSwitchCell.swift */; };
-		A3330C2F1A6C8A2B001DF590 /* FormTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C1B1A6C8A2B001DF590 /* FormTextFieldCell.swift */; };
-		A3330C301A6C8A2B001DF590 /* FormTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C1C1A6C8A2B001DF590 /* FormTextViewCell.swift */; };
-		A3330C311A6C8A2B001DF590 /* FormOptionsSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C1E1A6C8A2B001DF590 /* FormOptionsSelectorController.swift */; };
-		A3330C321A6C8A2B001DF590 /* FormSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C1F1A6C8A2B001DF590 /* FormSelector.swift */; };
-		A3330C331A6C8A2B001DF590 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C201A6C8A2B001DF590 /* FormViewController.swift */; };
-		A3330C341A6C8A2B001DF590 /* FormDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C221A6C8A2B001DF590 /* FormDescriptor.swift */; };
-		A3330C351A6C8A2B001DF590 /* FormRowDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C231A6C8A2B001DF590 /* FormRowDescriptor.swift */; };
-		A3330C361A6C8A2B001DF590 /* FormSectionDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3330C241A6C8A2B001DF590 /* FormSectionDescriptor.swift */; };
 		A347814F1A88785D00807793 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A34781511A88785D00807793 /* InfoPlist.strings */; };
 		A36CCC101A7211BD00F035D3 /* MHMeditationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587024FC360C5E22EE6BF2E /* MHMeditationCell.swift */; };
 		A36CCC121A7212A700F035D3 /* MHMeditationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36CCC111A7212A700F035D3 /* MHMeditationViewModel.swift */; };
@@ -95,24 +77,6 @@
 		A314C6F31A8074D80040E65F /* PFQueryTableViewController+Hack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFQueryTableViewController+Hack.h"; sourceTree = "<group>"; };
 		A314C7481A8091F50040E65F /* MHMeditationUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHMeditationUploader.swift; sourceTree = "<group>"; };
 		A314C74A1A8095E70040E65F /* MHAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHAlert.swift; sourceTree = "<group>"; };
-		A3330C111A6C8A2B001DF590 /* FormBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormBaseCell.swift; sourceTree = "<group>"; };
-		A3330C121A6C8A2B001DF590 /* FormTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTitleCell.swift; sourceTree = "<group>"; };
-		A3330C131A6C8A2B001DF590 /* FormValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValueCell.swift; sourceTree = "<group>"; };
-		A3330C141A6C8A2B001DF590 /* FormButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormButtonCell.swift; sourceTree = "<group>"; };
-		A3330C151A6C8A2B001DF590 /* FormCheckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCheckCell.swift; sourceTree = "<group>"; };
-		A3330C161A6C8A2B001DF590 /* FormDateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDateCell.swift; sourceTree = "<group>"; };
-		A3330C171A6C8A2B001DF590 /* FormPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormPickerCell.swift; sourceTree = "<group>"; };
-		A3330C181A6C8A2B001DF590 /* FormSegmentedControlCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSegmentedControlCell.swift; sourceTree = "<group>"; };
-		A3330C191A6C8A2B001DF590 /* FormSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSelectorCell.swift; sourceTree = "<group>"; };
-		A3330C1A1A6C8A2B001DF590 /* FormSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSwitchCell.swift; sourceTree = "<group>"; };
-		A3330C1B1A6C8A2B001DF590 /* FormTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextFieldCell.swift; sourceTree = "<group>"; };
-		A3330C1C1A6C8A2B001DF590 /* FormTextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextViewCell.swift; sourceTree = "<group>"; };
-		A3330C1E1A6C8A2B001DF590 /* FormOptionsSelectorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormOptionsSelectorController.swift; sourceTree = "<group>"; };
-		A3330C1F1A6C8A2B001DF590 /* FormSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSelector.swift; sourceTree = "<group>"; };
-		A3330C201A6C8A2B001DF590 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
-		A3330C221A6C8A2B001DF590 /* FormDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDescriptor.swift; sourceTree = "<group>"; };
-		A3330C231A6C8A2B001DF590 /* FormRowDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormRowDescriptor.swift; sourceTree = "<group>"; };
-		A3330C241A6C8A2B001DF590 /* FormSectionDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSectionDescriptor.swift; sourceTree = "<group>"; };
 		A34781501A88785D00807793 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		A34781541A887D6F00807793 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		A34781561A887D6F00807793 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -207,63 +171,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A3330C0E1A6C8A2B001DF590 /* SwiftForms */ = {
-			isa = PBXGroup;
-			children = (
-				A3330C0F1A6C8A2B001DF590 /* cells */,
-				A3330C1D1A6C8A2B001DF590 /* controllers */,
-				A3330C211A6C8A2B001DF590 /* descriptors */,
-			);
-			path = SwiftForms;
-			sourceTree = "<group>";
-		};
-		A3330C0F1A6C8A2B001DF590 /* cells */ = {
-			isa = PBXGroup;
-			children = (
-				A3330C101A6C8A2B001DF590 /* base */,
-				A3330C141A6C8A2B001DF590 /* FormButtonCell.swift */,
-				A3330C151A6C8A2B001DF590 /* FormCheckCell.swift */,
-				A3330C161A6C8A2B001DF590 /* FormDateCell.swift */,
-				A3330C171A6C8A2B001DF590 /* FormPickerCell.swift */,
-				A3330C181A6C8A2B001DF590 /* FormSegmentedControlCell.swift */,
-				A3330C191A6C8A2B001DF590 /* FormSelectorCell.swift */,
-				A3330C1A1A6C8A2B001DF590 /* FormSwitchCell.swift */,
-				A3330C1B1A6C8A2B001DF590 /* FormTextFieldCell.swift */,
-				A3330C1C1A6C8A2B001DF590 /* FormTextViewCell.swift */,
-			);
-			path = cells;
-			sourceTree = "<group>";
-		};
-		A3330C101A6C8A2B001DF590 /* base */ = {
-			isa = PBXGroup;
-			children = (
-				A3330C111A6C8A2B001DF590 /* FormBaseCell.swift */,
-				A3330C121A6C8A2B001DF590 /* FormTitleCell.swift */,
-				A3330C131A6C8A2B001DF590 /* FormValueCell.swift */,
-			);
-			path = base;
-			sourceTree = "<group>";
-		};
-		A3330C1D1A6C8A2B001DF590 /* controllers */ = {
-			isa = PBXGroup;
-			children = (
-				A3330C1E1A6C8A2B001DF590 /* FormOptionsSelectorController.swift */,
-				A3330C1F1A6C8A2B001DF590 /* FormSelector.swift */,
-				A3330C201A6C8A2B001DF590 /* FormViewController.swift */,
-			);
-			path = controllers;
-			sourceTree = "<group>";
-		};
-		A3330C211A6C8A2B001DF590 /* descriptors */ = {
-			isa = PBXGroup;
-			children = (
-				A3330C221A6C8A2B001DF590 /* FormDescriptor.swift */,
-				A3330C231A6C8A2B001DF590 /* FormRowDescriptor.swift */,
-				A3330C241A6C8A2B001DF590 /* FormSectionDescriptor.swift */,
-			);
-			path = descriptors;
-			sourceTree = "<group>";
-		};
 		A38E2EA51A70BC4F00ECD40E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,7 +206,6 @@
 			children = (
 				A3ED81C61A7A02E2009FFBF5 /* DDHTimerControl */,
 				A3ED81841A775B91009FFBF5 /* FXForms */,
-				A3330C0E1A6C8A2B001DF590 /* SwiftForms */,
 				A3ABB8F91A6A8A9700914A0E /* IJReachability.swift */,
 			);
 			name = Libraries;
@@ -584,44 +490,26 @@
 				A39903DB1A63946D00CB5493 /* MHMeditation.swift in Sources */,
 				A3ED81891A775C59009FFBF5 /* MHMeditationForm.swift in Sources */,
 				A3ED81871A775B9F009FFBF5 /* FXForms.m in Sources */,
-				A3330C251A6C8A2B001DF590 /* FormBaseCell.swift in Sources */,
 				A3ED81831A77594A009FFBF5 /* MHNotification.swift in Sources */,
-				A3330C341A6C8A2B001DF590 /* FormDescriptor.swift in Sources */,
-				A3330C311A6C8A2B001DF590 /* FormOptionsSelectorController.swift in Sources */,
 				A38E2EA41A70BBBE00ECD40E /* MHNotificationManager.swift in Sources */,
 				A3CB54FF1A7B4E3D008AA04E /* TimeUtil.swift in Sources */,
 				A3B9AF621A62834500234F80 /* MHDismissSegue.swift in Sources */,
-				A3330C2D1A6C8A2B001DF590 /* FormSelectorCell.swift in Sources */,
-				A3330C281A6C8A2B001DF590 /* FormButtonCell.swift in Sources */,
-				A3330C2E1A6C8A2B001DF590 /* FormSwitchCell.swift in Sources */,
 				A3B9AF641A6292B200234F80 /* MHMeditationDetailsViewController.swift in Sources */,
 				A36CCC101A7211BD00F035D3 /* MHMeditationCell.swift in Sources */,
-				A3330C291A6C8A2B001DF590 /* FormCheckCell.swift in Sources */,
 				A314C7491A8091F50040E65F /* MHMeditationUploader.swift in Sources */,
 				A38E2EAB1A70CE0C00ECD40E /* MHMigrator.swift in Sources */,
-				A3330C261A6C8A2B001DF590 /* FormTitleCell.swift in Sources */,
 				A36CCC121A7212A700F035D3 /* MHMeditationViewModel.swift in Sources */,
 				A38E2EAD1A71DB1900ECD40E /* MHMeditationListViewController.swift in Sources */,
-				A3330C361A6C8A2B001DF590 /* FormSectionDescriptor.swift in Sources */,
 				A38E2EA21A70BB2000ECD40E /* MHDebugger.swift in Sources */,
 				A38E2EA01A70B5D800ECD40E /* MHParseManager.swift in Sources */,
-				A3330C271A6C8A2B001DF590 /* FormValueCell.swift in Sources */,
 				A3CB55011A7B512B008AA04E /* MHTheme.swift in Sources */,
 				A3B9AF3E1A625CCF00234F80 /* AppDelegate.swift in Sources */,
-				A3330C331A6C8A2B001DF590 /* FormViewController.swift in Sources */,
 				A38E2EA71A70BDF900ECD40E /* MHLogInViewController.swift in Sources */,
-				A3330C2C1A6C8A2B001DF590 /* FormSegmentedControlCell.swift in Sources */,
-				A3330C2B1A6C8A2B001DF590 /* FormPickerCell.swift in Sources */,
 				A3ED81C91A7A02E2009FFBF5 /* DDHTimerControl.m in Sources */,
-				A3330C2F1A6C8A2B001DF590 /* FormTextFieldCell.swift in Sources */,
 				A3B9AF401A625CCF00234F80 /* MHMeditationViewController.swift in Sources */,
-				A3330C2A1A6C8A2B001DF590 /* FormDateCell.swift in Sources */,
-				A3330C301A6C8A2B001DF590 /* FormTextViewCell.swift in Sources */,
 				A3ABB8FA1A6A8A9700914A0E /* IJReachability.swift in Sources */,
 				A314C74B1A8095E70040E65F /* MHAlert.swift in Sources */,
-				A3330C321A6C8A2B001DF590 /* FormSelector.swift in Sources */,
 				A3B4121F1A6628AC00F74BDC /* MHSettingsTableViewController.swift in Sources */,
-				A3330C351A6C8A2B001DF590 /* FormRowDescriptor.swift in Sources */,
 				55870EA1C2DC8AD4E4970F26 /* MHMeditationListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
