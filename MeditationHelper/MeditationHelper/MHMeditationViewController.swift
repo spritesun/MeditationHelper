@@ -42,10 +42,8 @@ class MHMeditationViewController: UIViewController {
   func welcomeMessage() {
     var displayed = NSUserDefaults.standardUserDefaults().boolForKey(MHWelcomeMessageDisplayed)
     if displayed == false {
-      var message = "- 建议每次打坐前，调至【飞行模式】，切断网络，以免受到电话，短信，各种提醒的惊扰。\n"
-      message += "- 请不要调至【静音模式】，那样您就听不到下座的铃声了。\n"
-      message += "- 请确认【允许推送通知】，以激活铃声\n"
-      alert(title: "铃声说明", message: message)
+      var message = NSLocalizedString("- Recommend to turn on [Airplane mode] every time before meditation, cut off network, avoid phone ring, message, notification disturbing.\n- Please not turn on [Do not disturb] or [Silent] mode, otherwise you won't able to notify by the alarm.\n- Please allow push notification, it enables the bell.\n", comment: "Welcome message")
+      alert(title: NSLocalizedString("Bell notes", comment:"Welcome title"), message: message)
       NSUserDefaults.standardUserDefaults().setBool(true, forKey: MHWelcomeMessageDisplayed)
     }
   }

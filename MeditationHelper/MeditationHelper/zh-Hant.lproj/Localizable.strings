@@ -95,3 +95,6 @@
 
 "-star" = "分";
 
+"- Recommend to turn on [Airplane mode] every time before meditation, cut off network, avoid phone ring, message, notification disturbing.\n- Please not turn on [Do not disturb] or [Silent] mode, otherwise you won't able to notify by the alarm.\n- Please allow push notification, it enables the bell.\n" = "- 建議每次打坐前，調至【飛行模式】，切斷網絡，以免受到電話，短信，各種提醒的驚擾。\n- 請不要調至【靜音模式】，那樣您就聽不到下座的鈴聲了。\n- 請確認【允許推送通知】，以激活鈴聲\n";
+
+"Bell notes" = "鈴聲說明";

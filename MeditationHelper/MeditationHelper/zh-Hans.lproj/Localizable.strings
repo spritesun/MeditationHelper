@@ -94,3 +94,7 @@
 "Feedback for Zen Path" = "【日日禅】意见反馈";
 
 "-star" = "分";
+
+"- Recommend to turn on [Airplane mode] every time before meditation, cut off network, avoid phone ring, message, notification disturbing.\n- Please not turn on [Do not disturb] or [Silent] mode, otherwise you won't able to notify by the alarm.\n- Please allow push notification, it enables the bell.\n" = "- 建议每次打坐前，调至【飞行模式】，切断网络，以免受到电话，短信，各种提醒的惊扰。\n- 请不要调至【静音模式】，那样您就听不到下座的铃声了。\n- 请确认【允许推送通知】，以激活铃声\n";
+
+"Bell notes" = "铃声说明";
