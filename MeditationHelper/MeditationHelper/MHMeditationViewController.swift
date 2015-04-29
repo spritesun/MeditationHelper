@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Sunlong. All rights reserved.
 //
 
+import AVFoundation
+
 class MHMeditationViewController: UIViewController {
   
   @IBOutlet var startButton: UIButton!
@@ -18,12 +20,34 @@ class MHMeditationViewController: UIViewController {
   var meditation : MHMeditation!
   var endTime : NSDate!
   var timer: NSTimer?
+  var audioPlayer : AVAudioPlayer!
+  var soundURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("tibetan-bell-low", ofType: "caf")!)
+  
   
   let MHLastCountDown = "MHLastCountDown"
+  let MHWelcomeMessageDisplayed = "MHWelcomeMessageDisplayed"
   
   override func viewDidLoad() {
     super.viewDidLoad()
     resetTimeControl()
+    audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
+    audioPlayer.prepareToPlay()
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    welcomeMessage()
+  }
+  
+  func welcomeMessage() {
+    var displayed = NSUserDefaults.standardUserDefaults().boolForKey(MHWelcomeMessageDisplayed)
+    if displayed == false {
+      var message = "- 建议每次打坐前，调至【飞行模式】，切断网络，以免受到电话，短信，各种提醒的惊扰。\n"
+      message += "- 请不要调至【静音模式】，那样您就听不到下座的铃声了。\n"
+      message += "- 请确认【允许推送通知】，以激活铃声\n"
+      alert(title: "铃声说明", message: message)
+      NSUserDefaults.standardUserDefaults().setBool(true, forKey: MHWelcomeMessageDisplayed)
+    }
   }
   
   func resetTimeControl() {
@@ -51,6 +75,7 @@ class MHMeditationViewController: UIViewController {
   }
   
   @IBAction func start(sender: AnyObject) {
+    MHNotificationManager.setup()
     startButton.hidden = true
     stopButton.hidden = false
 
@@ -71,6 +96,7 @@ class MHMeditationViewController: UIViewController {
     meditation.start()
     
     NSUserDefaults.standardUserDefaults().setDouble(countDown, forKey: MHLastCountDown)
+    audioPlayer.play()
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -98,6 +124,7 @@ class MHMeditationViewController: UIViewController {
     meditation.stop()
 
     resetTimeControl()
+    audioPlayer.play()
   }
   
   func registerNotification() {
